@@ -1,0 +1,8 @@
+E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Debug\Content\erp.xnb
+E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Debug\ErppuTribute.exe
+E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Debug\ErppuTribute.pdb
+E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Debug\ErppuTribute.csprojResolveAssemblyReference.cache
+E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Debug\ErppuTribute.exe
+E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Debug\ErppuTribute.pdb
+E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Debug\Content\Glass.xnb
