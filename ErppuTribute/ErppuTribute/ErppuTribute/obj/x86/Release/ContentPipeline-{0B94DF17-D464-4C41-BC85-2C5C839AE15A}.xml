@@ -50,7 +50,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButton.xnb</Output>
-      <Time>2014-03-12T13:10:52.0044466+02:00</Time>
+      <Time>2014-03-12T15:08:57.5237151+02:00</Time>
     </Item>
     <Item>
       <Source>newButtonJpn.png</Source>
@@ -59,7 +59,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButtonJpn.xnb</Output>
-      <Time>2014-03-12T13:14:12.4869136+02:00</Time>
+      <Time>2014-03-12T15:09:11.2254988+02:00</Time>
     </Item>
     <Item>
       <Source>quitButton.png</Source>
@@ -68,7 +68,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\quitButton.xnb</Output>
-      <Time>2014-03-12T13:11:19.0879957+02:00</Time>
+      <Time>2014-03-12T15:09:28.7885034+02:00</Time>
     </Item>
     <Item>
       <Source>quitButtonJpn.png</Source>
@@ -77,7 +77,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\quitButtonJpn.xnb</Output>
-      <Time>2014-03-12T13:15:20.4968035+02:00</Time>
+      <Time>2014-03-12T15:08:42.6898667+02:00</Time>
     </Item>
     <Item>
       <Source>pointer.PNG</Source>
@@ -87,6 +87,15 @@
       <Options>None</Options>
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\pointer.xnb</Output>
       <Time>2014-03-12T13:45:57.3148635+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Eerobg.png</Source>
+      <Name>Eerobg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eerobg.xnb</Output>
+      <Time>2014-03-12T15:07:08.0964563+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
