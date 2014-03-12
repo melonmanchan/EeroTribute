@@ -17,3 +17,8 @@ E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\Micros
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuTribute.exe
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuTribute.pdb
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\dxu4b6k.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButton.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButtonJpn.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\quitButton.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\quitButtonJpn.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\pointer.xnb

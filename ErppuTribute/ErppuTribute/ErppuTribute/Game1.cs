@@ -69,8 +69,16 @@ namespace ErppuTribute
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             groundTexture = Content.Load<Texture2D>("erp");
+
+            List<Texture2D> buttons = new List<Texture2D>();
+            List<Texture2D> selectedbuttons = new List<Texture2D>();
+            selectedbuttons.Add(Content.Load<Texture2D>("newButton"));
+            buttons.Add(Content.Load<Texture2D>("newButtonJpn"));
+            selectedbuttons.Add(Content.Load<Texture2D>("quitButton"));
+            buttons.Add(Content.Load<Texture2D>("quitButtonJpn"));
+
             cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("Glass"));
-            menu = new Menu(Content.Load<Texture2D>("erp"), spriteBatch);
+            menu = new Menu(Content.Load<Texture2D>("erp"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons, spriteBatch, this);
             // TODO: use this.Content to load your game content here
         }
 

@@ -43,6 +43,51 @@
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\dxu4b6k.xnb</Output>
       <Time>2014-03-12T12:15:56.8079722+02:00</Time>
     </Item>
+    <Item>
+      <Source>newButton.png</Source>
+      <Name>newButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButton.xnb</Output>
+      <Time>2014-03-12T13:10:52.0044466+02:00</Time>
+    </Item>
+    <Item>
+      <Source>newButtonJpn.png</Source>
+      <Name>newButtonJpn</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButtonJpn.xnb</Output>
+      <Time>2014-03-12T13:14:12.4869136+02:00</Time>
+    </Item>
+    <Item>
+      <Source>quitButton.png</Source>
+      <Name>quitButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\quitButton.xnb</Output>
+      <Time>2014-03-12T13:11:19.0879957+02:00</Time>
+    </Item>
+    <Item>
+      <Source>quitButtonJpn.png</Source>
+      <Name>quitButtonJpn</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\quitButtonJpn.xnb</Output>
+      <Time>2014-03-12T13:15:20.4968035+02:00</Time>
+    </Item>
+    <Item>
+      <Source>pointer.PNG</Source>
+      <Name>pointer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\pointer.xnb</Output>
+      <Time>2014-03-12T13:45:57.3148635+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{0B94DF17-D464-4C41-BC85-2C5C839AE15A}</ContentProjectGUID>
