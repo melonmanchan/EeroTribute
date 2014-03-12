@@ -97,6 +97,16 @@
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eerobg.xnb</Output>
       <Time>2014-03-12T15:07:08.0964563+02:00</Time>
     </Item>
+    <Item>
+      <Source>staticMovie.wmv</Source>
+      <Name>staticMovie</Name>
+      <Importer>WmvImporter</Importer>
+      <Processor>VideoProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\staticMovie.xnb</Output>
+      <Extra>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\staticMovie.wmv</Extra>
+      <Time>2014-03-12T18:25:56.1747033+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{0B94DF17-D464-4C41-BC85-2C5C839AE15A}</ContentProjectGUID>

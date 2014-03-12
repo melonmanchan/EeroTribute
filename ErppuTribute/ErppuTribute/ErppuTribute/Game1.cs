@@ -15,7 +15,8 @@ namespace ErppuTribute
     /// This is the main type for your game
     /// </summary>
     /// 
-    enum GameState { MainMenu, Playing, GameOver }
+    public enum GameState { MainMenu, Playing, PlayingVideo, GameOver }
+
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
@@ -30,9 +31,15 @@ namespace ErppuTribute
         float moveScale = 1.5f;
         float rotateScale = MathHelper.PiOver2;
 
-        //menujutskast
-       
-        GameState gameState = GameState.MainMenu;
+        Video staticVideo;
+        VideoPlayer player;
+        Texture2D videoTexture;
+        Rectangle videoScreen;
+        int counter = 0;
+        float countDuration = 1f;
+        float currentTime = 0f;
+
+        public GameState gameState = GameState.MainMenu;
   
         public Game1()
         {
@@ -78,7 +85,16 @@ namespace ErppuTribute
             buttons.Add(Content.Load<Texture2D>("quitButtonJpn"));
 
             cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("Glass"));
-            menu = new Menu(Content.Load<Texture2D>("Eerobg"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons, spriteBatch, this);
+            menu = new Menu(Content.Load<Texture2D>("Eerobg"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons,spriteBatch, this);
+
+            player = new VideoPlayer();
+            player.IsLooped = false;
+            staticVideo = Content.Load<Video>("staticMovie");
+
+            videoScreen = new Rectangle(GraphicsDevice.Viewport.X,
+                    GraphicsDevice.Viewport.Y,
+                    GraphicsDevice.Viewport.Width,
+                    GraphicsDevice.Viewport.Height);
             // TODO: use this.Content to load your game content here
         }
 
@@ -103,19 +119,44 @@ namespace ErppuTribute
                 this.Exit();
 
             // TODO: Add your update logic here
+
             switch (gameState)
             {
                 case GameState.MainMenu:
-                    gameState = menu.Update();
+                    menu.Update();
                     break;
                 case GameState.Playing:
                     UpdateGamePlay(gameTime);
                     break;
+                case GameState.PlayingVideo:
+                    playTransition(gameTime);
+                     break;
                 case GameState.GameOver:
                     //Peli ohi jutskat
                     break;
             }
             base.Update(gameTime);
+        }
+
+        public void playTransition(GameTime gameTime)
+        {
+            player.Play(staticVideo);
+
+            currentTime += (float)gameTime.ElapsedGameTime.TotalSeconds; //Time passed since last Update() 
+
+            if (currentTime >= countDuration)
+            {
+                counter++;
+                Console.Write(counter);
+                currentTime -= countDuration; 
+              
+            }
+            if (counter >= 5)
+            {
+                counter = 0;//Reset the counter;
+                player.Stop();
+                gameState = GameState.Playing;
+            }
         }
 
         private void UpdateGamePlay(GameTime gameTime)
@@ -200,12 +241,34 @@ namespace ErppuTribute
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             if (gameState == GameState.MainMenu)
             {
                 menu.Draw();
             }
+
+            else if (gameState == GameState.PlayingVideo)
+            {
+                // Only call GetTexture if a video is playing or paused
+
+
+                 if (player.State != MediaState.Stopped)
+                    videoTexture = player.GetTexture();
+
+                // Drawing to the rectangle will stretch the 
+                // video to fill the screen
+                
+
+                // Draw the video, if we have a texture to draw.
+                if (videoTexture != null)
+                {
+                    spriteBatch.Begin();
+                    spriteBatch.Draw(videoTexture, videoScreen, Color.White);
+                    spriteBatch.End();
+                }
+            }
+
             else if (gameState == GameState.Playing)
             {
 
