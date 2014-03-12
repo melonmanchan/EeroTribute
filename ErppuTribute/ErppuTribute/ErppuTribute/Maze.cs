@@ -375,12 +375,12 @@ namespace ErppuTribute
             effect.EnableDefaultLighting();
             effect.PreferPerPixelLighting = true;
 
-            effect.AmbientLightColor = new Vector3(0.1f, 0f, 0f);
-            effect.EmissiveColor = new Vector3(1, 1, 1);
+            //effect.AmbientLightColor = new Vector3(0.1f, 0f, 0f);
+            effect.EmissiveColor = new Vector3(0.5f, 0.5f, 0.5f);
             effect.FogEnabled = true;
             effect.FogColor = Color.Black.ToVector3();
             effect.FogStart = 0f;
-            effect.FogEnd = 3.5f;
+            effect.FogEnd = 2.5f;
 
             foreach (EffectPass pass in effect.CurrentTechnique.Passes)
             {
