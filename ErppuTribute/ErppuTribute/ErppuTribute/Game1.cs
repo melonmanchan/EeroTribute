@@ -14,6 +14,8 @@ namespace ErppuTribute
     /// <summary>
     /// This is the main type for your game
     /// </summary>
+    /// 
+    enum GameState { MainMenu, Playing, GameOver }
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
@@ -21,6 +23,7 @@ namespace ErppuTribute
 
         Camera camera;
         Maze maze;
+        Menu menu;
         private Cube cube;
         BasicEffect effect;
         Texture2D groundTexture;
@@ -28,14 +31,13 @@ namespace ErppuTribute
         float rotateScale = MathHelper.PiOver2;
 
         //menujutskast
-        Texture2D mainMenu;
-        enum GameState { MainMenu, Playing, GameOver }
+       
         GameState gameState = GameState.MainMenu;
   
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferHeight = 1080;
+            graphics.PreferredBackBufferHeight = 1000;
             graphics.PreferredBackBufferWidth = 1600;
             Content.RootDirectory = "Content";
         }
@@ -68,7 +70,7 @@ namespace ErppuTribute
             spriteBatch = new SpriteBatch(GraphicsDevice);
             groundTexture = Content.Load<Texture2D>("erp");
             cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("Glass"));
-            mainMenu = Content.Load<Texture2D>("erp");
+            menu = new Menu(Content.Load<Texture2D>("erp"), spriteBatch);
             // TODO: use this.Content to load your game content here
         }
 
@@ -96,13 +98,7 @@ namespace ErppuTribute
             switch (gameState)
             {
                 case GameState.MainMenu:
-                    KeyboardState ks = Keyboard.GetState();
-                    if (ks.IsKeyDown(Keys.Space))
-                    {
-                        GraphicsDevice.BlendState = BlendState.Opaque;
-                        GraphicsDevice.DepthStencilState = DepthStencilState.Default;
-                        gameState = GameState.Playing;
-                    }
+                    gameState = menu.Update();
                     break;
                 case GameState.Playing:
                     UpdateGamePlay(gameTime);
@@ -200,12 +196,14 @@ namespace ErppuTribute
 
             if (gameState == GameState.MainMenu)
             {
-                drawMenu();
+                menu.Draw();
             }
             else if (gameState == GameState.Playing)
             {
 
                 // TODO: Add your drawing code here
+                GraphicsDevice.BlendState = BlendState.Opaque;
+                GraphicsDevice.DepthStencilState = DepthStencilState.Default;
                 effect.Texture = groundTexture;
                 maze.Draw(camera, effect);
                 cube.Draw(camera, effect);
@@ -214,13 +212,6 @@ namespace ErppuTribute
             base.Draw(gameTime);
         }
 
-        private void drawMenu()
-        {
-            spriteBatch.Begin();
-            spriteBatch.Draw(mainMenu, Vector2.Zero, Color.White);
-            spriteBatch.End();
-        }
-        
-
+       
     }
 }
