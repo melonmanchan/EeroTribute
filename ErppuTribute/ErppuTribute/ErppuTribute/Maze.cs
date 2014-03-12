@@ -11,8 +11,8 @@ namespace ErppuTribute
     {
         #region Fields
        
-        public const int mazeWidth = 10;
-        public const int mazeHeight = 10;
+        public const int mazeWidth = 30;
+        public const int mazeHeight = 30;
         public MazeCell[,] MazeCells = new MazeCell[mazeWidth, mazeHeight];
         Texture2D testTexture;
         GraphicsDevice device;
@@ -367,7 +367,6 @@ namespace ErppuTribute
         #region Draw
         public void Draw(Camera camera, BasicEffect effect)
         {
-            //effect.VertexColorEnabled = true;
             effect.TextureEnabled = true;
             
             effect.World = Matrix.Identity;
@@ -376,7 +375,7 @@ namespace ErppuTribute
             effect.EnableDefaultLighting();
             effect.PreferPerPixelLighting = true;
 
-            //effect.AmbientLightColor = new Vector3(0.1f, 0f, 0f);
+            effect.AmbientLightColor = new Vector3(0.1f, 0f, 0f);
             effect.EmissiveColor = new Vector3(1, 1, 1);
             effect.FogEnabled = true;
             effect.FogColor = Color.Black.ToVector3();

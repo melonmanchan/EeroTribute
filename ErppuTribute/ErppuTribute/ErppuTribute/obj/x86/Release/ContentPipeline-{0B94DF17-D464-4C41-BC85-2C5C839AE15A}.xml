@@ -10,7 +10,7 @@
         <Data Key="GenerateMipmaps">True</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\erp.xnb</Output>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\erp.xnb</Output>
       <Time>2014-02-19T20:30:45.8302813+02:00</Time>
     </Item>
     <Item>
@@ -22,7 +22,7 @@
         <Data Key="GenerateMipmaps">True</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Glass.xnb</Output>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Glass.xnb</Output>
       <Time>2014-02-19T20:27:18.0453966+02:00</Time>
     </Item>
     <Item>
@@ -31,8 +31,17 @@
       <Importer>EffectImporter</Importer>
       <Processor>EffectProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\effects.xnb</Output>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\effects.xnb</Output>
       <Time>2014-02-20T20:04:40.2339169+02:00</Time>
+    </Item>
+    <Item>
+      <Source>dxu4b6k.png</Source>
+      <Name>dxu4b6k</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\dxu4b6k.xnb</Output>
+      <Time>2014-03-12T12:15:56.8079722+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -41,10 +50,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Release</BuildConfiguration>
       <CompressContent>true</CompressContent>
-      <RootDirectory>E:\ERP\ErppuTribute\ErppuTribute\ErppuTributeContent\</RootDirectory>
-      <LoggerRootDirectory>E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\</IntermediateDirectory>
-      <OutputDirectory>E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\</OutputDirectory>
+      <RootDirectory>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTributeContent\</RootDirectory>
+      <LoggerRootDirectory>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

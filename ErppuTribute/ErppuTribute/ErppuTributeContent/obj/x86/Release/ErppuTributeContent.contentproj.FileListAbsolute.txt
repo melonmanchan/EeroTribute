@@ -1,1 +1,2 @@
 E:\ERP\ErppuTribute\ErppuTribute\ErppuTributeContent\obj\x86\Release\ErppuTributeContent.contentprojResolveAssemblyReference.cache
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTributeContent\obj\x86\Release\ErppuTributeContent.contentprojResolveAssemblyReference.cache

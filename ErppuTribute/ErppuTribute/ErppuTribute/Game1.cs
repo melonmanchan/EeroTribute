@@ -27,6 +27,11 @@ namespace ErppuTribute
         float moveScale = 1.5f;
         float rotateScale = MathHelper.PiOver2;
 
+        //menujutskast
+        Texture2D mainMenu;
+        enum GameState { MainMenu, Playing, GameOver }
+        GameState gameState = GameState.MainMenu;
+  
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -63,7 +68,7 @@ namespace ErppuTribute
             spriteBatch = new SpriteBatch(GraphicsDevice);
             groundTexture = Content.Load<Texture2D>("erp");
             cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("Glass"));
-
+            mainMenu = Content.Load<Texture2D>("erp");
             // TODO: use this.Content to load your game content here
         }
 
@@ -88,6 +93,29 @@ namespace ErppuTribute
                 this.Exit();
 
             // TODO: Add your update logic here
+            switch (gameState)
+            {
+                case GameState.MainMenu:
+                    KeyboardState ks = Keyboard.GetState();
+                    if (ks.IsKeyDown(Keys.Space))
+                    {
+                        GraphicsDevice.BlendState = BlendState.Opaque;
+                        GraphicsDevice.DepthStencilState = DepthStencilState.Default;
+                        gameState = GameState.Playing;
+                    }
+                    break;
+                case GameState.Playing:
+                    UpdateGamePlay(gameTime);
+                    break;
+                case GameState.GameOver:
+                    //Peli ohi jutskat
+                    break;
+            }
+            base.Update(gameTime);
+        }
+
+        private void UpdateGamePlay(GameTime gameTime)
+        {
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState keyState = Keyboard.GetState();
             float moveAmountForward = 0;
@@ -160,7 +188,6 @@ namespace ErppuTribute
 
             // TODO: Add your update logic here
             cube.Update(gameTime);
-            base.Update(gameTime);
         }
 
         /// <summary>
@@ -171,11 +198,29 @@ namespace ErppuTribute
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
-            effect.Texture = groundTexture;
-            maze.Draw(camera, effect);
-            cube.Draw(camera, effect);
+            if (gameState == GameState.MainMenu)
+            {
+                drawMenu();
+            }
+            else if (gameState == GameState.Playing)
+            {
+
+                // TODO: Add your drawing code here
+                effect.Texture = groundTexture;
+                maze.Draw(camera, effect);
+                cube.Draw(camera, effect);
+            }
+            
             base.Draw(gameTime);
         }
+
+        private void drawMenu()
+        {
+            spriteBatch.Begin();
+            spriteBatch.Draw(mainMenu, Vector2.Zero, Color.White);
+            spriteBatch.End();
+        }
+        
+
     }
 }
