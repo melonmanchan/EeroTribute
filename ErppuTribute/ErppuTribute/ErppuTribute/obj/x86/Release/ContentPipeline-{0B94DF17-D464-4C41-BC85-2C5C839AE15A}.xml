@@ -107,6 +107,24 @@
       <Extra>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\staticMovie.wmv</Extra>
       <Time>2014-03-12T18:25:56.1747033+02:00</Time>
     </Item>
+    <Item>
+      <Source>selectionChange.wav</Source>
+      <Name>selectionChange</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\selectionChange.xnb</Output>
+      <Time>2013-06-25T21:24:55.5075508+03:00</Time>
+    </Item>
+    <Item>
+      <Source>boom.wav</Source>
+      <Name>boom</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\boom.xnb</Output>
+      <Time>2014-03-13T10:52:25.214882+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{0B94DF17-D464-4C41-BC85-2C5C839AE15A}</ContentProjectGUID>

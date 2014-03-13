@@ -85,7 +85,7 @@ namespace ErppuTribute
             buttons.Add(Content.Load<Texture2D>("quitButtonJpn"));
 
             cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("Glass"));
-            menu = new Menu(Content.Load<Texture2D>("Eerobg"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons,spriteBatch, this);
+            menu = new Menu(Content.Load<Texture2D>("Eerobg"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons,spriteBatch, Content.Load<SoundEffect>("selectionChange"), Content.Load<SoundEffect>("boom"),this);
 
             player = new VideoPlayer();
             player.IsLooped = false;

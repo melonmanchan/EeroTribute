@@ -10,3 +10,5 @@ Content\pointer.xnb
 Content\Eerobg.xnb
 Content\staticMovie.xnb
 Content\staticMovie.wmv
+Content\selectionChange.xnb
+Content\boom.xnb
