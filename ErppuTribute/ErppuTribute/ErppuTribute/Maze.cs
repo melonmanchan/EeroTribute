@@ -11,8 +11,8 @@ namespace ErppuTribute
     {
         #region Fields
        
-        public const int mazeWidth = 30;
-        public const int mazeHeight = 30;
+        public const int mazeWidth = 15;
+        public const int mazeHeight = 15;
         public MazeCell[,] MazeCells = new MazeCell[mazeWidth, mazeHeight];
         Texture2D testTexture;
         GraphicsDevice device;

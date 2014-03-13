@@ -12,3 +12,4 @@ Content\staticMovie.xnb
 Content\staticMovie.wmv
 Content\selectionChange.xnb
 Content\boom.xnb
+Content\eerominati.xnb

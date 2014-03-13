@@ -105,7 +105,7 @@
       <Options>None</Options>
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\staticMovie.xnb</Output>
       <Extra>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\staticMovie.wmv</Extra>
-      <Time>2014-03-12T18:25:56.1747033+02:00</Time>
+      <Time>2014-03-13T11:17:08.5077215+02:00</Time>
     </Item>
     <Item>
       <Source>selectionChange.wav</Source>
@@ -124,6 +124,15 @@
       <Options>None</Options>
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\boom.xnb</Output>
       <Time>2014-03-13T10:52:25.214882+02:00</Time>
+    </Item>
+    <Item>
+      <Source>eerominati.png</Source>
+      <Name>eerominati</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\eerominati.xnb</Output>
+      <Time>2014-03-13T11:08:09.0498663+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
