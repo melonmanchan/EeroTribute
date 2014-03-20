@@ -17,6 +17,7 @@ namespace ErppuTribute
         Texture2D testTexture;
         GraphicsDevice device;
 
+        //piirtämisen käytettävät bufferit lattialle, seinille sekä katolle
         VertexBuffer floorBuffer;
         VertexBuffer wallBuffer;
         VertexBuffer ceilingBuffer;
@@ -58,10 +59,12 @@ namespace ErppuTribute
         #region The Floor
         private void BuildFloorBuffer()
         {
+            //luodaan lista verteksesitä joka annetaan sitten floorBufferille
             List<VertexPositionNormalTexture> vertexList = new List<VertexPositionNormalTexture>();
 
             int counter = 0;
             
+            //käydään labyrintin jokainen ruutu lävitse, luoden aina uusi lattilaatta.
             for (int x = 0; x < mazeWidth; x++)
             {
                 counter++;
@@ -76,7 +79,7 @@ namespace ErppuTribute
             }
 
             floorBuffer = new VertexBuffer(device, VertexPositionNormalTexture.VertexDeclaration, vertexList.Count, BufferUsage.WriteOnly);
-
+            //annetaan lista joka sisältää lattian verteksit floorBufferille, jotta ne voidaan piirtää
             floorBuffer.SetData<VertexPositionNormalTexture>(vertexList.ToArray());
         }
 
@@ -84,18 +87,10 @@ namespace ErppuTribute
         {
             List<VertexPositionNormalTexture> vList = new List<VertexPositionNormalTexture>();
 
-            /*vList.Add(new VertexPositionNormalTexture(new Vector3(0 + xOffset, 0, 0 + zOffset), new Vector3(0 + xOffset, 0, 0 + zOffset), new Vector2(0, 0)));
-
-            vList.Add(new VertexPositionNormalTexture(new Vector3(1 + xOffset, 0, 0 + zOffset), new Vector3(1 + xOffset, 0, 0 + zOffset), new Vector2(1, 0)));
-
-            vList.Add(new VertexPositionNormalTexture(new Vector3(0 + xOffset, 0, 1 + zOffset), new Vector3(0 + xOffset, 0, 1 + zOffset), new Vector2(0, 1)));
-
-            vList.Add(new VertexPositionNormalTexture(new Vector3(1 + xOffset, 0, 0 + zOffset), new Vector3(1 + xOffset, 0, 0 + zOffset), new Vector2(1, 0)));
-
-            vList.Add(new VertexPositionNormalTexture(new Vector3(1 + xOffset, 0, 1 + zOffset), new Vector3(1 + xOffset, 0, 1 + zOffset), new Vector2(1, 1)));
-
-            vList.Add(new VertexPositionNormalTexture(new Vector3(0 + xOffset, 0, 1 + zOffset), new Vector3(0 + xOffset, 0, 1 + zOffset), new Vector2(0, 1)));*/
-
+            //jokainen lattialaatta koostuu kahdesta sivuttain makaavasta kolmiosta. VertexPositionNormalin ensimmäinen parametri on paikka,
+            //toinen parametri on normaali-mappi ja kolmas parametri on teksture-mappi.
+            //tekstuuri annetaan silla lailla että se vedetään loppujen lopuksi koko tiilen 
+            //paint-kuva tiilestä: http://imgur.com/Bp9DUlL
             vList.Add(new VertexPositionNormalTexture(new Vector3(0 + xOffset, 0, 0 + zOffset), new Vector3(0,0,0), new Vector2(0, 0)));
 
             vList.Add(new VertexPositionNormalTexture(new Vector3(1 + xOffset, 0, 0 + zOffset), new Vector3(0, 0, 0), new Vector2(1, 0)));
@@ -108,12 +103,18 @@ namespace ErppuTribute
 
             vList.Add(new VertexPositionNormalTexture(new Vector3(0 + xOffset, 0, 1 + zOffset), new Vector3(0, 0, 0), new Vector2(0, 1)));
 
+            //SUPERTÄRKEE HUOMIO!!!!! verteksit tulee määritellä myötäpäiväisessä järkestyksessä siihen nähden, miltä suunnalta niitä tullaan katsomaan
+            //Lähes kaikki 3d-kirjastot optimoivat grafiikkaa siten, että verteksit piirretään ainoastaan toiselta puolen, silloin kun ne nähdään. Jos olet esim.
+            //jossain pelissä pudonnut pelimaailman lävitse ja yhtäkkiä maailma muuttuu näkymättömäksi, se johtuu nimenomaan tästä optimointikikasta.
+            //Esimerkkivideo tapahtumasta: http://www.youtube.com/watch?v=QOOXRD1LanI
             return vList;
         }
 
 
         private void BuildCeilingBuffer()
         {
+            //katon luominen on täsmälleen identtinen lattian luomiseen, paitsi että katon verteksien z-arvo on 1 yksikköä suurempi kuin lattian
+            //(katto on siis korkeammalla kuin lattia, kuten arvata saattaa.)
             List<VertexPositionNormalTexture> vertexList = new List<VertexPositionNormalTexture>();
 
             int counter = 0;
@@ -140,26 +141,6 @@ namespace ErppuTribute
         {
             List<VertexPositionNormalTexture> vList = new List<VertexPositionNormalTexture>();
 
-         /*   vList.Add(new VertexPositionTexture(new Vector3(0 + xOffset, 1, 0 + zOffset), new Vector2(0, 0)));
-
-            vList.Add(new VertexPositionTexture(new Vector3(1 + xOffset, 1, 0 + zOffset), new Vector2(1, 0)));
-
-            vList.Add(new VertexPositionTexture(new Vector3(0 + xOffset, 1, 1 + zOffset), new Vector2(0, 1)));
-
-            vList.Add(new VertexPositionTexture(new Vector3(1 + xOffset, 1, 0 + zOffset), new Vector2(1, 0)));
-
-            vList.Add(new VertexPositionTexture(new Vector3(1 + xOffset, 1, 1 + zOffset), new Vector2(1, 1)));
-
-            vList.Add(new VertexPositionTexture(new Vector3(0 + xOffset, 1, 1 + zOffset), new Vector2(0, 1)));*/
-            /*
-            vList.Add(new VertexPositionNormalTexture(new Vector3(0 + xOffset, 1, 1 + zOffset),new Vector3(0 + xOffset, 1, 1 + zOffset), new Vector2(0, 1)));
-            vList.Add(new VertexPositionNormalTexture(new Vector3(1 + xOffset, 1, 1 + zOffset),new Vector3(1 + xOffset, 1, 1 + zOffset), new Vector2(1, 1)));
-            vList.Add(new VertexPositionNormalTexture(new Vector3(1 + xOffset, 1, 0 + zOffset),new Vector3(1 + xOffset, 1, 0 + zOffset), new Vector2(1, 0)));
-            vList.Add(new VertexPositionNormalTexture(new Vector3(0 + xOffset, 1, 1 + zOffset),new Vector3(0 + xOffset, 1, 1 + zOffset), new Vector2(0, 1)));
-            vList.Add(new VertexPositionNormalTexture(new Vector3(1 + xOffset, 1, 0 + zOffset),new Vector3(1 + xOffset, 1, 0 + zOffset), new Vector2(1, 0)));
-            vList.Add(new VertexPositionNormalTexture(new Vector3(0 + xOffset, 1, 0 + zOffset), new Vector3(0 + xOffset, 1, 0 + zOffset),new Vector2(0, 0)));
-            */
-
             vList.Add(new VertexPositionNormalTexture(new Vector3(0 + xOffset, 1, 1 + zOffset), new Vector3(0,0,0), new Vector2(0, 1)));
             vList.Add(new VertexPositionNormalTexture(new Vector3(1 + xOffset, 1, 1 + zOffset), new Vector3(0, 0, 0), new Vector2(1, 1)));
             vList.Add(new VertexPositionNormalTexture(new Vector3(1 + xOffset, 1, 0 + zOffset), new Vector3(0, 0, 0), new Vector2(1, 0)));
@@ -174,6 +155,8 @@ namespace ErppuTribute
         #region Walls
         private void BuildWallBuffer()
         {
+            //rakennetaan labyrintin soluille piirrettävät seinät
+            //homma sujuu aikalailla samalla lailla kuin lattiat ja katto
             List<VertexPositionNormalTexture> wallVertexList = new List<VertexPositionNormalTexture>();
 
             for (int x = 0; x < mazeWidth; x++)
@@ -194,8 +177,11 @@ namespace ErppuTribute
 
         private List<VertexPositionNormalTexture> BuildMazeWall(int x, int z)
         {
-            List<VertexPositionNormalTexture> triangles = new List<VertexPositionNormalTexture>();
 
+            List<VertexPositionNormalTexture> triangles = new List<VertexPositionNormalTexture>();
+            //ottaa parametrinä solun koordinaatit
+            //luodaan verteksit solun olemassaoleville seinille
+            //ks. paint kuva:http://i.imgur.com/9IeADIY.png
             if (MazeCells[x, z].Walls[0])
             {
                 triangles.Add(CalcPoint(0, x, z, 0, 0));
@@ -248,6 +234,7 @@ namespace ErppuTribute
             
         }
 
+        //tarkistetaan törmääkö pelaaja seinään
         private BoundingBox BuildBoundingBox(int x, int z, int point1, int point2)
         {
             BoundingBox thisBox = new BoundingBox(wallPoints[point1], wallPoints[point2]);
@@ -298,6 +285,9 @@ namespace ErppuTribute
         #region Maze Generation
         public void GenerateMaze()
         {
+            //Generoidaan satunnainen labyrintti hyödyntämällä DFS-algoritmiä.
+            //ks. http://en.wikipedia.org/wiki/Maze_generation_algorithm#Depth-first_search
+            //alussa kaikkien labyrintin solujen seinät ovat pystyssä, eikä missään solussa ole vierailtu
             for (int x = 0; x < mazeWidth; x++)
                 for (int z = 0; z < mazeHeight; z++)
                 {
@@ -307,14 +297,20 @@ namespace ErppuTribute
                     MazeCells[x, z].Walls[3] = true;
                     MazeCells[x, z].Visited = false;
                 }
-
+            //aloiteaan solusta 0,0 labyrintin läpikäynti
             MazeCells[0,0].Visited = true;
             EvaluateCell(new Vector2(0, 0));
+            //Koska DFS antaa meille "klassisen" labyrintin joissa on paljon tiukkoja mutkia ja umpikujia, poistetaan seiniä satunnaisesti
             RemoveRandomWalls();
         }
 
         private void EvaluateCell(Vector2 cell)
         {
+            //lista käsiteltävissä olevan solun naapureista.
+            // 0 = solun yläpuolella oleva naapuri
+            // 1= solun oikealla puolella oleva naapuri
+            // 2 = solun alapuolella oleva naapuri
+            // 3 = solun vasemmalla puolella oleva naapuri
             List<int> neighborCells = new List<int>();
             neighborCells.Add(0);
             neighborCells.Add(1);
@@ -323,6 +319,7 @@ namespace ErppuTribute
 
             while (neighborCells.Count > 0)
             {
+                //arvotaan käsiteltävän solun satunnainen naapuri, poistetaan se käsiteltävissä ja otetaan talteen selectedNieghhbot-muuttujaan
                 int pick = rand.Next(0, neighborCells.Count);
                 int selectedNeighbor = neighborCells[pick];
                 neighborCells.RemoveAt(pick);
@@ -350,6 +347,11 @@ namespace ErppuTribute
                     (neighbor.Y < mazeHeight)
                     )
                 {
+                    //asetetaan käsiteltävissä olevan solun randomilla valittu seinä sekä naapurin sitä vastapäinen seinä
+                    //olemattomaksi. Tämä onnistuu kätevästi modulon avulla.
+                    //jos esim. valittu naapuri on käsiteltäbän solun oikella puolen, on se solu 1.
+                    //aluksi poistetaan käsiteltävän solun seinä nro 1.
+                    //sitten poistetaan naapurin seinä nro. 3
                     if (!MazeCells[(int)neighbor.X, (int)neighbor.Y].Visited)
                     {
                         MazeCells[(int)neighbor.X, (int)neighbor.Y].Visited = true;

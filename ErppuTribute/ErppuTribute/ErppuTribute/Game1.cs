@@ -32,7 +32,7 @@ namespace ErppuTribute
         float rotateScale = MathHelper.PiOver2;
 
         Video staticVideo;
-        VideoPlayer player;
+        VideoPlayer videoplayer;
         Texture2D videoTexture;
         Rectangle videoScreen;
         int counter = 0;
@@ -87,8 +87,8 @@ namespace ErppuTribute
             cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("eerominati"));
             menu = new Menu(Content.Load<Texture2D>("Eerobg"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons,spriteBatch, Content.Load<SoundEffect>("selectionChange"), Content.Load<SoundEffect>("boom"),this);
 
-            player = new VideoPlayer();
-            player.IsLooped = false;
+            videoplayer = new VideoPlayer();
+            videoplayer.IsLooped = false;
             staticVideo = Content.Load<Video>("staticMovie");
 
             videoScreen = new Rectangle(GraphicsDevice.Viewport.X,
@@ -140,7 +140,7 @@ namespace ErppuTribute
 
         public void playTransition(GameTime gameTime)
         {
-            player.Play(staticVideo);
+            videoplayer.Play(staticVideo);
 
             currentTime += (float)gameTime.ElapsedGameTime.TotalSeconds; //Time passed since last Update() 
 
@@ -154,7 +154,7 @@ namespace ErppuTribute
             if (counter >= 4)
             {
                 counter = 0;//Reset the counter;
-                player.Stop();
+                videoplayer.Stop();
                 gameState = GameState.Playing;
             }
         }
@@ -252,8 +252,8 @@ namespace ErppuTribute
             {
                 // Only call GetTexture if a video is playing or paused
 
-                 if (player.State != MediaState.Stopped)
-                    videoTexture = player.GetTexture();
+                 if (videoplayer.State != MediaState.Stopped)
+                    videoTexture = videoplayer.GetTexture();
 
                 // Drawing to the rectangle will stretch the 
                 // video to fill the screen
