@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+
 namespace ErppuTribute
 {
     class Cube
@@ -14,13 +15,13 @@ namespace ErppuTribute
         //kuution tekstuuri
         private Texture2D texture;
 
-        private float rotation = 0f;
-        private float zrotation = 0f;
-        private float collisionRadius = 0.25f;
+        protected float rotation = 0f;
+        protected float zrotation = 0f;
+        protected float collisionRadius = 0.25f;
         private Random rand = new Random();
 
         //kuution sijainti pelimaailmassa
-        private Vector3 location;
+        public Vector3 location { get; set; }
 
         //kuutin bufferi jotta voidaan piirtää kaikki verteksit kerralla
         private VertexBuffer cubeVertexBuffer;
@@ -65,7 +66,7 @@ namespace ErppuTribute
         }
         #endregion
 
-        #region Helper Methdods
+        #region Helper Methods
         private void BuildFace(Vector3 p1, Vector3 p2)
         {
             vertices.Add(BuildVertex(p1.X, p1.Y, p1.Z, 1, 0));
@@ -116,7 +117,7 @@ namespace ErppuTribute
 
         #region Draw
 
-        public void Draw(Camera camera, BasicEffect effect)
+        public virtual void Draw(Camera camera, BasicEffect effect)
         {
             //kuutio piirretään tekstuureilla -> basiceffecting vertex-väritys pois päältä
             effect.VertexColorEnabled = false;
@@ -160,12 +161,11 @@ namespace ErppuTribute
         #endregion
 
         #region Update
-        public void Update(GameTime gameTime)
+        public virtual void Update(GameTime gameTime)
         {
             //pyöritellään kuutio, käyttäen MathHelperin WrapAnglea jotta rotaation kulma pysyy sallituilla asteilla
             rotation = MathHelper.WrapAngle(rotation + 0.05f);
             zrotation = MathHelper.WrapAngle(zrotation + 0.025f);
-
         }
         #endregion
     }

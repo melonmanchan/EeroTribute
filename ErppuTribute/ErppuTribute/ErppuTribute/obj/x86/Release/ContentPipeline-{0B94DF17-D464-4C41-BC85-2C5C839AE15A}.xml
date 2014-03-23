@@ -10,8 +10,8 @@
         <Data Key="GenerateMipmaps">True</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\erp.xnb</Output>
-      <Time>2014-02-19T20:30:45.8302813+02:00</Time>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\erp.xnb</Output>
+      <Time>2014-03-19T15:32:48.9090967+02:00</Time>
     </Item>
     <Item>
       <Source>Glass.png</Source>
@@ -22,17 +22,8 @@
         <Data Key="GenerateMipmaps">True</Data>
       </Parameters>
       <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Glass.xnb</Output>
-      <Time>2014-02-19T20:27:18.0453966+02:00</Time>
-    </Item>
-    <Item>
-      <Source>effects.fx</Source>
-      <Name>effects</Name>
-      <Importer>EffectImporter</Importer>
-      <Processor>EffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\effects.xnb</Output>
-      <Time>2014-02-20T20:04:40.2339169+02:00</Time>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Glass.xnb</Output>
+      <Time>2014-03-19T15:32:48.9060965+02:00</Time>
     </Item>
     <Item>
       <Source>dxu4b6k.png</Source>
@@ -40,8 +31,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\dxu4b6k.xnb</Output>
-      <Time>2014-03-12T12:15:56.8079722+02:00</Time>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\dxu4b6k.xnb</Output>
+      <Time>2014-03-23T20:29:18.1130955+02:00</Time>
     </Item>
     <Item>
       <Source>newButton.png</Source>
@@ -49,8 +40,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButton.xnb</Output>
-      <Time>2014-03-12T21:27:49.3789029+02:00</Time>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButton.xnb</Output>
+      <Time>2014-03-23T20:29:18.1160957+02:00</Time>
     </Item>
     <Item>
       <Source>newButtonJpn.png</Source>
@@ -58,8 +49,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButtonJpn.xnb</Output>
-      <Time>2014-03-12T21:27:51.0569989+02:00</Time>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButtonJpn.xnb</Output>
+      <Time>2014-03-23T20:29:18.1170958+02:00</Time>
     </Item>
     <Item>
       <Source>quitButton.png</Source>
@@ -67,8 +58,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\quitButton.xnb</Output>
-      <Time>2014-03-12T21:27:49.9969382+02:00</Time>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\quitButton.xnb</Output>
+      <Time>2014-03-23T20:29:18.1180958+02:00</Time>
     </Item>
     <Item>
       <Source>quitButtonJpn.png</Source>
@@ -76,8 +67,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\quitButtonJpn.xnb</Output>
-      <Time>2014-03-12T21:27:50.499967+02:00</Time>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\quitButtonJpn.xnb</Output>
+      <Time>2014-03-23T20:29:18.1180958+02:00</Time>
     </Item>
     <Item>
       <Source>pointer.PNG</Source>
@@ -85,8 +76,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\pointer.xnb</Output>
-      <Time>2014-03-12T13:45:57.3148635+02:00</Time>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\pointer.xnb</Output>
+      <Time>2014-03-23T20:29:18.1170958+02:00</Time>
     </Item>
     <Item>
       <Source>Eerobg.png</Source>
@@ -94,36 +85,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eerobg.xnb</Output>
-      <Time>2014-03-12T15:07:08.0964563+02:00</Time>
-    </Item>
-    <Item>
-      <Source>staticMovie.wmv</Source>
-      <Name>staticMovie</Name>
-      <Importer>WmvImporter</Importer>
-      <Processor>VideoProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\staticMovie.xnb</Output>
-      <Extra>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\staticMovie.wmv</Extra>
-      <Time>2014-03-13T11:17:08.5077215+02:00</Time>
-    </Item>
-    <Item>
-      <Source>selectionChange.wav</Source>
-      <Name>selectionChange</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\selectionChange.xnb</Output>
-      <Time>2013-06-25T21:24:55.5075508+03:00</Time>
-    </Item>
-    <Item>
-      <Source>boom.wav</Source>
-      <Name>boom</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\boom.xnb</Output>
-      <Time>2014-03-13T10:52:25.214882+02:00</Time>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eerobg.xnb</Output>
+      <Time>2014-03-23T20:29:18.103095+02:00</Time>
     </Item>
     <Item>
       <Source>eerominati.png</Source>
@@ -131,8 +94,54 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\eerominati.xnb</Output>
-      <Time>2014-03-13T11:08:09.0498663+02:00</Time>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\eerominati.xnb</Output>
+      <Time>2014-03-23T20:29:18.1130955+02:00</Time>
+    </Item>
+    <Item>
+      <Source>effects.fx</Source>
+      <Name>effects</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\effects.xnb</Output>
+      <Time>2014-03-19T15:32:48.9070965+02:00</Time>
+    </Item>
+    <Item>
+      <Source>staticMovie.wmv</Source>
+      <Name>staticMovie</Name>
+      <Importer>WmvImporter</Importer>
+      <Processor>VideoProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\staticMovie.xnb</Output>
+      <Extra>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\staticMovie.wmv</Extra>
+      <Time>2014-03-23T20:29:18.139097+02:00</Time>
+    </Item>
+    <Item>
+      <Source>selectionChange.wav</Source>
+      <Name>selectionChange</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\selectionChange.xnb</Output>
+      <Time>2014-03-23T20:29:18.1190959+02:00</Time>
+    </Item>
+    <Item>
+      <Source>boom.wav</Source>
+      <Name>boom</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\boom.xnb</Output>
+      <Time>2014-03-23T20:29:18.1110954+02:00</Time>
+    </Item>
+    <Item>
+      <Source>nmi.png</Source>
+      <Name>nmi</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\nmi.xnb</Output>
+      <Time>2014-03-23T21:09:01.6364253+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -141,39 +150,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Release</BuildConfiguration>
       <CompressContent>true</CompressContent>
-      <RootDirectory>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTributeContent\</RootDirectory>
-      <LoggerRootDirectory>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\</IntermediateDirectory>
-      <OutputDirectory>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTributeContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2011-09-01T17:22:30+03:00</Value>
+        <Value>2011-09-01T16:22:30+03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2011-09-01T17:22:30+03:00</Value>
+        <Value>2011-09-01T16:22:30+03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2011-09-01T17:22:30+03:00</Value>
+        <Value>2011-09-01T16:22:30+03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2011-09-01T17:22:30+03:00</Value>
+        <Value>2011-09-01T16:22:30+03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2011-09-01T17:22:30+03:00</Value>
+        <Value>2011-09-01T16:22:30+03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2011-09-01T17:22:30+03:00</Value>
+        <Value>2011-09-01T16:22:30+03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-12-20T16:46:22.6695497+02:00</Value>
+        <Value>2014-03-23T20:17:58.7252368+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

@@ -28,7 +28,7 @@ namespace ErppuTribute
         private Cube cube;
         BasicEffect effect;
         Texture2D groundTexture;
-        float moveScale = 1.5f;
+        float moveScale = 1.7f;
         float rotateScale = MathHelper.PiOver2;
 
         Video staticVideo;
@@ -38,6 +38,8 @@ namespace ErppuTribute
         int counter = 0;
         float countDuration = 1.5f;
         float currentTime = 0f;
+
+        private Enemy enemy;
 
         public GameState gameState = GameState.MainMenu;
   
@@ -85,6 +87,7 @@ namespace ErppuTribute
             buttons.Add(Content.Load<Texture2D>("quitButtonJpn"));
 
             cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("eerominati"));
+            enemy = new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"));
             menu = new Menu(Content.Load<Texture2D>("Eerobg"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons,spriteBatch, Content.Load<SoundEffect>("selectionChange"), Content.Load<SoundEffect>("boom"),this);
 
             videoplayer = new VideoPlayer();
@@ -172,26 +175,26 @@ namespace ErppuTribute
             float moveAmountForward = 0;
             float moveAmountSideways = 0;
 
-            if (keyState.IsKeyDown(Keys.Right))
+            if (keyState.IsKeyDown(Keys.Right) || keyState.IsKeyDown(Keys.D))
             {
                 camera.Rotation = MathHelper.WrapAngle(camera.Rotation - (rotateScale * elapsed));
                 //  moveAmountSideways = -moveScale * elapsed;
             }
 
-            if (keyState.IsKeyDown(Keys.Left))
+            if (keyState.IsKeyDown(Keys.Left) || keyState.IsKeyDown(Keys.A))
             {
                 camera.Rotation = MathHelper.WrapAngle(camera.Rotation + (rotateScale * elapsed));
 
                 //   moveAmountSideways = moveScale * elapsed;
             }
 
-            if (keyState.IsKeyDown(Keys.Up))
+            if (keyState.IsKeyDown(Keys.Up) || keyState.IsKeyDown(Keys.W))
             {
                 //camera.MoveForward(moveScale * elapsed);
                 moveAmountForward = moveScale * elapsed;
             }
 
-            if (keyState.IsKeyDown(Keys.Down))
+            if (keyState.IsKeyDown(Keys.Down) || keyState.IsKeyDown(Keys.S))
             {
                 //camera.MoveForward(-moveScale * elapsed);
                 moveAmountForward = -moveScale * elapsed;
@@ -245,7 +248,23 @@ namespace ErppuTribute
                 gameState = GameState.MainMenu;
             }
 
+            
+            //Vihollisvektorin sijainnin suunta, pituus ja normaali kameravektorin sijaintiin
+            Vector2 dir = new Vector2(enemy.location.X - camera.Position.X, enemy.location.Z - camera.Position.Z);
+            float mag = (float)Math.Sqrt(Math.Abs(Math.Pow(dir.X, 2)) + Math.Abs(Math.Pow(dir.Y, 2)));
+            Vector2 normal = new Vector2(dir.X / mag, dir.Y / mag);
+
+            //Siirret‰‰n vihollista kameran suuntaan tietyll‰ nopeudella (20-40 arvot varmaan sopivia)
+            float speed = 25.0f;
+            enemy.location = new Vector3(enemy.location.X - (normal.X / (100.0f - speed)), enemy.location.Y, enemy.location.Z - (normal.Y / (100.0f - speed)));
+
+            if(enemy.Hitbox.Contains(camera.Position) == ContainmentType.Contains)
+            {
+                
+            }
+
             cube.Update(gameTime);
+            enemy.Update(gameTime);
         }
 
         /// <summary>
@@ -290,6 +309,7 @@ namespace ErppuTribute
                 effect.Texture = groundTexture;
                 maze.Draw(camera, effect);
                 cube.Draw(camera, effect);
+                enemy.Draw(camera, effect);
             }
             
             base.Draw(gameTime);
