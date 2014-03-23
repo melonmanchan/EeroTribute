@@ -16,6 +16,7 @@ namespace ErppuTribute
 
         private float rotation = 0f;
         private float zrotation = 0f;
+        private float collisionRadius = 0.25f;
         private Random rand = new Random();
 
         //kuution sijainti pelimaailmassa
@@ -25,6 +26,17 @@ namespace ErppuTribute
         private VertexBuffer cubeVertexBuffer;
         //lista kuuton verteksesitä
         private List<VertexPositionNormalTexture> vertices = new List<VertexPositionNormalTexture>();
+        #endregion
+
+        #region Properties
+        public BoundingSphere Hitbox
+        {
+            get
+            {
+                return new BoundingSphere(location, collisionRadius);
+            }
+
+        }
         #endregion
 
         #region Constructor

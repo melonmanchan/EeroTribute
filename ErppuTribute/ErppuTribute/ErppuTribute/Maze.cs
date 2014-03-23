@@ -41,7 +41,6 @@ namespace ErppuTribute
                     MazeCells[x, z] = new MazeCell();
 
                 }
-            GenerateMaze();
 
             wallPoints[0] = new Vector3(0, 1, 0);
             wallPoints[1] = new Vector3(0, 1, 1);
@@ -52,7 +51,7 @@ namespace ErppuTribute
             wallPoints[6] = new Vector3(1, 0, 0);
             wallPoints[7] = new Vector3(1, 0, 1);
 
-            BuildWallBuffer();
+            GenerateMaze();
         }
         #endregion
 
@@ -302,6 +301,7 @@ namespace ErppuTribute
             EvaluateCell(new Vector2(0, 0));
             //Koska DFS antaa meille "klassisen" labyrintin joissa on paljon tiukkoja mutkia ja umpikujia, poistetaan seiniä satunnaisesti
             RemoveRandomWalls();
+            BuildWallBuffer();
         }
 
         private void EvaluateCell(Vector2 cell)

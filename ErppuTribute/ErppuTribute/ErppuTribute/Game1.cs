@@ -147,7 +147,6 @@ namespace ErppuTribute
             if (currentTime >= countDuration)
             {
                 counter++;
-                Console.Write(counter);
                 currentTime -= countDuration; 
               
             }
@@ -157,6 +156,13 @@ namespace ErppuTribute
                 videoplayer.Stop();
                 gameState = GameState.Playing;
             }
+        }
+
+        private void resetGameLevel()
+        {
+            camera.MoveTo(new Vector3(0.5f, 0.5f, 0.5f),0);
+            maze.GenerateMaze();
+            cube.PositionCube(camera.Position, 10f);
         }
 
         private void UpdateGamePlay(GameTime gameTime)
@@ -232,6 +238,13 @@ namespace ErppuTribute
 
 
             // TODO: Add your update logic here
+
+            if (cube.Hitbox.Contains(camera.Position) == ContainmentType.Contains)
+            {
+                resetGameLevel();
+                gameState = GameState.MainMenu;
+            }
+
             cube.Update(gameTime);
         }
 
