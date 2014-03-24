@@ -86,13 +86,20 @@ namespace ErppuTribute
             selectedbuttons.Add(Content.Load<Texture2D>("quitButton"));
             buttons.Add(Content.Load<Texture2D>("quitButtonJpn"));
 
-            cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("eerominati"));
-            enemy = new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"));
+            cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("eerominati"), Content.Load<SoundEffect>("ambienthum"));
+            enemy = new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum"));
             menu = new Menu(Content.Load<Texture2D>("Eerobg"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons,spriteBatch, Content.Load<SoundEffect>("selectionChange"), Content.Load<SoundEffect>("boom"),this);
+
+
+            cube.emitter.Position = cube.location;
+            camera.listener.Position = camera.Position;
+            cube.soundEffectInstance.Apply3D(camera.listener, cube.emitter);
 
             videoplayer = new VideoPlayer();
             videoplayer.IsLooped = false;
             staticVideo = Content.Load<Video>("staticMovie");
+
+           // cube.soundEffectInstance.Play();
 
             videoScreen = new Rectangle(GraphicsDevice.Viewport.X,
                     GraphicsDevice.Viewport.Y,
@@ -129,6 +136,7 @@ namespace ErppuTribute
                     menu.Update();
                     break;
                 case GameState.Playing:
+                    cube.soundEffectInstance.Play();
                     UpdateGamePlay(gameTime);
                     break;
                 case GameState.PlayingVideo:
@@ -163,6 +171,7 @@ namespace ErppuTribute
 
         private void resetGameLevel()
         {
+            cube.soundEffectInstance.Stop();
             camera.MoveTo(new Vector3(0.5f, 0.5f, 0.5f),0);
             maze.GenerateMaze();
             cube.PositionCube(camera.Position, 10f);
@@ -170,6 +179,7 @@ namespace ErppuTribute
 
         private void UpdateGamePlay(GameTime gameTime)
         {
+
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState keyState = Keyboard.GetState();
             float moveAmountForward = 0;
@@ -238,9 +248,8 @@ namespace ErppuTribute
                     camera.MoveSideways(moveAmountSideways);
             }
 
-
-
             // TODO: Add your update logic here
+            updateAudioCue();
 
             if (cube.Hitbox.Contains(camera.Position) == ContainmentType.Contains)
             {
@@ -265,6 +274,12 @@ namespace ErppuTribute
 
             cube.Update(gameTime);
             enemy.Update(gameTime);
+        }
+
+        private void updateAudioCue()
+        {
+            camera.listener.Position = camera.Position;
+            cube.soundEffectInstance.Apply3D(camera.listener, cube.emitter);
         }
 
         /// <summary>

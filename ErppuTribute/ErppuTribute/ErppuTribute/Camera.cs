@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 
 namespace ErppuTribute
 {
     class Camera
     {
 #region Fields
+       public  AudioListener listener = new AudioListener();
+
         //kameran sijainti 
         private Vector3 position = Vector3.Zero;
         //kameran rotaatio y-akselin suhteen
@@ -36,6 +39,7 @@ namespace ErppuTribute
             set
             {
                 position = value;
+                listener.Position = position;
                 UpdateLookAt();
             }
         }

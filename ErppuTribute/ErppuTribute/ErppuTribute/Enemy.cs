@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 
 namespace ErppuTribute
 {
     class Enemy : Cube
     {
         
-        public Enemy(GraphicsDevice graphicsDevice, Vector3 playerLocation, float minDistance, Texture2D texture)
-            : base(graphicsDevice, playerLocation, minDistance, texture)
+        public Enemy(GraphicsDevice graphicsDevice, Vector3 playerLocation, float minDistance, Texture2D texture, SoundEffect soundEffect)
+            : base(graphicsDevice, playerLocation, minDistance, texture, soundEffect)
         {
             collisionRadius = 1.50f;
             base.zrotation = MathHelper.WrapAngle((float)Math.PI);

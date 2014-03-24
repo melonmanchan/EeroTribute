@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 
 namespace ErppuTribute
 {
@@ -23,6 +24,9 @@ namespace ErppuTribute
         //kuution sijainti pelimaailmassa
         public Vector3 location { get; set; }
 
+        public AudioEmitter emitter = new AudioEmitter();
+        public SoundEffectInstance soundEffectInstance;
+
         //kuutin bufferi jotta voidaan piirtää kaikki verteksit kerralla
         private VertexBuffer cubeVertexBuffer;
         //lista kuuton verteksesitä
@@ -41,7 +45,7 @@ namespace ErppuTribute
         #endregion
 
         #region Constructor
-        public Cube(GraphicsDevice graphicsDevice, Vector3 playerLocation, float minDistance, Texture2D texture)
+        public Cube(GraphicsDevice graphicsDevice, Vector3 playerLocation, float minDistance, Texture2D texture, SoundEffect soundEffect)
         {
             device = graphicsDevice;
             this.texture = texture;
@@ -63,6 +67,9 @@ namespace ErppuTribute
             cubeVertexBuffer = new VertexBuffer(device, VertexPositionNormalTexture.VertexDeclaration, vertices.Count, BufferUsage.WriteOnly);
             cubeVertexBuffer.SetData<VertexPositionNormalTexture>(vertices.ToArray());
 
+
+            soundEffectInstance = soundEffect.CreateInstance();
+            soundEffectInstance.IsLooped = true;
         }
         #endregion
 
@@ -106,7 +113,7 @@ namespace ErppuTribute
             Vector3 newLocation;
             do
             {
-                newLocation = new Vector3(rand.Next(0, Maze.mazeWidth) + 0.5f, 0.5f, rand.Next(0, Maze.mazeHeight) + 0.5f);
+                newLocation = new Vector3(rand.Next(0, Maze.mazeWidth) + 0.5f, 0.5f, rand.Next(0, Maze.mazeHeight) + 0.5f);          
             }
             while (Vector3.Distance(PlayerLocation, newLocation) < minDistance);
 
