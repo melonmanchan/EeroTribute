@@ -171,6 +171,7 @@ namespace ErppuTribute
         public virtual void Update(GameTime gameTime)
         {
             //pyöritellään kuutio, käyttäen MathHelperin WrapAnglea jotta rotaation kulma pysyy sallituilla asteilla
+
             rotation = MathHelper.WrapAngle(rotation + 0.05f);
             zrotation = MathHelper.WrapAngle(zrotation + 0.025f);
         }

@@ -10,14 +10,16 @@ namespace ErppuTribute
 {
     class Enemy : Cube
     {
-        
+        #region Constructor
         public Enemy(GraphicsDevice graphicsDevice, Vector3 playerLocation, float minDistance, Texture2D texture, SoundEffect soundEffect)
             : base(graphicsDevice, playerLocation, minDistance, texture, soundEffect)
         {
             collisionRadius = 1.50f;
             base.zrotation = MathHelper.WrapAngle((float)Math.PI);
         }
+        #endregion
 
+        #region Methods
         public override void Update(GameTime gameTime)
         {
             base.rotation = MathHelper.WrapAngle(rotation + 0.01f);
@@ -58,5 +60,6 @@ namespace ErppuTribute
         {
             base.Draw(camera, effect);
         }
+        #endregion
     }
 }
