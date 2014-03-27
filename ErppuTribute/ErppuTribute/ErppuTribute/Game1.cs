@@ -39,7 +39,9 @@ namespace ErppuTribute
         float countDuration = 1.5f;
         float currentTime = 0f;
 
-        private Enemy enemy;
+        private List<Enemy> enemyList;
+        private float enemyTimer = 0f;
+        private float enemySpawnRate = 20f;
 
         public GameState gameState = GameState.MainMenu;
   
@@ -60,6 +62,8 @@ namespace ErppuTribute
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            enemyList = new List<Enemy>();
+
             camera = new Camera(new Vector3(0.5f, 0.5f, 0.5f), 0, GraphicsDevice.Viewport.AspectRatio, 0.05f, 100f);
 
             effect = new BasicEffect(GraphicsDevice);
@@ -87,7 +91,7 @@ namespace ErppuTribute
             buttons.Add(Content.Load<Texture2D>("quitButtonJpn"));
 
             cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("eerominati"), Content.Load<SoundEffect>("ambienthum"));
-            enemy = new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum"));
+            enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
             menu = new Menu(Content.Load<Texture2D>("Eerobg"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons,spriteBatch, Content.Load<SoundEffect>("selectionChange"), Content.Load<SoundEffect>("boom"),this);
 
 
@@ -257,23 +261,33 @@ namespace ErppuTribute
                 gameState = GameState.MainMenu;
             }
 
-            
-            //Vihollisvektorin sijainnin suunta, pituus ja normaali kameravektorin sijaintiin
-            Vector2 dir = new Vector2(enemy.location.X - camera.Position.X, enemy.location.Z - camera.Position.Z);
-            float mag = (float)Math.Sqrt(Math.Abs(Math.Pow(dir.X, 2)) + Math.Abs(Math.Pow(dir.Y, 2)));
-            Vector2 normal = new Vector2(dir.X / mag, dir.Y / mag);
 
-            //Siirretään vihollista kameran suuntaan tietyllä nopeudella (20-40 arvot varmaan sopivia)
-            float speed = 25.0f;
-            enemy.location = new Vector3(enemy.location.X - (normal.X / (100.0f - speed)), enemy.location.Y, enemy.location.Z - (normal.Y / (100.0f - speed)));
+            enemyTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            if(enemy.Hitbox.Contains(camera.Position) == ContainmentType.Contains)
+            if (enemyTimer > enemySpawnRate)
             {
-                
+                enemyTimer = 0;
+                enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
             }
 
+            //Vihollisvektorin sijainnin suunta, pituus ja normaali kameravektorin sijaintiin
+            foreach (Enemy enemy in enemyList)
+            {
+                Vector2 dir = new Vector2(enemy.location.X - camera.Position.X, enemy.location.Z - camera.Position.Z);
+                float mag = (float)Math.Sqrt(Math.Abs(Math.Pow(dir.X, 2)) + Math.Abs(Math.Pow(dir.Y, 2)));
+                Vector2 normal = new Vector2(dir.X / mag, dir.Y / mag);
+
+                //Siirretään vihollista kameran suuntaan tietyllä nopeudella (20-40 arvot varmaan sopivia)
+                float speed = 25.0f;
+                enemy.location = new Vector3(enemy.location.X - (normal.X / (100.0f - speed)), enemy.location.Y, enemy.location.Z - (normal.Y / (100.0f - speed)));
+
+                if (enemy.Hitbox.Contains(camera.Position) == ContainmentType.Contains)
+                {
+
+                }
+                enemy.Update(gameTime);
+            }
             cube.Update(gameTime);
-            enemy.Update(gameTime);
         }
 
         private void updateAudioCue()
@@ -324,7 +338,7 @@ namespace ErppuTribute
                 effect.Texture = groundTexture;
                 maze.Draw(camera, effect);
                 cube.Draw(camera, effect);
-                enemy.Draw(camera, effect);
+                enemyList.ForEach(enemy => enemy.Draw(camera, effect));
             }
             
             base.Draw(gameTime);

@@ -52,3 +52,7 @@ C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\obj
 C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\nmi.xnb
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\nmi.xnb
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\ambienthum.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\ErppuTribute.exe.manifest
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\ErppuTribute.application
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuTribute.exe.manifest
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuTribute.application
