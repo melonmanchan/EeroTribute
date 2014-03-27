@@ -175,10 +175,13 @@ namespace ErppuTribute
 
         private void resetGameLevel()
         {
+            enemyTimer = 0;
             cube.soundEffectInstance.Stop();
             camera.MoveTo(new Vector3(0.5f, 0.5f, 0.5f),0);
             maze.GenerateMaze();
             cube.PositionCube(camera.Position, 10f);
+            enemyList.Clear();
+            enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
         }
 
         private void UpdateGamePlay(GameTime gameTime)
