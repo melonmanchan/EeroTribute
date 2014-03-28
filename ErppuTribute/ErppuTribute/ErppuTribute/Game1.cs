@@ -42,6 +42,7 @@ namespace ErppuTribute
         private List<Enemy> enemyList;
         private float enemyTimer = 0f;
         private float enemySpawnRate = 20f;
+        private float enemySpeed = 25f;
 
         public GameState gameState = GameState.MainMenu;
   
@@ -264,32 +265,32 @@ namespace ErppuTribute
                 gameState = GameState.MainMenu;
             }
 
-
-            enemyTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            if (enemyTimer > enemySpawnRate)
-            {
-                enemyTimer = 0;
-                enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
-            }
-
             //Vihollisvektorin sijainnin suunta, pituus ja normaali kameravektorin sijaintiin
-            foreach (Enemy enemy in enemyList)
+
+            for (int i = 0; i < enemyList.Count; i++)
             {
-                Vector2 dir = new Vector2(enemy.location.X - camera.Position.X, enemy.location.Z - camera.Position.Z);
+                Vector2 dir = new Vector2(enemyList[i].location.X - camera.Position.X, enemyList[i].location.Z - camera.Position.Z);
                 float mag = (float)Math.Sqrt(Math.Abs(Math.Pow(dir.X, 2)) + Math.Abs(Math.Pow(dir.Y, 2)));
                 Vector2 normal = new Vector2(dir.X / mag, dir.Y / mag);
 
                 //Siirretään vihollista kameran suuntaan tietyllä nopeudella (20-40 arvot varmaan sopivia)
-                float speed = 25.0f;
-                enemy.location = new Vector3(enemy.location.X - (normal.X / (100.0f - speed)), enemy.location.Y, enemy.location.Z - (normal.Y / (100.0f - speed)));
+                enemyList[i].location = new Vector3(enemyList[i].location.X - (normal.X / (100.0f - enemySpeed)), enemyList[i].location.Y, enemyList[i].location.Z - (normal.Y / (100.0f - enemySpeed)));
 
-                if (enemy.Hitbox.Contains(camera.Position) == ContainmentType.Contains)
+                if (enemyList[i].Hitbox.Contains(camera.Position) == ContainmentType.Contains)
                 {
 
                 }
-                enemy.Update(gameTime);
+                enemyList[i].Update(gameTime);
             }
+
+            enemyTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (enemyTimer >= enemySpawnRate)
+            {
+                enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
+                enemyTimer = 0;
+            }
+
             cube.Update(gameTime);
         }
 

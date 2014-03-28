@@ -10,9 +10,9 @@ namespace ErppuTribute
     class Maze
     {
         #region Fields
-       
-        public const int mazeWidth = 15;
-        public const int mazeHeight = 15;
+
+        public const int mazeWidth = 25;
+        public const int mazeHeight = 25;
         public MazeCell[,] MazeCells = new MazeCell[mazeWidth, mazeHeight];
         Texture2D testTexture;
         GraphicsDevice device;

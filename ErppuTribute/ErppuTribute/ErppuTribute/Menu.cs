@@ -91,7 +91,6 @@ namespace ErppuTribute
                     selectedButtonIndex--;
                     selectionChanged.Play();
                 }
-                Console.Write(selectedButtonIndex);
             }
             else if (ks.IsKeyDown(Keys.Down) || ks.IsKeyDown(Keys.S))
             {
@@ -100,7 +99,6 @@ namespace ErppuTribute
                     selectedButtonIndex++;
                     selectionChanged.Play();
                 }
-                Console.Write(selectedButtonIndex);
             }
 
             
