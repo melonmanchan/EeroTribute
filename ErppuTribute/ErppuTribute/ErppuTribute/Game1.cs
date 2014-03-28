@@ -43,6 +43,7 @@ namespace ErppuTribute
         private float enemyTimer = 0f;
         private float enemySpawnRate = 20f;
         private float enemySpeed = 25f;
+        private bool isEnemyNear = false;
 
         public GameState gameState = GameState.MainMenu;
   
@@ -177,6 +178,8 @@ namespace ErppuTribute
         private void resetGameLevel()
         {
             enemyTimer = 0;
+            isEnemyNear = false;
+            maze.fogColor = Color.Black.ToVector3();
             cube.soundEffectInstance.Stop();
             camera.MoveTo(new Vector3(0.5f, 0.5f, 0.5f),0);
             maze.GenerateMaze();
@@ -276,11 +279,30 @@ namespace ErppuTribute
                 //Siirret‰‰n vihollista kameran suuntaan tietyll‰ nopeudella (20-40 arvot varmaan sopivia)
                 enemyList[i].location = new Vector3(enemyList[i].location.X - (normal.X / (100.0f - enemySpeed)), enemyList[i].location.Y, enemyList[i].location.Z - (normal.Y / (100.0f - enemySpeed)));
 
+
+                if (Vector3.Distance(camera.Position, enemyList[i].location) < 2.5)
+                {
+                    isEnemyNear = true;
+                }
+
                 if (enemyList[i].Hitbox.Contains(camera.Position) == ContainmentType.Contains)
                 {
-
                 }
+
                 enemyList[i].Update(gameTime);
+            }
+
+
+
+            if (isEnemyNear == false)
+            {
+                maze.fogColor = Color.Black.ToVector3();
+            }
+
+            else if (isEnemyNear == true)
+            {
+                maze.fogColor = Color.Red.ToVector3();
+                isEnemyNear = false;
             }
 
             enemyTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;

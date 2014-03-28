@@ -74,7 +74,7 @@ namespace ErppuTribute
                 if (selectedButtonIndex == 0)
                 {
                     Boom.Play();
-                    game.gameState = GameState.PlayingVideo;
+                    game.gameState = GameState.Playing;
                 }
                 else if (selectedButtonIndex == 1)
                     game.Exit();

@@ -13,6 +13,7 @@ namespace ErppuTribute
 
         public const int mazeWidth = 25;
         public const int mazeHeight = 25;
+        public Vector3 fogColor = Color.Black.ToVector3();
         public MazeCell[,] MazeCells = new MazeCell[mazeWidth, mazeHeight];
         Texture2D testTexture;
         GraphicsDevice device;
@@ -367,6 +368,7 @@ namespace ErppuTribute
         #endregion
 
         #region Draw
+
         public void Draw(Camera camera, BasicEffect effect)
         {
             effect.TextureEnabled = true;
@@ -380,7 +382,7 @@ namespace ErppuTribute
             //effect.AmbientLightColor = new Vector3(0.1f, 0f, 0f);
             effect.EmissiveColor = new Vector3(0.5f, 0.5f, 0.5f);
             effect.FogEnabled = true;
-            effect.FogColor = Color.Black.ToVector3();
+            effect.FogColor = fogColor;
             effect.FogStart = 0f;
             effect.FogEnd = 2.5f;
 
