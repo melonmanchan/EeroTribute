@@ -11,7 +11,7 @@
       </Parameters>
       <Options>None</Options>
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\erp.xnb</Output>
-      <Time>2014-02-19T20:30:45.8302813+02:00</Time>
+      <Time>2014-03-29T18:42:02.955131+02:00</Time>
     </Item>
     <Item>
       <Source>Glass.png</Source>
@@ -160,6 +160,15 @@
       <Options>None</Options>
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\spookybackgroundmusic.xnb</Output>
       <Time>2014-03-29T10:13:15.4990708+02:00</Time>
+    </Item>
+    <Item>
+      <Source>erp2.png</Source>
+      <Name>erp2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\erp2.xnb</Output>
+      <Time>2014-03-29T18:42:02.973132+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -80,7 +80,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>U2w8lyclGnHuSezAzVrI3788Eds=</dsig:DigestValue>
+        <dsig:DigestValue>M18RYtcsofd3JpMx1g2SWWzpsTI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -138,13 +138,22 @@
       <dsig:DigestValue>WnkK3SGkb4726vIyNuZy8vFXw7k=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\erp.xnb" size="71158">
+  <file name="Content\erp.xnb" size="101346">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>1cQau31guUMY22MPmfwdbxP5BoM=</dsig:DigestValue>
+      <dsig:DigestValue>SaXR5dhCuNBOFlEPQfNvVCxHFTw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\erp2.xnb" size="19254">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fvrUcsTWoMpHXlJTl5vxWZRdSyY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Glass.xnb" size="672">

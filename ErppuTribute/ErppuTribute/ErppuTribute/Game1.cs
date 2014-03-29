@@ -275,7 +275,7 @@ namespace ErppuTribute
 
             if (isEnemyNear == false)
             {
-
+                maze.drawTexture = maze.normalEero;
                 if (maze.fogColor != Color.Black.ToVector3())
                 {
                     bgMusic.Pitch = 0;
@@ -285,6 +285,7 @@ namespace ErppuTribute
 
             else if (isEnemyNear == true)
             {
+                maze.drawTexture = maze.scaryEero;
                 if (maze.fogColor != Color.Red.ToVector3())
                 {
                     bgMusic.Pitch = 1;
