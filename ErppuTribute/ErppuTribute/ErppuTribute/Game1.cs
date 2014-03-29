@@ -170,20 +170,6 @@ namespace ErppuTribute
             }
         }
 
-        private void resetGameLevel()
-        {
-            bgMusic.Stop();
-            enemyTimer = 0;
-            isEnemyNear = false;
-            maze.fogColor = Color.Black.ToVector3();
-            cube.soundEffectInstance.Stop();
-            camera.MoveTo(new Vector3(0.5f, 0.5f, 0.5f),0);
-            maze.GenerateMaze();
-            cube.PositionCube(camera.Position, 10f);
-            enemyList.Clear();
-            enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
-        }
-
         private void UpdateGamePlay(GameTime gameTime)
         {
 
@@ -264,10 +250,9 @@ namespace ErppuTribute
                 gameState = GameState.MainMenu;
             }
 
-            //Vihollisvektorin sijainnin suunta, pituus ja normaali kameravektorin sijaintiin
-
             for (int i = 0; i < enemyList.Count; i++)
             {
+                //Vihollisvektorin sijainnin suunta, pituus ja normaali kameravektorin sijaintiin
                 Vector2 dir = new Vector2(enemyList[i].location.X - camera.Position.X, enemyList[i].location.Z - camera.Position.Z);
                 float mag = (float)Math.Sqrt(Math.Abs(Math.Pow(dir.X, 2)) + Math.Abs(Math.Pow(dir.Y, 2)));
                 Vector2 normal = new Vector2(dir.X / mag, dir.Y / mag);
@@ -288,11 +273,9 @@ namespace ErppuTribute
                 enemyList[i].Update(gameTime);
             }
 
-
-          
             if (isEnemyNear == false)
             {
-               
+
                 if (maze.fogColor != Color.Black.ToVector3())
                 {
                     bgMusic.Pitch = 0;
@@ -304,7 +287,7 @@ namespace ErppuTribute
             {
                 if (maze.fogColor != Color.Red.ToVector3())
                 {
-                    bgMusic.Pitch = 1;               
+                    bgMusic.Pitch = 1;
                     maze.fogColor = Color.Red.ToVector3();
                 }
                 isEnemyNear = false;
@@ -319,6 +302,21 @@ namespace ErppuTribute
             }
 
             cube.Update(gameTime);
+        }
+
+
+        private void resetGameLevel()
+        {
+            bgMusic.Stop();
+            enemyTimer = 0;
+            isEnemyNear = false;
+            maze.fogColor = Color.Black.ToVector3();
+            cube.soundEffectInstance.Stop();
+            camera.MoveTo(new Vector3(0.5f, 0.5f, 0.5f),0);
+            maze.GenerateMaze();
+            cube.PositionCube(camera.Position, 10f);
+            enemyList.Clear();
+            enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
         }
 
         private void updateAudioCue()
