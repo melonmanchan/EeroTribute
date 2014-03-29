@@ -87,7 +87,7 @@ namespace ErppuTribute
             spriteBatch = new SpriteBatch(GraphicsDevice);
             groundTexture = Content.Load<Texture2D>("erp");
             bgMusic = Content.Load<SoundEffect>("spookybackgroundmusic").CreateInstance();
-
+            bgMusic.Volume = 0.1f;
             List<Texture2D> buttons = new List<Texture2D>();
             List<Texture2D> selectedbuttons = new List<Texture2D>();
             selectedbuttons.Add(Content.Load<Texture2D>("newButton"));
@@ -316,7 +316,7 @@ namespace ErppuTribute
 
             if (enemyTimer >= enemySpawnRate)
             {
-                enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
+                enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 5.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
                 enemyTimer = 0;
             }
 
