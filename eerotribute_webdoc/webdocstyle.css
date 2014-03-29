@@ -1,0 +1,103 @@
+html
+{
+	zoom: 100%;
+	background-color: #ecf0f1;
+}
+
+body
+{
+	font-family: Arial;
+	background-color: #ecf0f1;
+}
+
+h1
+{
+	margin-left: 10px;
+	/*text-decoration: underline;*/
+}
+
+h2
+{
+	margin-left: 20px;
+	
+}
+
+h3
+{
+	margin-left: 30px;
+}
+
+p.content
+{
+	margin-left: 40px;
+}
+
+.padded
+{
+	margin-left: 40px;
+}
+
+table.paddedtable
+{
+	margin-left: 40px;
+}
+
+table.paddedtable td:nth-child(1)
+{
+	width: 175px;
+}
+
+table.paddedtable td:nth-child(2)
+{
+	width: 400px;
+}
+
+a.contentlink:link, a.backtotop:link, a.normallink:link
+{
+	color: #2980b9;
+}
+
+a.contentlink:visited, a.backtotop:visited, a.normallink:visited
+{
+	color: #2980b9;
+}
+
+a.contentlink:hover, a.backtotop:hover, a.normallink:hover
+{
+	color: #3498db;
+}
+
+a.content
+{
+	margin-left: 40px;
+}
+
+table.borderedpaddedtable
+{
+	margin-left: 40px;
+	border-collapse: collapse;
+}
+
+table.borderedpaddedtable tr.header td
+{
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+table.borderedpaddedtable td
+{
+	border: 1px solid black;
+	
+}
+
+img.roundedimage
+{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+ul
+{
+    list-style-type: none;
+	margin-left: -25px;
+}
