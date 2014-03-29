@@ -152,6 +152,15 @@
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\ambienthum.xnb</Output>
       <Time>2014-03-24T14:10:03.8482983+02:00</Time>
     </Item>
+    <Item>
+      <Source>spookybackgroundmusic.wav</Source>
+      <Name>spookybackgroundmusic</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\spookybackgroundmusic.xnb</Output>
+      <Time>2014-03-29T10:00:41.22341+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{0B94DF17-D464-4C41-BC85-2C5C839AE15A}</ContentProjectGUID>

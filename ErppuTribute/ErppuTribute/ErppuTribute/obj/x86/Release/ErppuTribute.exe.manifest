@@ -80,7 +80,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Ivr5mOUaRRehhkN1q1a1YO6FD70=</dsig:DigestValue>
+        <dsig:DigestValue>kV4NbQlbIlNmBfMeOAIMr9nr1pY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -217,6 +217,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>xbROENF5Jn58Ocd4+L8WJhCBb+M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\spookybackgroundmusic.xnb" size="29556843">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>bytYDCLR34C49xZ3iPvHTMjpfGw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\staticMovie.wmv" size="2570195">

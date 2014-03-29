@@ -31,6 +31,8 @@ namespace ErppuTribute
         float moveScale = 1.7f;
         float rotateScale = MathHelper.PiOver2;
 
+        SoundEffectInstance bgMusic;
+
         Video staticVideo;
         VideoPlayer videoplayer;
         Texture2D videoTexture;
@@ -84,6 +86,7 @@ namespace ErppuTribute
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             groundTexture = Content.Load<Texture2D>("erp");
+            bgMusic = Content.Load<SoundEffect>("spookybackgroundmusic").CreateInstance();
 
             List<Texture2D> buttons = new List<Texture2D>();
             List<Texture2D> selectedbuttons = new List<Texture2D>();
@@ -143,6 +146,7 @@ namespace ErppuTribute
                     break;
                 case GameState.Playing:
                     cube.soundEffectInstance.Play();
+                    bgMusic.Play();
                     UpdateGamePlay(gameTime);
                     break;
                 case GameState.PlayingVideo:
@@ -177,6 +181,7 @@ namespace ErppuTribute
 
         private void resetGameLevel()
         {
+            bgMusic.Stop();
             enemyTimer = 0;
             isEnemyNear = false;
             maze.fogColor = Color.Black.ToVector3();
@@ -296,11 +301,13 @@ namespace ErppuTribute
 
             if (isEnemyNear == false)
             {
+                bgMusic.Pitch = 0;
                 maze.fogColor = Color.Black.ToVector3();
             }
 
             else if (isEnemyNear == true)
             {
+                bgMusic.Pitch = 1;
                 maze.fogColor = Color.Red.ToVector3();
                 isEnemyNear = false;
             }
