@@ -138,9 +138,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="spookybackgroundmusic.wav">
+    <Compile Include="spookybackgroundmusic.mp3">
       <Name>spookybackgroundmusic</Name>
-      <Importer>WavImporter</Importer>
+      <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
   </ItemGroup>

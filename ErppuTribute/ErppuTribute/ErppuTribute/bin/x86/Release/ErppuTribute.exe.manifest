@@ -219,13 +219,13 @@
       <dsig:DigestValue>xbROENF5Jn58Ocd4+L8WJhCBb+M=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\spookybackgroundmusic.xnb" size="29556843">
+  <file name="Content\spookybackgroundmusic.xnb" size="54321305">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>bytYDCLR34C49xZ3iPvHTMjpfGw=</dsig:DigestValue>
+      <dsig:DigestValue>VgW+4+wQo8jy1ssD+MAjMJksd7Q=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\staticMovie.wmv" size="2570195">

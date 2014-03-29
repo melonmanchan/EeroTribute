@@ -153,13 +153,13 @@
       <Time>2014-03-24T14:10:03.8482983+02:00</Time>
     </Item>
     <Item>
-      <Source>spookybackgroundmusic.wav</Source>
+      <Source>spookybackgroundmusic.mp3</Source>
       <Name>spookybackgroundmusic</Name>
-      <Importer>WavImporter</Importer>
+      <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\spookybackgroundmusic.xnb</Output>
-      <Time>2014-03-29T10:00:41.22341+02:00</Time>
+      <Time>2014-03-29T10:13:15.4990708+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
