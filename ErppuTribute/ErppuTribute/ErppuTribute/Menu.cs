@@ -28,7 +28,6 @@ namespace ErppuTribute
         private int selectedButtonIndex;
 
 
-        // new Menu(Content.Load<Texture2D>("Eerobg"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons,spriteBatch, Content.Load<SoundEffect>("selectionChange"), Content.Load<SoundEffect>("boom"),this);
         public Menu(ContentManager content, SpriteBatch spriteBatch, Game1 game)
         {
             this.mainMenu = content.Load<Texture2D>("Eerobg");

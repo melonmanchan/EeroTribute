@@ -87,12 +87,6 @@ namespace ErppuTribute
            
             bgMusic = Content.Load<SoundEffect>("spookybackgroundmusic").CreateInstance();
             bgMusic.Volume = 0.1f;
-            List<Texture2D> buttons = new List<Texture2D>();
-            List<Texture2D> selectedbuttons = new List<Texture2D>();
-            selectedbuttons.Add(Content.Load<Texture2D>("newButton"));
-            buttons.Add(Content.Load<Texture2D>("newButtonJpn"));
-            selectedbuttons.Add(Content.Load<Texture2D>("quitButton"));
-            buttons.Add(Content.Load<Texture2D>("quitButtonJpn"));
 
             cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("eerominati"), Content.Load<SoundEffect>("ambienthum"));
             enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
@@ -106,8 +100,6 @@ namespace ErppuTribute
             videoplayer = new VideoPlayer();
             videoplayer.IsLooped = false;
             staticVideo = Content.Load<Video>("staticMovie");
-
-           // cube.soundEffectInstance.Play();
 
             videoScreen = new Rectangle(GraphicsDevice.Viewport.X,
                     GraphicsDevice.Viewport.Y,
