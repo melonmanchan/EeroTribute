@@ -15,7 +15,7 @@ namespace ErppuTribute
         public const int mazeHeight = 15;
         public Vector3 fogColor = Color.Black.ToVector3();
         public MazeCell[,] MazeCells = new MazeCell[mazeWidth, mazeHeight];
-        Texture2D testTexture;
+        Texture2D groundTexture;
         GraphicsDevice device;
 
         //piirtämisen käytettävät bufferit lattialle, seinille sekä katolle
@@ -31,8 +31,7 @@ namespace ErppuTribute
         public Maze(GraphicsDevice device, ContentManager content)
         {
             this.device = device;
-
-            testTexture = content.Load<Texture2D>("erp");
+            groundTexture = content.Load<Texture2D>("erp");
             BuildFloorBuffer();
             BuildCeilingBuffer();
 
@@ -372,7 +371,8 @@ namespace ErppuTribute
         public void Draw(Camera camera, BasicEffect effect)
         {
             effect.TextureEnabled = true;
-            
+            effect.Texture = groundTexture;
+
             effect.World = Matrix.Identity;
             effect.View = camera.View;
             effect.Projection = camera.Projection;

@@ -19,8 +19,8 @@ namespace ErppuTribute
 
         private Texture2D mainMenu;
         private Texture2D cursor;
-        private List<Texture2D> buttons;
-        private List<Texture2D> selectedbuttons;
+        private List<Texture2D> buttons = new List<Texture2D>();
+        private List<Texture2D> selectedbuttons = new List<Texture2D>();
         private SpriteBatch spriteBatch;
 
         private SoundEffect selectionChanged;
@@ -28,16 +28,21 @@ namespace ErppuTribute
         private int selectedButtonIndex;
 
 
-        public Menu(Texture2D mainMenu, Texture2D cursor, List<Texture2D> buttons, List<Texture2D> selectedbuttons, SpriteBatch spriteBatch, SoundEffect selectionChanged, SoundEffect Boom, Game1 game)
+        // new Menu(Content.Load<Texture2D>("Eerobg"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons,spriteBatch, Content.Load<SoundEffect>("selectionChange"), Content.Load<SoundEffect>("boom"),this);
+        public Menu(ContentManager content, SpriteBatch spriteBatch, Game1 game)
         {
-            this.mainMenu = mainMenu;
-            this.cursor = cursor;
+            this.mainMenu = content.Load<Texture2D>("Eerobg");
+            this.cursor = content.Load<Texture2D>("pointer");
             this.spriteBatch = spriteBatch;
             this.game = game;
-            this.buttons = buttons;
-            this.selectedbuttons = selectedbuttons;
-            this.selectionChanged = selectionChanged;
-            this.Boom = Boom;
+
+            selectedbuttons.Add(content.Load<Texture2D>("newButton"));
+            selectedbuttons.Add(content.Load<Texture2D>("quitButton"));
+            buttons.Add(content.Load<Texture2D>("newButtonJpn"));
+            buttons.Add(content.Load<Texture2D>("quitButtonJpn"));
+
+            this.selectionChanged = content.Load<SoundEffect>("selectionChange");
+            this.Boom = content.Load<SoundEffect>("Boom");
             selectedButtonIndex = 0;
         }
 

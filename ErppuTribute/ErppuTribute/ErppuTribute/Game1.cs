@@ -27,7 +27,6 @@ namespace ErppuTribute
         Menu menu;
         private Cube cube;
         BasicEffect effect;
-        Texture2D groundTexture;
         float moveScale = 1.7f;
         float rotateScale = MathHelper.PiOver2;
 
@@ -46,7 +45,7 @@ namespace ErppuTribute
         private float enemySpawnRate = 20f;
         private float enemySpeed = 25f;
         private bool isEnemyNear = false;
-
+       
         public GameState gameState = GameState.MainMenu;
   
         public Game1()
@@ -85,7 +84,7 @@ namespace ErppuTribute
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            groundTexture = Content.Load<Texture2D>("erp");
+           
             bgMusic = Content.Load<SoundEffect>("spookybackgroundmusic").CreateInstance();
             bgMusic.Volume = 0.1f;
             List<Texture2D> buttons = new List<Texture2D>();
@@ -97,8 +96,8 @@ namespace ErppuTribute
 
             cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("eerominati"), Content.Load<SoundEffect>("ambienthum"));
             enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
-            menu = new Menu(Content.Load<Texture2D>("Eerobg"), Content.Load<Texture2D>("pointer"),buttons, selectedbuttons,spriteBatch, Content.Load<SoundEffect>("selectionChange"), Content.Load<SoundEffect>("boom"),this);
 
+            menu = new Menu(Content, spriteBatch, this);
 
             cube.emitter.Position = cube.location;
             camera.listener.Position = camera.Position;
@@ -298,17 +297,24 @@ namespace ErppuTribute
             }
 
 
-
+          
             if (isEnemyNear == false)
             {
-                bgMusic.Pitch = 0;
-                maze.fogColor = Color.Black.ToVector3();
+               
+                if (maze.fogColor != Color.Black.ToVector3())
+                {
+                    bgMusic.Pitch = 0;
+                    maze.fogColor = Color.Black.ToVector3();
+                }
             }
 
             else if (isEnemyNear == true)
             {
-                bgMusic.Pitch = 1;
-                maze.fogColor = Color.Red.ToVector3();
+                if (maze.fogColor != Color.Red.ToVector3())
+                {
+                    bgMusic.Pitch = 1;               
+                    maze.fogColor = Color.Red.ToVector3();
+                }
                 isEnemyNear = false;
             }
 
@@ -368,7 +374,6 @@ namespace ErppuTribute
                 // TODO: Add your drawing code here
                 GraphicsDevice.BlendState = BlendState.Opaque;
                 GraphicsDevice.DepthStencilState = DepthStencilState.Default;
-                effect.Texture = groundTexture;
                 maze.Draw(camera, effect);
                 cube.Draw(camera, effect);
                 enemyList.ForEach(enemy => enemy.Draw(camera, effect));
