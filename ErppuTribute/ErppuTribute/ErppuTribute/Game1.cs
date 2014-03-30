@@ -283,6 +283,7 @@ namespace ErppuTribute
             {
                 resetGameLevel();
                 gameState = GameState.MainMenu;
+                return;
             }
 
             for (int i = 0; i < enemyList.Count; i++)
@@ -305,6 +306,7 @@ namespace ErppuTribute
                 {
                     resetGameLevel();
                     gameState = GameState.MainMenu;
+                    return;
                 }
 
                 enemyList[i].Update(gameTime);
