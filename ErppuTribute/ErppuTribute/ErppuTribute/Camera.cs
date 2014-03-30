@@ -58,6 +58,10 @@ namespace ErppuTribute
             set
             {
                 rotationX = value;
+                if (rotationX >= 1.5f)
+                    rotationX = 1.5f;
+                if (rotationX <= -1.5f)
+                    rotationX = -1.5f;
                 UpdateLookAt();
             }
         }

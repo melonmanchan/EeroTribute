@@ -32,7 +32,7 @@ namespace ErppuTribute
         private Cube cube;
         BasicEffect effect;
         float moveScale = 1.7f;
-        float rotateScale = MathHelper.PiOver2;
+        float rotateScale = 0.3f;
 
         SoundEffectInstance bgMusic;
 
@@ -194,8 +194,8 @@ namespace ErppuTribute
                 float xDifference = currentMouseState.X - originalMouseState.X;
                 float yDifference = currentMouseState.Y - originalMouseState.Y;
 
-                leftrightRot -= 0.3f * xDifference * elapsed;
-                updownRot -= -0.3f * yDifference * elapsed;
+                leftrightRot -= rotateScale * xDifference * elapsed;
+                updownRot -= -rotateScale * yDifference * elapsed;
 
                 Mouse.SetPosition(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
 
