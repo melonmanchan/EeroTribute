@@ -367,7 +367,7 @@ namespace ErppuTribute
         {
             for (int i = 0; i < enemyList.Count; i++)
             {
-                enemyList[i].PositionEnemy(camera.Position, 2, 3);
+                enemyList[i].PositionEnemy(camera.Position, 2.5f, 4);
             }
         }
 
