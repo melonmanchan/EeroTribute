@@ -29,8 +29,8 @@ namespace ErppuTribute
         private int selectedButtonIndex;
         public MouseState ms;
 
-        private float screenWidth;
-        private float screenHeight;
+        private int screenWidth;
+        private int screenHeight;
 
         private Vector2 scaleVector;
 
@@ -111,6 +111,8 @@ namespace ErppuTribute
                         }
                         else
                         {
+                            if (selectedButtonIndex != i)
+                                selectionChanged.Play();
                             selectedButtonIndex = i;
                         }
                     }
@@ -125,6 +127,7 @@ namespace ErppuTribute
             if (selected == 0)
             {
                 Boom.Play();
+                Mouse.SetPosition(screenWidth / 2, screenHeight / 2);
                 game.IsMouseVisible = false;
                 game.gameState = GameState.Playing;
             }
