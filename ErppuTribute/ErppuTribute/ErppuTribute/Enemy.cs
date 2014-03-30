@@ -14,7 +14,7 @@ namespace ErppuTribute
         public Enemy(GraphicsDevice graphicsDevice, Vector3 playerLocation, float minDistance, Texture2D texture, SoundEffect soundEffect)
             : base(graphicsDevice, playerLocation, minDistance, texture, soundEffect)
         {
-            collisionRadius = 1.50f;
+            collisionRadius = 0.5f;
             base.zrotation = MathHelper.WrapAngle((float)Math.PI);
         }
         #endregion

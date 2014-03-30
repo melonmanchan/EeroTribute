@@ -303,6 +303,8 @@ namespace ErppuTribute
 
                 if (enemyList[i].Hitbox.Contains(camera.Position) == ContainmentType.Contains)
                 {
+                    resetGameLevel();
+                    gameState = GameState.MainMenu;
                 }
 
                 enemyList[i].Update(gameTime);
