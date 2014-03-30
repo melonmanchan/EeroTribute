@@ -224,6 +224,13 @@ namespace ErppuTribute
                 moveAmountForward = -moveScale * elapsed;
             }
 
+            //normalisoidaan nopeus ettei diagonaalisesti pysty liikkumaan liian nopeasti
+            if ((keyState.IsKeyDown(Keys.A) && keyState.IsKeyDown(Keys.S)) || (keyState.IsKeyDown(Keys.W) && keyState.IsKeyDown(Keys.A)) || (keyState.IsKeyDown(Keys.W) && keyState.IsKeyDown(Keys.D)) || (keyState.IsKeyDown(Keys.S) && keyState.IsKeyDown(Keys.D)))
+            {
+                moveAmountSideways *= 0.7071f;
+                moveAmountForward *= 0.7071f;
+            }
+
             if (keyState.IsKeyDown(Keys.Escape))
             {
                 resetGameLevel();
