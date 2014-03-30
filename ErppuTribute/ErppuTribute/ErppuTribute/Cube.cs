@@ -19,7 +19,7 @@ namespace ErppuTribute
         protected float rotation = 0f;
         protected float zrotation = 0f;
         protected float collisionRadius = 0.25f;
-        private Random rand = new Random();
+        protected Random rand = new Random();
 
         //kuution sijainti pelimaailmassa
         public Vector3 location { get; set; }

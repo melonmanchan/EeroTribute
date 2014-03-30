@@ -8,7 +8,6 @@ E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuTribute.pdb
 E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\effects.xnb
 E:\ERP\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuTribute.csprojResolveAssemblyReference.cache
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\erp.xnb
-E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Glass.xnb
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\effects.xnb
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\ErppuTribute.exe
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\ErppuTribute.pdb

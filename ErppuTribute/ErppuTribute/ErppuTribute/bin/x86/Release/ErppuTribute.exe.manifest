@@ -80,7 +80,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>QqAGorRvvEzBo+9FmYB55lyIEEg=</dsig:DigestValue>
+        <dsig:DigestValue>kAxObrFfuUJbP1eCBgEDTxSrWQI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -154,15 +154,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>fvrUcsTWoMpHXlJTl5vxWZRdSyY=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Content\Glass.xnb" size="672">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>pyDTlekbjNYaDBZWwXZPANlSCqE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\newButton.xnb" size="988">

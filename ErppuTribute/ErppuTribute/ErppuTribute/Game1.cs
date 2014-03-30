@@ -46,10 +46,10 @@ namespace ErppuTribute
 
         private List<Enemy> enemyList;
         private float enemyTimer = 0f;
-        private float enemySpawnRate = 20f;
-        private float enemySpeed = 25f;
+        private float enemySpawnRate = 18f;
+        private float enemySpeed = 30f;
         private bool isEnemyNear = false;
-       
+
         public GameState gameState = GameState.MainMenu;
   
         public Game1()
@@ -337,6 +337,7 @@ namespace ErppuTribute
 
             if (enemyTimer >= enemySpawnRate)
             {
+                randomizeEnemyPositions();
                 enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 5.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
                 enemyTimer = 0;
             }
@@ -360,6 +361,14 @@ namespace ErppuTribute
             cube.PositionCube(camera.Position, 10f);
             enemyList.Clear();
             enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
+        }
+
+        private void randomizeEnemyPositions()
+        {
+            for (int i = 0; i < enemyList.Count; i++)
+            {
+                enemyList[i].PositionEnemy(camera.Position, 2, 3);
+            }
         }
 
         private void updateAudioCue()

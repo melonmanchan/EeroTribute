@@ -56,6 +56,18 @@ namespace ErppuTribute
             //base.Update(gameTime);
         }
 
+        public void PositionEnemy(Vector3 PlayerLocation, float minDistance, float maxDistance)
+        {
+            Vector3 newLocation;
+            do
+            {
+                newLocation = new Vector3(rand.Next(0, Maze.mazeWidth) + 0.5f, 0.5f, rand.Next(0, Maze.mazeHeight) + 0.5f);
+            }
+            while (Vector3.Distance(PlayerLocation, newLocation) < minDistance && Vector3.Distance(PlayerLocation, newLocation) > maxDistance);
+
+            location = newLocation;
+        }
+
         public override void Draw(Camera camera, BasicEffect effect)
         {
             base.Draw(camera, effect);
