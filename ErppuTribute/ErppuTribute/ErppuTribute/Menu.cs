@@ -21,6 +21,7 @@ namespace ErppuTribute
         private Texture2D cursor;
         private List<Texture2D> buttons = new List<Texture2D>();
         private List<Texture2D> selectedbuttons = new List<Texture2D>();
+        private List<Vector2> buttonPositions = new List<Vector2>();
         private SpriteBatch spriteBatch;
 
         private SoundEffect selectionChanged;
@@ -54,6 +55,17 @@ namespace ErppuTribute
             screenHeight = graphicsDevice.Viewport.Height;
 
             scaleVector = new Vector2(screenWidth / 1600, screenHeight / 1000);
+            initializeButtonPositions();
+        }
+
+        public void initializeButtonPositions()
+        {
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                Vector2 Pos = new Vector2(screenWidth / 2.37f, screenHeight / 1.66f + i * screenHeight / 6.666f);
+                buttonPositions.Add(Pos);
+            }
+
         }
 
         public void Draw()
@@ -64,19 +76,16 @@ namespace ErppuTribute
 
                 for (int i = 0; i < buttons.Count; i++)
                 {
-
-                    Vector2 Pos = new Vector2(screenWidth / 2.37f, screenHeight / 1.66f + i * screenHeight/ 6.666f);
                     if (i == selectedButtonIndex)
                     {
-                        spriteBatch.Draw(selectedbuttons[i], Pos, null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
-                        spriteBatch.Draw(cursor, (Pos - new Vector2(80, -30)), null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
+                        spriteBatch.Draw(selectedbuttons[i], buttonPositions[i], null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
+                        spriteBatch.Draw(cursor, (buttonPositions[i] - new Vector2(80, -30)), null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
                     }
                     else
                     {
-                        spriteBatch.Draw(buttons[i], Pos, null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
+                        spriteBatch.Draw(buttons[i], buttonPositions[i], null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
                     }
                 }
-
 
             spriteBatch.End();
         }
