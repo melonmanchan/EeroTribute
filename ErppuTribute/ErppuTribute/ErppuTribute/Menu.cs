@@ -20,14 +20,14 @@ namespace ErppuTribute
         private Texture2D mainMenu;
         private Texture2D cursor;
         private List<Texture2D> buttons = new List<Texture2D>();
-        private List<Texture2D> selectedbuttons = new List<Texture2D>();
+        private List<Texture2D> selectedButtons = new List<Texture2D>();
         private List<Vector2> buttonPositions = new List<Vector2>();
         private SpriteBatch spriteBatch;
 
         private SoundEffect selectionChanged;
         private SoundEffect Boom;
         private int selectedButtonIndex;
-
+        public MouseState ms;
 
         private float screenWidth;
         private float screenHeight;
@@ -41,8 +41,8 @@ namespace ErppuTribute
             this.spriteBatch = spriteBatch;
             this.game = game;
 
-            selectedbuttons.Add(content.Load<Texture2D>("newButton"));
-            selectedbuttons.Add(content.Load<Texture2D>("quitButton"));
+            selectedButtons.Add(content.Load<Texture2D>("newButton"));
+            selectedButtons.Add(content.Load<Texture2D>("quitButton"));
             buttons.Add(content.Load<Texture2D>("newButtonJpn"));
             buttons.Add(content.Load<Texture2D>("quitButtonJpn"));
 
@@ -58,7 +58,7 @@ namespace ErppuTribute
             initializeButtonPositions();
         }
 
-        public void initializeButtonPositions()
+        private void initializeButtonPositions()
         {
             for (int i = 0; i < buttons.Count; i++)
             {
@@ -78,7 +78,7 @@ namespace ErppuTribute
                 {
                     if (i == selectedButtonIndex)
                     {
-                        spriteBatch.Draw(selectedbuttons[i], buttonPositions[i], null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
+                        spriteBatch.Draw(selectedButtons[i], buttonPositions[i], null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
                         spriteBatch.Draw(cursor, (buttonPositions[i] - new Vector2(80, -30)), null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
                     }
                     else
@@ -90,20 +90,56 @@ namespace ErppuTribute
             spriteBatch.End();
         }
 
-        public void Update()
-        {
 
+        private void handleMouseInput()
+        {
+            ms = Mouse.GetState();
+
+
+                Rectangle mouseClickRect = new Rectangle(ms.X, ms.Y, 10, 10);
+
+                for (int i = 0; i < buttonPositions.Count; i++)
+                {
+
+                    Rectangle tempRect = new Rectangle((int)buttonPositions[i].X, (int)buttonPositions[i].Y, Convert.ToInt32(screenWidth / 6.4f), Convert.ToInt32(screenHeight / 10.2f));
+
+                    if (tempRect.Contains(mouseClickRect))
+                    {
+                        if (ms.LeftButton == ButtonState.Pressed)
+                        {
+                            handleSelection(i);
+                        }
+                        else
+                        {
+                            selectedButtonIndex = i;
+                        }
+                    }
+
+                }
+
+            
+        }
+
+        private void handleSelection(int selected)
+        {
+            if (selected == 0)
+            {
+                Boom.Play();
+                game.IsMouseVisible = false;
+                game.gameState = GameState.Playing;
+            }
+            else if (selected == 1)
+                game.Exit();
+        }
+
+        private void handleKeyBoardInput()
+        {
             KeyboardState ks = Keyboard.GetState();
             if (ks.IsKeyDown(Keys.Space) || ks.IsKeyDown(Keys.Enter))
             {
-                if (selectedButtonIndex == 0)
-                {
-                    Boom.Play();
-                    game.IsMouseVisible = false;
-                    game.gameState = GameState.Playing;
-                }
-                else if (selectedButtonIndex == 1)
-                    game.Exit();
+
+                handleSelection(selectedButtonIndex);
+
             }
             else if (ks.IsKeyDown(Keys.Escape))
             {
@@ -126,6 +162,14 @@ namespace ErppuTribute
                     selectionChanged.Play();
                 }
             }
+        }
+
+        public void Update()
+        {
+
+            handleMouseInput();
+            handleKeyBoardInput();
+
         }
     }
 }
