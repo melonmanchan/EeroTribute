@@ -77,6 +77,8 @@ namespace ErppuTribute
 
             maze = new Maze(GraphicsDevice, this.Content);
 
+            this.IsMouseVisible = true;
+
             base.Initialize();
         }
 
@@ -95,7 +97,7 @@ namespace ErppuTribute
             cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("eerominati"), Content.Load<SoundEffect>("ambienthum"));
             enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
 
-            menu = new Menu(Content, spriteBatch, this);
+            menu = new Menu(Content, spriteBatch, this, GraphicsDevice);
 
             cube.emitter.Position = cube.location;
             camera.listener.Position = camera.Position;
@@ -361,6 +363,7 @@ namespace ErppuTribute
             cube.PositionCube(camera.Position, 10f);
             enemyList.Clear();
             enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
+            this.IsMouseVisible = true;
         }
 
         private void randomizeEnemyPositions()

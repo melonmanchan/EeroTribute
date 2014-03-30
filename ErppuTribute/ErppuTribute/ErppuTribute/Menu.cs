@@ -28,7 +28,12 @@ namespace ErppuTribute
         private int selectedButtonIndex;
 
 
-        public Menu(ContentManager content, SpriteBatch spriteBatch, Game1 game)
+        private float screenWidth;
+        private float screenHeight;
+
+        private Vector2 scaleVector;
+
+        public Menu(ContentManager content, SpriteBatch spriteBatch, Game1 game, GraphicsDevice graphicsDevice)
         {
             this.mainMenu = content.Load<Texture2D>("Eerobg");
             this.cursor = content.Load<Texture2D>("pointer");
@@ -43,25 +48,32 @@ namespace ErppuTribute
             this.selectionChanged = content.Load<SoundEffect>("selectionChange");
             this.Boom = content.Load<SoundEffect>("Boom");
             selectedButtonIndex = 0;
+
+            //default koko on 1600x1000
+            screenWidth = graphicsDevice.Viewport.Width;
+            screenHeight = graphicsDevice.Viewport.Height;
+
+            scaleVector = new Vector2(screenWidth / 1600, screenHeight / 1000);
         }
 
         public void Draw()
         {
-            spriteBatch.Begin();
 
-                spriteBatch.Draw(mainMenu, Vector2.Zero, Color.White);
+            spriteBatch.Begin();
+            spriteBatch.Draw(mainMenu, Vector2.Zero, null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
 
                 for (int i = 0; i < buttons.Count; i++)
                 {
-                    Vector2 Pos = new Vector2(675, 600 + i * 150);
+
+                    Vector2 Pos = new Vector2(screenWidth / 2.37f, screenHeight / 1.66f + i * screenHeight/ 6.666f);
                     if (i == selectedButtonIndex)
                     {
-                        spriteBatch.Draw(selectedbuttons[i], Pos, Color.White);
-                        spriteBatch.Draw(cursor, (Pos - new Vector2(80, -30)), Color.White);
+                        spriteBatch.Draw(selectedbuttons[i], Pos, null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
+                        spriteBatch.Draw(cursor, (Pos - new Vector2(80, -30)), null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
                     }
                     else
                     {
-                        spriteBatch.Draw(buttons[i], Pos, Color.White);
+                        spriteBatch.Draw(buttons[i], Pos, null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
                     }
                 }
 
@@ -78,6 +90,7 @@ namespace ErppuTribute
                 if (selectedButtonIndex == 0)
                 {
                     Boom.Play();
+                    game.IsMouseVisible = false;
                     game.gameState = GameState.Playing;
                 }
                 else if (selectedButtonIndex == 1)
@@ -104,8 +117,6 @@ namespace ErppuTribute
                     selectionChanged.Play();
                 }
             }
-
-            
         }
     }
 }
