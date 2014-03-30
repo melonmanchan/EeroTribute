@@ -22,6 +22,10 @@ namespace ErppuTribute
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        MouseState originalMouseState;
+        float leftrightRot = MathHelper.PiOver2;
+        float updownRot = -MathHelper.Pi / 10.0f;
+
         Camera camera;
         Maze maze;
         Menu menu;
@@ -67,7 +71,7 @@ namespace ErppuTribute
             // TODO: Add your initialization logic here
             enemyList = new List<Enemy>();
 
-            camera = new Camera(new Vector3(0.5f, 0.5f, 0.5f), 0, GraphicsDevice.Viewport.AspectRatio, 0.05f, 100f);
+            camera = new Camera(new Vector3(0.5f, 0.5f, 0.5f), 0, 0, GraphicsDevice.Viewport.AspectRatio, 0.05f, 100f);
 
             effect = new BasicEffect(GraphicsDevice);
 
@@ -105,6 +109,10 @@ namespace ErppuTribute
                     GraphicsDevice.Viewport.Y,
                     GraphicsDevice.Viewport.Width,
                     GraphicsDevice.Viewport.Height);
+
+
+        Mouse.SetPosition(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
+        originalMouseState = Mouse.GetState();
             // TODO: use this.Content to load your game content here
         }
 
@@ -178,30 +186,50 @@ namespace ErppuTribute
             float moveAmountForward = 0;
             float moveAmountSideways = 0;
 
-            if (keyState.IsKeyDown(Keys.Right) || keyState.IsKeyDown(Keys.D))
+
+
+            MouseState currentMouseState = Mouse.GetState();
+            if (currentMouseState != originalMouseState)
             {
-                camera.Rotation = MathHelper.WrapAngle(camera.Rotation - (rotateScale * elapsed));
-                //  moveAmountSideways = -moveScale * elapsed;
+                float xDifference = currentMouseState.X - originalMouseState.X;
+                float yDifference = currentMouseState.Y - originalMouseState.Y;
+
+                leftrightRot -= 0.3f * xDifference * elapsed;
+                updownRot -= -0.3f * yDifference * elapsed;
+
+                Mouse.SetPosition(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
+
+                camera.RotationY = MathHelper.WrapAngle(leftrightRot);
+                camera.RotationX = MathHelper.WrapAngle(updownRot);
+
             }
 
-            if (keyState.IsKeyDown(Keys.Left) || keyState.IsKeyDown(Keys.A))
+            if (keyState.IsKeyDown(Keys.A))
             {
-                camera.Rotation = MathHelper.WrapAngle(camera.Rotation + (rotateScale * elapsed));
-
-                //   moveAmountSideways = moveScale * elapsed;
+                moveAmountSideways = moveScale * elapsed;
             }
 
-            if (keyState.IsKeyDown(Keys.Up) || keyState.IsKeyDown(Keys.W))
+            if (keyState.IsKeyDown(Keys.D))
             {
-                //camera.MoveForward(moveScale * elapsed);
-                moveAmountForward = moveScale * elapsed;
+                moveAmountSideways = -moveScale * elapsed;
             }
 
-            if (keyState.IsKeyDown(Keys.Down) || keyState.IsKeyDown(Keys.S))
+             if (keyState.IsKeyDown(Keys.W))
             {
-                //camera.MoveForward(-moveScale * elapsed);
+                moveAmountForward = moveScale * elapsed;;
+            }
+
+             if (keyState.IsKeyDown(Keys.S))
+            {
                 moveAmountForward = -moveScale * elapsed;
             }
+
+            if (keyState.IsKeyDown(Keys.Escape))
+            {
+                resetGameLevel();
+                gameState = GameState.MainMenu;
+            }
+
             if (moveAmountForward != 0)
             {
                 Vector3 newLocation = camera.PreviewMove(moveAmountForward);
@@ -313,7 +341,7 @@ namespace ErppuTribute
             isEnemyNear = false;
             maze.fogColor = Color.Black.ToVector3();
             cube.soundEffectInstance.Stop();
-            camera.MoveTo(new Vector3(0.5f, 0.5f, 0.5f),0);
+            camera.MoveTo(new Vector3(0.5f, 0.5f, 0.5f), 0, 0);
             maze.GenerateMaze();
             cube.PositionCube(camera.Position, 10f);
             enemyList.Clear();

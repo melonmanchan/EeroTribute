@@ -14,8 +14,11 @@ namespace ErppuTribute
 
         //kameran sijainti 
         private Vector3 position = Vector3.Zero;
+
+        private float rotationX;
+
         //kameran rotaatio y-akselin suhteen
-        private float rotation;
+        private float rotationY;
         //piste jota kohti kamera katsoo.
         private Vector3 lookAt;
         //referenssi kameralle, osoittaa positiivista z-akselia pitkin. tarvitaan lookAtin käyttöön
@@ -44,16 +47,31 @@ namespace ErppuTribute
             }
         }
 
-        public float Rotation
+
+        public float RotationX
         {
 
             get
             {
-                return rotation;
+                return rotationX;
             }
             set
             {
-                rotation = value;
+                rotationX = value;
+                UpdateLookAt();
+            }
+        }
+
+        public float RotationY
+        {
+
+            get
+            {
+                return rotationY;
+            }
+            set
+            {
+                rotationY = value;
                 UpdateLookAt();
             }
         }
@@ -81,7 +99,8 @@ namespace ErppuTribute
 #region Constructor
         public Camera(
             Vector3 position,
-            float rotation,
+            float rotationY,
+            float rotationX,
             float aspectRatio,
             float nearClip,
             float farClip)
@@ -92,7 +111,7 @@ namespace ErppuTribute
             // 2. parametri. kameran aspektiratio. Tuttu telkkareista ja näytöistä (4:3, 16:10, jne...)
             //3. ja 4. parametri. Rajaavat alueen, jonka sisällä olevat asiat piirretään näytölle
             Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver4, aspectRatio, nearClip, farClip);
-            MoveTo(position, rotation);
+            MoveTo(position, rotationY, rotationX);
         }
 #endregion
 
@@ -101,21 +120,23 @@ namespace ErppuTribute
         {
             //luodaan rotatio y-akselin suhteen ja transformataan lookAtOffset
             //näin saadaan Vector3 joka kertoo mihin kohti katsotaan maailman origoon verrattuna
-            Matrix rotationMatrix = Matrix.CreateRotationY(rotation);
-           // Matrix rotationMatrix = Matrix.CreateRotationX(rotation);
+            Matrix rotationMatrixY = Matrix.CreateRotationY(rotationY);
+            Matrix rotationMatrixX = Matrix.CreateRotationX(rotationX);
             Vector3 lookAtOffset = Vector3.Transform(
                 baseCameraReference,
-                rotationMatrix);
+                rotationMatrixX * rotationMatrixY);
             //Yhdistetaan kameran nykyiseen sijaintiin offset. Näin kameran sijainnista lähtee vektori joka osoittaa mihin suuntaan kamera katsoo.
             lookAt = position + lookAtOffset;
             needViewResync = true;
         }
 
-        public void MoveTo(Vector3 position, float rotation)
+        public void MoveTo(Vector3 position, float rotationY, float rotationX)
         {
             //muutetaan kameran paikkaa ja katsomiskulmaa y-akselin suhteen
+            position.Y = 0.5f;
             this.position = position;
-            this.rotation = rotation;
+            this.rotationY = rotationY;
+            this.rotationX = rotationX;
             UpdateLookAt();
         }
 
@@ -123,30 +144,31 @@ namespace ErppuTribute
         //
         public Vector3 PreviewMove(float scale)
         {
-            Matrix rotate = Matrix.CreateRotationY(rotation);
-            //Matrix rotate = Matrix.CreateRotationX(rotation);
+            Matrix rotateY = Matrix.CreateRotationY(rotationY);
+            Matrix rotateX = Matrix.CreateRotationX(rotationX);
             Vector3 forward = new Vector3(0, 0, scale);
-            forward = Vector3.Transform(forward, rotate);
+            forward = Vector3.Transform(forward, rotateY * rotateX);
             return (position + forward);
 
         }
 
         public Vector3 PreviewMoveSideways(float scale)
         {
-            Matrix rotate = Matrix.CreateRotationX(rotation);
+            Matrix rotateY = Matrix.CreateRotationY(rotationY);
+            Matrix rotateX = Matrix.CreateRotationX(rotationX);
             Vector3 sideways = new Vector3(scale, 0, 0);
-            sideways = Vector3.Transform(sideways, rotate);
+            sideways = Vector3.Transform(sideways, rotateY * rotateX);
             return (position + sideways);
         }
 
         public void MoveForward(float scale)
         {
-            MoveTo(PreviewMove(scale), rotation);
+            MoveTo(PreviewMove(scale), rotationY, rotationX);
         }
 
         public void MoveSideways(float scale)
         {
-            MoveTo(PreviewMoveSideways(scale), rotation);
+            MoveTo(PreviewMoveSideways(scale), rotationY, rotationX);
         }
 
 #endregion
