@@ -343,6 +343,7 @@ namespace ErppuTribute
 
         private void resetGameLevel()
         {
+            bgMusic.Pitch = 0;
             bgMusic.Stop();
             enemyTimer = 0;
             isEnemyNear = false;

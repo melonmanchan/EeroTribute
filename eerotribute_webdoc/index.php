@@ -137,6 +137,13 @@
 				sekä Shader Model 1.1, mieluiten kuitenkin Shader Model 2.</br></br>
 				
 			</p>
+			<h3>6.1 Asentaminen</h3>
+				<p class = "content">
+				1. Asenna XNA redistributable Framework: http://www.microsoft.com/en-us/download/details.aspx?id=20914</br>
+				2. Pyöräytä peli käyntiin joko Erpputribute.exen kautta tai asenna se setup.exellä</br></br>
+				
+			</p>			
+			
 		<h2><a id="7">7. Pelin idea</a></h2>
 			<p class = "content">
 				Pelaaja on "eeropsykoosiin" vajonnut henkilö joka löytää itsensä pimeästä</br>
