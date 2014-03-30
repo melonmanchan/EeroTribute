@@ -46,7 +46,7 @@ namespace ErppuTribute
 
         private List<Enemy> enemyList;
         private float enemyTimer = 0f;
-        private float enemySpawnRate = 18f;
+        private float enemySpawnRate = 15f;
         private float enemySpeed = 30f;
         private bool isEnemyNear = false;
 
