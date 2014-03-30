@@ -23,8 +23,8 @@ namespace ErppuTribute
         SpriteBatch spriteBatch;
 
         MouseState originalMouseState;
-        float leftrightRot = MathHelper.PiOver2;
-        float updownRot = -MathHelper.Pi / 10.0f;
+        float leftrightRot = 0;
+        float updownRot = 0;
 
         Camera camera;
         Maze maze;
@@ -347,6 +347,8 @@ namespace ErppuTribute
 
         private void resetGameLevel()
         {
+            updownRot = 0;
+            leftrightRot = 0;
             bgMusic.Pitch = 0;
             bgMusic.Stop();
             enemyTimer = 0;
