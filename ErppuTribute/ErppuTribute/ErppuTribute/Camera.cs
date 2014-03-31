@@ -14,11 +14,9 @@ namespace ErppuTribute
 
         //kameran sijainti 
         private Vector3 position = Vector3.Zero;
-
-        private float rotationX;
-
-        //kameran rotaatio y-akselin suhteen
+        //kameran rotaatio y-akselin ja x-akselin suhteen
         private float rotationY;
+        private float rotationX;
         //piste jota kohti kamera katsoo.
         private Vector3 lookAt;
         //referenssi kameralle, osoittaa positiivista z-akselia pitkin. tarvitaan lookAtin käyttöön
@@ -96,10 +94,7 @@ namespace ErppuTribute
                 return cachedViewMatrix;
             }
         }
-
-
 #endregion
-
 #region Constructor
         public Camera(
             Vector3 position,
@@ -145,36 +140,22 @@ namespace ErppuTribute
         }
 
         //previewaa liikkumista. voi käyttää katsomaan käveleekö pelaaj esim. seinää päin. ottaa parametrikseen määrän jota kameraa halutaan liikuttaa
-        //
-        public Vector3 PreviewMove(float scale)
+        public Vector3 PreviewMoveVector(Vector2 moveVector)
         {
             Matrix rotateY = Matrix.CreateRotationY(rotationY);
             Matrix rotateX = Matrix.CreateRotationX(rotationX);
-            Vector3 forward = new Vector3(0, 0, scale);
-            forward = Vector3.Transform(forward, rotateY * rotateX);
-            return (position + forward);
+            //Vector3 forward = new Vector3(0, 0, moveVector.Y);
+           // Vector3 sideways = new Vector3(moveVector.X, 0, 0);
+            Vector3 movement = new Vector3(moveVector.X, 0, moveVector.Y);
+            movement = Vector3.Transform(movement, rotateY * rotateX);
+            return (position + movement);
 
         }
 
-        public Vector3 PreviewMoveSideways(float scale)
+        public void MoveForwardVector(Vector2 moveVector)
         {
-            Matrix rotateY = Matrix.CreateRotationY(rotationY);
-            Matrix rotateX = Matrix.CreateRotationX(rotationX);
-            Vector3 sideways = new Vector3(scale, 0, 0);
-            sideways = Vector3.Transform(sideways, rotateY * rotateX);
-            return (position + sideways);
+            MoveTo(PreviewMoveVector(moveVector), rotationY, rotationX);
         }
-
-        public void MoveForward(float scale)
-        {
-            MoveTo(PreviewMove(scale), rotationY, rotationX);
-        }
-
-        public void MoveSideways(float scale)
-        {
-            MoveTo(PreviewMoveSideways(scale), rotationY, rotationX);
-        }
-
 #endregion
 
      }

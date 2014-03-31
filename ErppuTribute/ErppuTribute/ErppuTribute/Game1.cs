@@ -185,10 +185,8 @@ namespace ErppuTribute
 
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
             KeyboardState keyState = Keyboard.GetState();
-            float moveAmountForward = 0;
-            float moveAmountSideways = 0;
 
-
+            Vector2 moveAmount = Vector2.Zero;
 
             MouseState currentMouseState = Mouse.GetState();
             if (currentMouseState != originalMouseState)
@@ -203,27 +201,26 @@ namespace ErppuTribute
 
                 camera.RotationY = MathHelper.WrapAngle(leftrightRot);
                 camera.RotationX = MathHelper.WrapAngle(updownRot);
-
             }
 
             if (keyState.IsKeyDown(Keys.A))
             {
-                moveAmountSideways = moveScale * elapsed;
+                moveAmount.X = moveScale * elapsed;
             }
 
             if (keyState.IsKeyDown(Keys.D))
             {
-                moveAmountSideways = -moveScale * elapsed;
+                moveAmount.X = -moveScale * elapsed;
             }
 
              if (keyState.IsKeyDown(Keys.W))
             {
-                moveAmountForward = moveScale * elapsed;;
+                 moveAmount.Y = moveScale * elapsed;
             }
 
              if (keyState.IsKeyDown(Keys.S))
             {
-                moveAmountForward = -moveScale * elapsed;
+                moveAmount.Y = -moveScale * elapsed;
             }
 
              if (keyState.IsKeyDown(Keys.Escape))
@@ -233,15 +230,15 @@ namespace ErppuTribute
              }
 
             //normalisoidaan nopeus ettei diagonaalisesti pysty liikkumaan liian nopeasti
-            if (moveAmountForward != 0 && moveAmountSideways !=0)
+            if (moveAmount.X != 0 && moveAmount.Y != 0)
             {
-                moveAmountSideways *= 0.7071f;
-                moveAmountForward *= 0.7071f;
+                moveAmount.X *= 0.7071f;
+                moveAmount.Y *= 0.7071f;
             }
 
-            if (moveAmountForward != 0)
+            if (moveAmount.X != 0 || moveAmount.Y != 0)
             {
-                Vector3 newLocation = camera.PreviewMove(moveAmountForward);
+                Vector3 newLocation = camera.PreviewMoveVector(moveAmount);
                 bool moveOk = true;
                 if (newLocation.X < 0 || newLocation.X > Maze.mazeWidth)
                     moveOk = false;
@@ -255,27 +252,7 @@ namespace ErppuTribute
                 }
 
                 if (moveOk)
-                    camera.MoveForward(moveAmountForward);
-
-            }
-
-            if (moveAmountSideways != 0)
-            {
-                Vector3 newLocation = camera.PreviewMoveSideways(moveAmountSideways);
-                bool moveOk = true;
-                if (newLocation.X < 0 || newLocation.X > Maze.mazeWidth)
-                    moveOk = false;
-                if (newLocation.Z < 0 || newLocation.Z > Maze.mazeHeight)
-                    moveOk = false;
-
-                foreach (BoundingBox box in maze.GetBoundsForCell((int)newLocation.X, (int)newLocation.Z))
-                {
-                    if (box.Contains(newLocation) == ContainmentType.Contains)
-                        moveOk = false;
-                }
-
-                if (moveOk)
-                    camera.MoveSideways(moveAmountSideways);
+                    camera.MoveForwardVector(moveAmount);
             }
 
             // TODO: Add your update logic here
