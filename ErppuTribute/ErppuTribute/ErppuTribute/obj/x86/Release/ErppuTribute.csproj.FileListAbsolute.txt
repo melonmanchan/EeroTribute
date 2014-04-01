@@ -57,3 +57,9 @@ E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuT
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuTribute.application
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\spookybackgroundmusic.xnb
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\erp2.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero1.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero2.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero3.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero4.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero5.xnb
+E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero6.xnb

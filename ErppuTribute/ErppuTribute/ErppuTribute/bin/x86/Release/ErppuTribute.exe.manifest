@@ -73,14 +73,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ErppuTribute.exe" size="29696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ErppuTribute.exe" size="30720">
       <assemblyIdentity name="ErppuTribute" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ePy0sOGf+dxZBqZiPZVKsXg2J7o=</dsig:DigestValue>
+        <dsig:DigestValue>DGjsS+Xrk6FJEVT0YvB56SrE9Z4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -109,6 +109,60 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>3hCYRo0ilq3Sy6UIgWRi/pdGgxo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Eero1.xnb" size="163437">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ocPDtQ2M7yNB1gQRLi8JTamwD80=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Eero2.xnb" size="374893">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zCPsIXvC+Kr0y9WlZBTkX03NGN4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Eero3.xnb" size="375917">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>D2y1OKbxhFYLRDnyIYsix9cInr4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Eero4.xnb" size="207085">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8tP4ATRgotSppNpq/8JVDLB4oJw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Eero5.xnb" size="562797">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hHt1NUWwu21gqCTPJr5VbE/3pwA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\Eero6.xnb" size="879725">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>d5+tb5g3lZ+AspF+Qit/iD+fIfA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Eerobg.xnb" size="23132">

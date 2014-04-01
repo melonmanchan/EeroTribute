@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErppuTribute", "ErppuTribute\ErppuTribute\ErppuTribute.csproj", "{C0B7DC43-C5FA-4B10-96D7-4B4616B89549}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "ErppuTributeContent", "ErppuTribute\ErppuTributeContent\ErppuTributeContent.contentproj", "{0B94DF17-D464-4C41-BC85-2C5C839AE15A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErppuTributeContent", "ErppuTribute\ErppuTributeContent\ErppuTributeContent.contentproj", "{0B94DF17-D464-4C41-BC85-2C5C839AE15A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,5 +20,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

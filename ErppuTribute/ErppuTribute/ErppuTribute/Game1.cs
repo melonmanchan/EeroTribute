@@ -25,6 +25,7 @@ namespace ErppuTribute
         MouseState originalMouseState;
         float leftrightRot = 0;
         float updownRot = 0;
+        Random rnd = new Random();
 
         Camera camera;
         Maze maze;
@@ -35,6 +36,8 @@ namespace ErppuTribute
         float rotateScale = 0.3f;
 
         SoundEffectInstance bgMusic;
+
+        List<SoundEffectInstance> eeroShouts;
 
         Video staticVideo;
         VideoPlayer videoplayer;
@@ -90,7 +93,22 @@ namespace ErppuTribute
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-           
+
+            eeroShouts = new List<SoundEffectInstance>();
+            eeroShouts.Add(Content.Load<SoundEffect>("Eero1").CreateInstance());
+            eeroShouts.Add(Content.Load<SoundEffect>("Eero2").CreateInstance());
+            eeroShouts.Add(Content.Load<SoundEffect>("Eero3").CreateInstance());
+            eeroShouts.Add(Content.Load<SoundEffect>("Eero4").CreateInstance());
+            eeroShouts.Add(Content.Load<SoundEffect>("Eero5").CreateInstance());
+            eeroShouts.Add(Content.Load<SoundEffect>("Eero6").CreateInstance());
+
+
+            for (int i = 0; i < eeroShouts.Count; i++)
+            {
+
+                eeroShouts[i].Pitch = -0.75f;
+                eeroShouts[i].Volume = 0.2f;
+            }
             bgMusic = Content.Load<SoundEffect>("spookybackgroundmusic").CreateInstance();
             bgMusic.Volume = 0.1f;
 
@@ -223,6 +241,10 @@ namespace ErppuTribute
                 moveAmount.Y = -moveScale * elapsed;
             }
 
+             if (keyState.IsKeyDown(Keys.E) && (isShoutPlaying() != true))
+             {
+                 eeroShouts[rnd.Next(eeroShouts.Count)].Play();
+             }
              if (keyState.IsKeyDown(Keys.Escape))
              {
                  resetGameLevel();
@@ -255,6 +277,8 @@ namespace ErppuTribute
                     camera.MoveForwardVector(moveAmount);
             }
 
+
+
             // TODO: Add your update logic here
             updateAudioCue();
 
@@ -275,7 +299,6 @@ namespace ErppuTribute
                 //Siirret‰‰n vihollista kameran suuntaan tietyll‰ nopeudella (20-40 arvot varmaan sopivia)
                 enemyList[i].location = new Vector3(enemyList[i].location.X - (normal.X / (100.0f - enemySpeed)), enemyList[i].location.Y, enemyList[i].location.Z - (normal.Y / (100.0f - enemySpeed)));
 
-
                 if (Vector3.Distance(camera.Position, enemyList[i].location) < 2.5)
                 {
                     isEnemyNear = true;
@@ -290,6 +313,8 @@ namespace ErppuTribute
 
                 enemyList[i].Update(gameTime);
             }
+
+            changeShoutPitch();
 
             if (isEnemyNear == false)
             {
@@ -313,6 +338,8 @@ namespace ErppuTribute
             }
 
             enemyTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            
 
             if (enemyTimer >= enemySpawnRate)
             {
@@ -341,6 +368,7 @@ namespace ErppuTribute
             enemyList.Clear();
             enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
             this.IsMouseVisible = true;
+            stopAllEeroShouts();
         }
 
         private void randomizeEnemyPositions()
@@ -349,6 +377,44 @@ namespace ErppuTribute
             {
                 enemyList[i].PositionEnemy(camera.Position, 2.5f, 4);
             }
+        }
+
+        private bool isShoutPlaying()
+        {
+
+            for (int i = 0; i < eeroShouts.Count; i++)
+            {
+                if (eeroShouts[i].State == SoundState.Playing)
+                {
+                    return true;
+                }
+
+            }
+            return false;
+        }
+
+        private void changeShoutPitch()
+        {
+                for (int i = 0; i < eeroShouts.Count; i++)
+                {
+                    if (eeroShouts[i].State == SoundState.Playing && isEnemyNear)
+                    {
+                        eeroShouts[i].Pitch = 1f;
+                    }
+
+                    else
+                    {
+                        eeroShouts[i].Pitch = -0.75f;
+                    }
+                }
+           
+
+        }
+
+        private void stopAllEeroShouts()
+        {
+            for (int i = 0; i < eeroShouts.Count; i++)
+                eeroShouts[i].Stop();
         }
 
         private void updateAudioCue()
