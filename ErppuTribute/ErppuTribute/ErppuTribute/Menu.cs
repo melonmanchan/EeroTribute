@@ -129,7 +129,7 @@ namespace ErppuTribute
                 Boom.Play();
                 Mouse.SetPosition(screenWidth / 2, screenHeight / 2);
                 game.IsMouseVisible = false;
-                game.gameState = GameState.Playing;
+                game.gameState = GameState.PlayingVideo;
             }
             else if (selected == 1)
                 game.Exit();
