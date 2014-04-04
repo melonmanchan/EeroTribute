@@ -46,6 +46,51 @@
 					</td>
 				</tr>
 			</table>
+			<br>
+		<h3>2.1 Työtunnit</h3>
+			<table class = "borderedpaddedtable">
+			<thead>
+			<th>Tekijä</th>
+			<th>Camera</th>
+			<th>Cube</th>
+			<th>Enemy</th>
+			<th>Maze</th>
+			<th>Menu</th>
+			<th>Game</th>
+			<th>Dokumentointi</th>
+			<th>Suunnittelu</th>
+			<th>Muu</th>
+			<th>Yhteensä</th>
+			</thead>
+			<tbody>
+			<tr>
+				<td>Matti</td>
+				<td>15h</td>
+				<td>10h</td>
+				<td>1h</td>
+				<td>22h</td>
+				<td>7h</td>
+				<td>30h</td>
+				<td>8h</td>
+				<td>10h</td>
+				<td>5h</td>
+				<td>108h</td>
+			</tr>
+			<tr>
+				<td>Jonah</td>
+				<td>x H</td>
+				<td>x H</td>
+				<td>x H</td>
+				<td>x H</td>
+				<td>x H</td>
+				<td>x H</td>
+				<td>x H</td>
+				<td>x H</td>
+				<td>x H</td>
+				<td>x H</td>
+			</tr>
+			</tbody>
+			</table>
 			
 		<h2><a id="3">3. Tietoa</a></h2>
 			<table class = "paddedtable">
