@@ -91,7 +91,18 @@
 			</tr>
 			</tbody>
 			</table>
-			
+		<h3>2.2 Pisteperustelut</h3>
+		<h4> Matti Jokitulppo</h4>
+		<p class = "content">
+				Antaisin itselleni harjoitustyöstä pisteiksi täydet 30 pojoa. Onnistuimme täyttämään </br>
+				kaikki tavoitteemme, jopa yli alkuperäisen suunnitelmien.  Lisäksi peliohjelmointi on todella </br>
+				haastava ohjelmointiala, joten uskon että lopullinen tuote kertoo tarvittavissa määrin  tekijöiden.</br>
+				osaamisesta.</br>
+			</p>
+		<h4> Jonah Ahvonen</h4>
+		<p class = "content">
+		
+		</p>
 		<h2><a id="3">3. Tietoa</a></h2>
 			<table class = "paddedtable">
 				<tr>
