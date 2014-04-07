@@ -6,7 +6,7 @@ $(document).ready(function()
 		{
 			var w = screen.availWidth;
 			var h = screen.availHeight;
-			$("body").append( "<span id = '4343DFe34fd'>Q/E: 2Drotate</br>Mouse-middle: 3Drotate</br>Mouse-right: Drag</span>");
+			/*$("body").append( "<span id = '4343DFe34fd'>Q/E: 2Drotate</br>Mouse-middle: 3Drotate</br>Mouse-right: Drag</span>");
 			$("#4343DFe34fd").css("color", "#3498db");
 			$("#4343DFe34fd").css("font-size", "200%");
 			$("#4343DFe34fd").css("position", "absolute");
@@ -14,7 +14,7 @@ $(document).ready(function()
 			$("#4343DFe34fd").css("left", w/2);
 			$("#4343DFe34fd").css("top", h/2);
 			
-			$("#4343DFe34fd").fadeOut(2000);
+			$("#4343DFe34fd").fadeOut(2000);*/
 			
 			/*document.onselectstart = function () { return false; };*/
 			document.oncontextmenu = function() {return false;};
@@ -48,8 +48,8 @@ $(document).ready(function()
 					lastX = curX;
 					lastY = curY;
 					
-					$('html').transition({
-						perspective: '100px',
+					$('html').css({
+						perspective: '250px',
 						rotateX: '+=' + deltaY / 20 + 'deg',
 						rotateY: '+=' + deltaX / 20 + 'deg'
 					}).stop(true, true);
@@ -110,20 +110,18 @@ $(document).ready(function()
 				rdown = false;
 			});
 			
+			var current = 1;
 			$('html').mousewheel(function(event) 
 			{
+
 				if(altdown)
 				{
-					/*console.log(event.deltaY / 100);
-					var scale = parseFloat($('html').css("-webkit-transform")); 
-					var style = window.getComputedStyle($('html').get(0));  // Need the DOM object
-					var matrix = new WebKitCSSMatrix(style.webkitTransform);
-					var scale = matrix.m41;
-					$('html').css("-webkit-transform", "scale(" + (scale + deltaY / 100) + ", " + (scale + deltaY / 100) + ")");
-					
-					var zoom = $("html").css("zoom");
-					console.log(zoom);
-					$("html").css("zoom", zoom + deltaY * 10 + "%");*/
+					event.preventDefault();
+					current += event.deltaY / 10;
+					$('html').css({
+						scale: current
+					});
+					console.log(current);
 				}
 				
 			});
@@ -139,10 +137,21 @@ $(document).ready(function()
 						altdown = true;
 						break;
 					case 81: /*q*/
-						$("html").transition({ rotate: '-=5deg' }).stop(true, true);				
+						$("html").css({ rotate: '-=2deg' }).stop(true, true);				
 						break;
 					case 69: /*e*/
-						$("html").transition({ rotate: '+=5deg' }).stop(true, true);
+						$("html").css({ rotate: '+=2deg' }).stop(true, true);
+						break;
+					case 82:
+						$('html').css({
+							perspective: '0px',
+							rotateX: 0 + 'deg',
+							rotateY: 0 + 'deg',
+							rotate: 0 + 'deg',
+							scale: 1
+						}).stop(true, true);
+						$('html').css("margin-left", 5);
+						$('html').css("margin-top", 5);
 						break;
 				}
 			});
