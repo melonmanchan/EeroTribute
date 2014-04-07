@@ -28,7 +28,6 @@ E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Conten
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\boom.xnb
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\eerominati.xnb
 C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\erp.xnb
-C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Glass.xnb
 C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\dxu4b6k.xnb
 C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButton.xnb
 C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\newButtonJpn.xnb
@@ -63,3 +62,16 @@ E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Conten
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero4.xnb
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero5.xnb
 E:\ERP\eerotribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero6.xnb
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\erp2.xnb
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero1.xnb
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero2.xnb
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero3.xnb
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero4.xnb
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero5.xnb
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\Eero6.xnb
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\ambienthum.xnb
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\Content\spookybackgroundmusic.xnb
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\ErppuTribute.exe.manifest
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\ErppuTribute.application
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuTribute.exe.manifest
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuTribute.application

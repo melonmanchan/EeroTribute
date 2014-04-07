@@ -183,13 +183,13 @@
       <dsig:DigestValue>XMcZTRsKwZEZ/M0GDi0XjxK+ELg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\effects.xnb" size="728">
+  <file name="Content\effects.xnb" size="732">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>WnkK3SGkb4726vIyNuZy8vFXw7k=</dsig:DigestValue>
+      <dsig:DigestValue>0pui9c+cQKA9VkJa1wk328HUccQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\erp.xnb" size="101346">
@@ -201,13 +201,13 @@
       <dsig:DigestValue>SaXR5dhCuNBOFlEPQfNvVCxHFTw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\erp2.xnb" size="19254">
+  <file name="Content\erp2.xnb" size="17258">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>fvrUcsTWoMpHXlJTl5vxWZRdSyY=</dsig:DigestValue>
+      <dsig:DigestValue>XIcqCfOgTGuRcsY9o9hXk00YV6U=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\newButton.xnb" size="988">
