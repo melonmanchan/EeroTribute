@@ -80,7 +80,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>BRatMHZ4Q43N+Q2eixx+crMYMHU=</dsig:DigestValue>
+        <dsig:DigestValue>jE7wRO8A+lt7wvBUYokEaPVu4pc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -298,6 +298,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>41Lg2zAsZdZQDV+V/XN5D4hh5Ds=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ErppuTribute.exe.config" size="168">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HANVNaBxVfk3pLB728wQYGEK1jk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Game.ico" size="4286">

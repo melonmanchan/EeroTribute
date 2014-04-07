@@ -1,4 +1,11 @@
-﻿using System;
+﻿/****************************************************
+ * Class: Menu
+ * Description: Main menu of the game
+ * Author(s): Matti Jokitulppo, Jonah Ahvonen
+ * Date: April 1, 2014
+****************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

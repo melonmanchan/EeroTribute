@@ -75,3 +75,4 @@ C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin
 C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\ErppuTribute.application
 C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuTribute.exe.manifest
 C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\obj\x86\Release\ErppuTribute.application
+C:\Users\Jonah\Documents\eero-tribute\ErppuTribute\ErppuTribute\ErppuTribute\bin\x86\Release\ErppuTribute.exe.config

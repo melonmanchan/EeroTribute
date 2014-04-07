@@ -1,4 +1,11 @@
-﻿using System;
+﻿/****************************************************
+ * Class: Camera
+ * Description: Camera controls and business logic
+ * Author(s): Matti Jokitulppo, Jonah Ahvonen
+ * Date: April 1, 2014
+****************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

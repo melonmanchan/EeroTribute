@@ -1,3 +1,10 @@
+/****************************************************
+ * Class: Game
+ * Description: "Main" class of the game
+ * Author(s): Matti Jokitulppo, Jonah Ahvonen
+ * Date: April 1, 2014
+****************************************************/
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,4 +1,11 @@
-﻿using System;
+﻿/**********************************************************************
+ * Class: Cube
+ * Description: Business logic for "eerokuutio", the goal of the game
+ * Author(s): Jonah Ahvonen, Matti Jokitulppo
+ * Date: April 1, 2014
+**********************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
