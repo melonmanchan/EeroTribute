@@ -61,6 +61,7 @@
 			<th>Suunnittelu</th>
 			<th>Tutkimustyö</th>
 			<th>Gfx/Sfx</th>
+			<th>Konfiguraatio</th>
 			<th>Muu</th>
 			<th>Yhteensä</th>
 			</thead>
@@ -77,8 +78,9 @@
 				<td>10h</td>
 				<td>18h</td>
 				<td>5h</td>
+				<td>1h</td>
 				<td>5h</td>
-				<td>108h</td>
+				<td>132h</td>
 			</tr>
 			<tr>
 				<td>Jonah</td>
@@ -87,27 +89,30 @@
 				<td>7h</td>
 				<td>2h</td>
 				<td>10h</td>
-				<td>4h</td>
-				<td>9h</td>
+				<td>6h</td>
+				<td>13h</td>
 				<td>9h</td>
 				<td>13h</td>
 				<td>9h</td>
+				<td>12h</td>
 				<td>10h</td>
-				<td>x H</td>
+				<td>97h</td>
 			</tr>
 			</tbody>
 			</table>
 		<h3>2.2 Pisteperustelut</h3>
 		<h4> Matti Jokitulppo</h4>
 		<p class = "content">
-				Antaisin itselleni harjoitustyöstä pisteiksi täydet 30 pojoa. Onnistuimme täyttämään </br>
-				kaikki tavoitteemme, jopa yli alkuperäisen suunnitelmien.  Lisäksi peliohjelmointi on todella </br>
-				haastava ohjelmointiala, joten uskon että lopullinen tuote kertoo tarvittavissa määrin  tekijöiden.</br>
-				osaamisesta.</br>
-			</p>
+			Antaisin itselleni harjoitustyöstä pisteiksi täydet 30 pojoa. Onnistuimme täyttämään </br>
+			kaikki tavoitteemme, jopa yli alkuperäisen suunnitelmien. Lisäksi peliohjelmointi on todella </br>
+			haastava ohjelmointiala, joten uskon että lopullinen tuote kertoo tarvittavissa määrin  tekijöiden.</br>
+			osaamisesta.</br>
+		</p>
 		<h4> Jonah Ahvonen</h4>
 		<p class = "content">
-		
+			Pelistä iso osa aikaa meni tutkimustyöhön sekä 3D-peligrafiikan ja pelimekaaniikoitten toiminnan selvittämiseen.</br>
+			Antaisin sen täydet 30p. sillä tätä voisi kutsua ensimmäiseksi vähän isommaksi 3D-peliprojektiksemme ja</br>
+			sen huomioon ottaen olemme onnistuneet projektissamme erittäin hyvin. 
 		</p>
 		<h2><a id="3">3. Tietoa</a></h2>
 			<table class = "paddedtable">
@@ -218,37 +223,38 @@
 			<h2><a id="8">8. Toteutetut/toteuttamatta jääneet vaatimukset</a></h2>
 			<h3>8.1 Toteutetut toiminnalliset vaatimukset</h3>
 			<p class = "content">
-			<ul>
-			<li>Pelissä on menu jossa pelaaja pystyy aloittamaan uuden pelin </li>
-			<li>Pelissä on tilakone jolla voi manageroida helposti pelin tilaa </li>
-			<li>Pelissä on satunnaisgeneroitu luolasto jossa pelaaja pystyy liikkumaan näppäimistöllä ja hiirellä </li>
-			<li>Pelissä on vihollinen joka jahtaa pelaajaa </li>
-			<li>Pelissä on end-condition kun pelaaja löytää luolastosta kuution tai kuolee viholliseen </li>
-			</ul>
+				<ul class = "content">
+					<li>Pelissä on menu jossa pelaaja pystyy aloittamaan uuden pelin </li>
+					<li>Pelissä on tilakone jolla voi manageroida helposti pelin tilaa </li>
+					<li>Pelissä on satunnaisgeneroitu luolasto jossa pelaaja pystyy liikkumaan näppäimistöllä ja hiirellä </li>
+					<li>Pelissä on vihollinen joka jahtaa pelaajaa </li>
+					<li>Pelissä on end-condition kun pelaaja löytää luolastosta kuution tai kuolee viholliseen </li>
+				</ul>
 			</p>
 			
 			<h3>8.2 Toteuttamatta jääneet toiminnalliset vaatimukset</h3>
 			<p class = "content">
-			<ul>
-			</ul>
+				<ul class = "content">
+				<li>-</li>
+				</ul>
 			</p>
 			
 			<h3>8.3 Yli alkuperäisten suunnitelmien toteutetut vaatimukset</h3>
 			<p class = "content">
-			<ul>
-			<li>Eerokuutio humisee </li>
-			<li>Pelissä on välianimaatio kun siirrytään menusta peliin </li>
-			<li>Pelissä on XNA:n shadereilla toteutettu valaistus </li>
-			<li>Pelissä on kivannäköisia efekteja esim. kun vihollinen lähestyy </li>
-			</ul>
+				<ul class = "content">
+					<li>Eerokuutio humisee </li>
+					<li>Pelissä on välianimaatio kun siirrytään menusta peliin </li>
+					<li>Pelissä on XNA:n shadereilla toteutettu valaistus </li>
+					<li>Pelissä on kivannäköisia efekteja esim. kun vihollinen lähestyy </li>
+				</ul>
 			</p>
 			
 			<h3>8.4 Ei-toiminnalliset vaatimukset</h3>
 			<p class = "content">
-			<ul>
-			<li>Tahdoimme, että peli ei pätkisi huomattavasti "kehnommallakaan" koneella </li>
-			<li>Peli vastaa hyvin pelaajan inputtiin ja liikkuminen on sujuvaa </li>
-			</ul>
+				<ul class = "content">
+					<li>Tahdoimme, että peli ei pätkisi huomattavasti "kehnommallakaan" koneella </li>
+					<li>Peli vastaa hyvin pelaajan inputtiin ja liikkuminen on sujuvaa </li>
+				</ul>
 			</p>
 			
 		<h2><a id="9">9. Pelikuvaa (v0.1)</a></h2>
