@@ -3,6 +3,9 @@
 	<head>
 		<title>Eerotribute3D - webdoc</title>
 		<link rel="stylesheet" type="text/css" href="webdocstyle.css">
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type = "text/javascript" src = "3dcontrols.js"></script>
 	</head>
 	<body>
 		<h1><a id="top">Eerotribute3D - webdoc</a></h1>
@@ -27,6 +30,7 @@
 					<li>12.3&nbsp;&nbsp;Cube</li>
 					<li>12.4&nbsp;&nbsp;Enemy</li>
 					<li>12.5&nbsp;&nbsp;Menu</li>
+					<li>12.6&nbsp;&nbsp;ConfigHandler</li>
 				</ul>
 				<li><a href="#13" class = "contentlink">Ongelmat</a></li>
 				<li><a href="#14" class = "contentlink">Loppuarvio</a></li>
@@ -335,9 +339,11 @@
 		
 		<h2><a id="13">13. Ongelmat</a></h2>
 			<p class = "content">
-			
+				<ul class = "content">
+					<li>Peli kaatui jonkin ajan päästä käynnistymisestä.
+					</br>Tämä johtui loputtomasta luupista vihollisia spawnatessa,</li>
+				</ul>
 			</p>
-			
 		<h2><a id="14">14. Loppuarvio</a></h2>
 			<p class = "content">
 			
