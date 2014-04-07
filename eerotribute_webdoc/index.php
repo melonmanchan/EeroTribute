@@ -90,13 +90,13 @@
 				<td>2h</td>
 				<td>10h</td>
 				<td>6h</td>
-				<td>13h</td>
+				<td>16h</td>
 				<td>9h</td>
 				<td>13h</td>
 				<td>9h</td>
-				<td>12h</td>
+				<td>15h</td>
 				<td>10h</td>
-				<td>97h</td>
+				<td>103h</td>
 			</tr>
 			</tbody>
 			</table>
@@ -319,6 +319,18 @@
 			<h3>12.5 Menu</h3>
 				<p class = "content">
 					Menu-luokka on pelin päävalikon määrittelevä ja sitä ylläpitävä yksinkertainen luokka.
+				</p>
+			<h3>12.6 ConfigHandler</h3>
+				<p class = "content">
+					ConfigHandler-luokka tehtiin pelin asetusten hallintaan.</br></br>
+					Sen avulla on mahdollista lukea sekä kirjoittaa erilaisia pelin asetustietoja, kuten</br>
+					esimerkiksi pelaajan liikkumisnopeuden ja keybindit, xml-tiedostoon.</br></br>
+					
+					Asetukset toimivat yksinkertaisella avain-arvopari -periaatteella, eli jotain avainta (asetusta)</br>
+					vastaa sen asetuksen arvo (key).</br></br>
+					
+					Koska C# ei osaa serialisoida dictionaryja, niin täytyy ne muuntaa avain-arvopari listaksi ennen serialisointia.</br>
+					Asetuksia deserialisoidessa avain-arvopari lista muunnetaan takaisin dictionaryksi sillä se on selkokäyttöisempi.
 				</p>
 		
 		<h2><a id="13">13. Ongelmat</a></h2>
