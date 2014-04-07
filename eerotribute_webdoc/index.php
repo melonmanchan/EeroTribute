@@ -59,6 +59,8 @@
 			<th>Game</th>
 			<th>Dokumentointi</th>
 			<th>Suunnittelu</th>
+			<th>Tutkimustyö</th>
+			<th>Gfx/Sfx</th>
 			<th>Muu</th>
 			<th>Yhteensä</th>
 			</thead>
@@ -73,20 +75,24 @@
 				<td>30h</td>
 				<td>8h</td>
 				<td>10h</td>
+				<td>18h</td>
+				<td>5h</td>
 				<td>5h</td>
 				<td>108h</td>
 			</tr>
 			<tr>
 				<td>Jonah</td>
-				<td>x H</td>
-				<td>x H</td>
-				<td>x H</td>
-				<td>x H</td>
-				<td>x H</td>
-				<td>x H</td>
-				<td>x H</td>
-				<td>x H</td>
-				<td>x H</td>
+				<td>4h</td>
+				<td>2h</td>
+				<td>7h</td>
+				<td>2h</td>
+				<td>10h</td>
+				<td>4h</td>
+				<td>9h</td>
+				<td>9h</td>
+				<td>13h</td>
+				<td>9h</td>
+				<td>10h</td>
 				<td>x H</td>
 			</tr>
 			</tbody>

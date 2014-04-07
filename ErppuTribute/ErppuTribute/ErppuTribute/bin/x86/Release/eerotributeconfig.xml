@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfKeyValuePairOfStringObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KeyValuePairOfStringObject>
+    <Key>movescale</Key>
+    <Value xsi:type="xsd:float">1.7</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>rotatescale</Key>
+    <Value xsi:type="xsd:float">0.3</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>countduration</Key>
+    <Value xsi:type="xsd:float">1.5</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>cubespawnmindistance</Key>
+    <Value xsi:type="xsd:float">10</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>enemyspawnrate</Key>
+    <Value xsi:type="xsd:float">15</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>enemyspeed</Key>
+    <Value xsi:type="xsd:float">30</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>enemyspawnmindistance</Key>
+    <Value xsi:type="xsd:float">15</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>enemyneardistance</Key>
+    <Value xsi:type="xsd:float">2.5</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>cubecollisionradius</Key>
+    <Value xsi:type="xsd:float">0.25</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>enemycollisionradius</Key>
+    <Value xsi:type="xsd:float">0.5</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>backgroundmusicvolume</Key>
+    <Value xsi:type="xsd:float">0.2</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>forwardkey</Key>
+    <Value xsi:type="xsd:string">W</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>leftkey</Key>
+    <Value xsi:type="xsd:string">A</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>backwardkey</Key>
+    <Value xsi:type="xsd:string">S</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>rightkey</Key>
+    <Value xsi:type="xsd:string">D</Value>
+  </KeyValuePairOfStringObject>
+  <KeyValuePairOfStringObject>
+    <Key>shoutkey</Key>
+    <Value xsi:type="xsd:string">E</Value>
+  </KeyValuePairOfStringObject>
+</ArrayOfKeyValuePairOfStringObject>

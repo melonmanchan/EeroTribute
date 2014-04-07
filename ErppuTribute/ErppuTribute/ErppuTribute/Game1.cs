@@ -61,12 +61,14 @@ namespace ErppuTribute
         private bool isEnemyNear = false;
 
         public GameState gameState = GameState.MainMenu;
-  
+
+        private ConfigHandler configHandler;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferHeight = 1000;
             graphics.PreferredBackBufferWidth = 1600;
+            
             Content.RootDirectory = "Content";
         }
 
@@ -78,6 +80,7 @@ namespace ErppuTribute
         /// </summary>
         protected override void Initialize()
         {
+            
             // TODO: Add your initialization logic here
             enemyList = new List<Enemy>();
 
@@ -90,12 +93,82 @@ namespace ErppuTribute
             this.IsMouseVisible = true;
 
             base.Initialize();
+
+            var form = (System.Windows.Forms.Form)System.Windows.Forms.Control.FromHandle(this.Window.Handle);
+            form.Location = new System.Drawing.Point(100, 10);
+
+            configHandler = new ConfigHandler();
+            loadConfig();
+           
         }
 
+        private void loadConfig()
+        {
+            #region config alustus
+            /*configHandler.ConfigBundle.Add("movescale", 1.7f);
+            configHandler.ConfigBundle.Add("rotatescale", 0.3f);
+            configHandler.ConfigBundle.Add("countduration", 1.5f);
+            configHandler.ConfigBundle.Add("cubespawnmindistance", 10f);
+            configHandler.ConfigBundle.Add("enemyspawnrate", 15f);
+            configHandler.ConfigBundle.Add("enemyspeed", 30f);
+            configHandler.ConfigBundle.Add("enemyspawnmindistance", 15f);
+            configHandler.ConfigBundle.Add("enemyneardistance", 2.5f);
+            configHandler.ConfigBundle.Add("cubecollisionradius", 0.25f);
+            configHandler.ConfigBundle.Add("enemycollisionradius", 0.50f);
+            configHandler.ConfigBundle.Add("backgroundmusicvolume", 0.20f);
+            configHandler.ConfigBundle.Add("forwardkey", Keys.W.ToString());
+            configHandler.ConfigBundle.Add("leftkey", Keys.A.ToString());
+            configHandler.ConfigBundle.Add("backwardkey", Keys.S.ToString());
+            configHandler.ConfigBundle.Add("rightkey", Keys.D.ToString());
+            configHandler.ConfigBundle.Add("shoutkey", Keys.E.ToString());
+            configHandler.WriteConfig();*/
+            #endregion
+
+            configHandler.ReadConfig();
+
+            try
+            {
+                moveScale = (float)configHandler.ConfigBundle["movescale"];
+                rotateScale = (float)configHandler.ConfigBundle["rotatescale"];
+                countDuration = (float)configHandler.ConfigBundle["countduration"];
+                cubespawnmin = (float)configHandler.ConfigBundle["cubespawnmindistance"];
+                enemySpawnRate = (float)configHandler.ConfigBundle["enemyspawnrate"];
+                enemySpeed = (float)configHandler.ConfigBundle["enemyspeed"];
+                enemyspawnmin = (float)configHandler.ConfigBundle["enemyspawnmindistance"];
+                enemyneardistance = (float)configHandler.ConfigBundle["enemyneardistance"];
+                cube.CollisionRadius = (float)configHandler.ConfigBundle["cubecollisionradius"];
+
+                foreach (Enemy e in enemyList)
+                {
+                    e.CollisionRadius = (float)configHandler.ConfigBundle["enemycollisionradius"];
+                }
+
+                backgroundMusicVolume = (float)configHandler.ConfigBundle["backgroundmusicvolume"];
+                forwardKey = (Keys)Enum.Parse(typeof(Keys), (string)configHandler.ConfigBundle["forwardkey"]);
+                leftKey = (Keys)Enum.Parse(typeof(Keys), (string)configHandler.ConfigBundle["leftkey"]);
+                backwardKey = (Keys)Enum.Parse(typeof(Keys), (string)configHandler.ConfigBundle["backwardkey"]);
+                rightKey = (Keys)Enum.Parse(typeof(Keys), (string)configHandler.ConfigBundle["rightkey"]);
+                shoutKey = (Keys)Enum.Parse(typeof(Keys), (string)configHandler.ConfigBundle["shoutkey"]);
+            }
+            catch(KeyNotFoundException kfe)
+            {
+                Console.WriteLine("Config is missing values!");
+            }
+        }
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
+
+        private float cubespawnmin;
+        private float enemyspawnmin;
+        private float enemyneardistance;
+        private float backgroundMusicVolume;
+        private Keys forwardKey;
+        private Keys leftKey;
+        private Keys backwardKey;
+        private Keys rightKey;
+        private Keys shoutKey;
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
@@ -117,10 +190,10 @@ namespace ErppuTribute
                 eeroShouts[i].Volume = 0.2f;
             }
             bgMusic = Content.Load<SoundEffect>("spookybackgroundmusic").CreateInstance();
-            bgMusic.Volume = 0.1f;
+            bgMusic.Volume = backgroundMusicVolume;
 
-            cube = new Cube(this.GraphicsDevice, camera.Position, 10f, Content.Load<Texture2D>("eerominati"), Content.Load<SoundEffect>("ambienthum"));
-            enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
+            cube = new Cube(this.GraphicsDevice, camera.Position, cubespawnmin, Content.Load<Texture2D>("eerominati"), Content.Load<SoundEffect>("ambienthum"));
+            enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, enemyspawnmin, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
 
             menu = new Menu(Content, spriteBatch, this, GraphicsDevice);
 
@@ -228,27 +301,27 @@ namespace ErppuTribute
                 camera.RotationX = MathHelper.WrapAngle(updownRot);
             }
 
-            if (keyState.IsKeyDown(Keys.A))
+            if (keyState.IsKeyDown(leftKey))
             {
                 moveAmount.X = moveScale * elapsed;
             }
 
-            if (keyState.IsKeyDown(Keys.D))
+            if (keyState.IsKeyDown(rightKey))
             {
                 moveAmount.X = -moveScale * elapsed;
             }
 
-             if (keyState.IsKeyDown(Keys.W))
+             if (keyState.IsKeyDown(forwardKey))
             {
                  moveAmount.Y = moveScale * elapsed;
             }
 
-             if (keyState.IsKeyDown(Keys.S))
+             if (keyState.IsKeyDown(backwardKey))
             {
                 moveAmount.Y = -moveScale * elapsed;
             }
 
-             if (keyState.IsKeyDown(Keys.E) && (isShoutPlaying() != true))
+             if (keyState.IsKeyDown(shoutKey) && (isShoutPlaying() != true))
              {
                  eeroShouts[rnd.Next(eeroShouts.Count)].Play();
              }
@@ -306,7 +379,7 @@ namespace ErppuTribute
                 //Siirret‰‰n vihollista kameran suuntaan tietyll‰ nopeudella (20-40 arvot varmaan sopivia)
                 enemyList[i].location = new Vector3(enemyList[i].location.X - (normal.X / (100.0f - enemySpeed)), enemyList[i].location.Y, enemyList[i].location.Z - (normal.Y / (100.0f - enemySpeed)));
 
-                if (Vector3.Distance(camera.Position, enemyList[i].location) < 2.5)
+                if (Vector3.Distance(camera.Position, enemyList[i].location) < enemyneardistance)
                 {
                     isEnemyNear = true;
                 }

@@ -25,7 +25,7 @@ namespace ErppuTribute
 
         protected float rotation = 0f;
         protected float zrotation = 0f;
-        protected float collisionRadius = 0.25f;
+        public float CollisionRadius = 0.25f;
         protected Random rand = new Random();
 
         //kuution sijainti pelimaailmassa
@@ -45,7 +45,7 @@ namespace ErppuTribute
         {
             get
             {
-                return new BoundingSphere(location, collisionRadius);
+                return new BoundingSphere(location, CollisionRadius);
             }
 
         }

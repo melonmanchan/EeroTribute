@@ -82,6 +82,9 @@
     <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -92,6 +95,7 @@
     <Compile Include="ConfigHandler.cs" />
     <Compile Include="Cube.cs" />
     <Compile Include="Enemy.cs" />
+    <Compile Include="KeyValuePair.cs" />
     <Compile Include="Maze.cs" />
     <Compile Include="MazeCell.cs" />
     <Compile Include="Menu.cs" />
@@ -139,7 +143,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ErppuTribute_TemporaryKey.pfx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

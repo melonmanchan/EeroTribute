@@ -1,4 +1,11 @@
-﻿using System;
+﻿/***********************************************************************
+ * Class: Enemy
+ * Description: Derives from Cube class, acts as an enemy in the game
+ * Author(s): Jonah Ahvonen, Matti Jokitulppo
+ * Date: April 1, 2014
+***********************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +21,6 @@ namespace ErppuTribute
         public Enemy(GraphicsDevice graphicsDevice, Vector3 playerLocation, float minDistance, Texture2D texture, SoundEffect soundEffect)
             : base(graphicsDevice, playerLocation, minDistance, texture, soundEffect)
         {
-            collisionRadius = 0.5f;
             base.zrotation = MathHelper.WrapAngle((float)Math.PI);
         }
         #endregion
