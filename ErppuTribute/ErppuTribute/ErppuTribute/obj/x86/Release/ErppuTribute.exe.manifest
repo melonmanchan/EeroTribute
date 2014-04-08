@@ -73,14 +73,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ErppuTribute.exe" size="35840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ErppuTribute.exe" size="401920">
       <assemblyIdentity name="ErppuTribute" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Q21AfJJ7xPX4KRRcQsDOFTXj78Y=</dsig:DigestValue>
+        <dsig:DigestValue>BmUGWxWx7p/ubenjeAqhmYQQqIg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -309,13 +309,13 @@
       <dsig:DigestValue>HANVNaBxVfk3pLB728wQYGEK1jk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Game.ico" size="4286">
+  <file name="Game.ico" size="370070">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>/y21PfwGnUAkwpPwwaFuIIyWENo=</dsig:DigestValue>
+      <dsig:DigestValue>F5NfaIWFZB1Ct6JUHBCS+KTY21s=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GameThumbnail.png" size="5734">
