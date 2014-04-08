@@ -22,6 +22,7 @@ namespace ErppuTribute
 
     class Menu
     {
+        #region Variables
         public Game1 game;
 
         private Texture2D mainMenu;
@@ -40,7 +41,8 @@ namespace ErppuTribute
         private float screenHeight;
 
         private Vector2 scaleVector;
-
+        #endregion
+        #region Constructor
         public Menu(ContentManager content, SpriteBatch spriteBatch, Game1 game, GraphicsDevice graphicsDevice)
         {
             this.mainMenu = content.Load<Texture2D>("Eerobg");
@@ -64,7 +66,8 @@ namespace ErppuTribute
             scaleVector = new Vector2(screenWidth / 1600, screenHeight / 1000);
             initializeButtonPositions();
         }
-
+        #endregion
+        #region Methods (Input)
         private void initializeButtonPositions()
         {
             for (int i = 0; i < buttons.Count; i++)
@@ -72,57 +75,33 @@ namespace ErppuTribute
                 Vector2 Pos = new Vector2(screenWidth / 2.37f, screenHeight / 1.66f + i * screenHeight / 6.666f);
                 buttonPositions.Add(Pos);
             }
-
         }
-
-        public void Draw()
-        {
-
-            spriteBatch.Begin();
-            spriteBatch.Draw(mainMenu, Vector2.Zero, null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
-
-                for (int i = 0; i < buttons.Count; i++)
-                {
-                    if (i == selectedButtonIndex)
-                    {
-                        spriteBatch.Draw(selectedButtons[i], buttonPositions[i], null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
-                        spriteBatch.Draw(cursor, (buttonPositions[i] - new Vector2(80, -30)), null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
-                    }
-                    else
-                    {
-                        spriteBatch.Draw(buttons[i], buttonPositions[i], null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
-                    }
-                }
-
-            spriteBatch.End();
-        }
-
 
         private void handleMouseInput()
         {
             ms = Mouse.GetState();
 
-                Rectangle mouseClickRect = new Rectangle(ms.X, ms.Y, 10, 10);
+            Rectangle mouseClickRect = new Rectangle(ms.X, ms.Y, 10, 10);
 
-                for (int i = 0; i < buttonPositions.Count; i++)
+            for (int i = 0; i < buttonPositions.Count; i++)
+            {
+
+                Rectangle tempRect = new Rectangle((int)buttonPositions[i].X, (int)buttonPositions[i].Y, Convert.ToInt32(screenWidth / 6.4f), Convert.ToInt32(screenHeight / 10.2f));
+
+                if (tempRect.Contains(mouseClickRect))
                 {
-
-                    Rectangle tempRect = new Rectangle((int)buttonPositions[i].X, (int)buttonPositions[i].Y, Convert.ToInt32(screenWidth / 6.4f), Convert.ToInt32(screenHeight / 10.2f));
-
-                    if (tempRect.Contains(mouseClickRect))
+                    if (ms.LeftButton == ButtonState.Pressed)
                     {
-                        if (ms.LeftButton == ButtonState.Pressed)
-                        {
-                            handleSelection(i);
-                        }
-                        else
-                        {
-                            if (selectedButtonIndex != i)
-                                selectionChanged.Play();
-                            selectedButtonIndex = i;
-                        }
+                        handleSelection(i);
+                    }
+                    else
+                    {
+                        if (selectedButtonIndex != i)
+                            selectionChanged.Play();
+                        selectedButtonIndex = i;
                     }
                 }
+            }
         }
 
         private void handleSelection(int selected)
@@ -169,11 +148,34 @@ namespace ErppuTribute
                 }
             }
         }
+        #endregion
+        #region Draw
+        public void Draw()
+        {
+            spriteBatch.Begin();
+            spriteBatch.Draw(mainMenu, Vector2.Zero, null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
 
+                for (int i = 0; i < buttons.Count; i++)
+                {
+                    if (i == selectedButtonIndex)
+                    {
+                        spriteBatch.Draw(selectedButtons[i], buttonPositions[i], null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
+                        spriteBatch.Draw(cursor, (buttonPositions[i] - new Vector2(80, -30)), null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
+                    }
+                    else
+                    {
+                        spriteBatch.Draw(buttons[i], buttonPositions[i], null, Color.White, 0, Vector2.Zero, scaleVector, SpriteEffects.None, 0);
+                    }
+                }
+            spriteBatch.End();
+        }
+        #endregion
+        #region Update
         public void Update()
         {
             handleMouseInput();
             handleKeyBoardInput();
         }
+        #endregion
     }
 }

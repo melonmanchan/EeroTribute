@@ -26,6 +26,7 @@ namespace ErppuTribute
 
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        #region Variables
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         public int screenWidth = 1600;
@@ -55,7 +56,6 @@ namespace ErppuTribute
         private Rectangle videoScreen;
         private bool hasVideoPlayed = false;
 
-
         private int counter = 0;
         private float countDuration = 1.5f;
         private float currentTime = 0f;
@@ -70,6 +70,19 @@ namespace ErppuTribute
         public GameState gameState = GameState.MainMenu;
 
         private ConfigHandler configHandler;
+
+        private float cubespawnmin;
+        private float enemyspawnmin;
+        private float enemyneardistance;
+        private float backgroundMusicVolume;
+        private Keys forwardKey;
+        private Keys leftKey;
+        private Keys backwardKey;
+        private Keys rightKey;
+        private Keys shoutKey;
+
+        #endregion
+        #region Constructor
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -80,17 +93,17 @@ namespace ErppuTribute
 
             Content.RootDirectory = "Content";
         }
-
+        #endregion
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
         /// This is where it can query for any required services and load any non-graphic
         /// related content.  Calling base.Initialize will enumerate through any components
         /// and initialize them as well.
         /// </summary>
+        /// 
+        #region Load Game Content
         protected override void Initialize()
         {
-
-            
 
             // TODO: Add your initialization logic here
             enemyList = new List<Enemy>();
@@ -133,9 +146,7 @@ namespace ErppuTribute
             configHandler.ConfigBundle.Add("shoutkey", Keys.E.ToString());
             configHandler.WriteConfig();*/
             #endregion
-
             configHandler.ReadConfig();
-
             try
             {
                 moveScale = (float)configHandler.ConfigBundle["movescale"];
@@ -170,15 +181,6 @@ namespace ErppuTribute
         /// all of your content.
         /// </summary>
 
-        private float cubespawnmin;
-        private float enemyspawnmin;
-        private float enemyneardistance;
-        private float backgroundMusicVolume;
-        private Keys forwardKey;
-        private Keys leftKey;
-        private Keys backwardKey;
-        private Keys rightKey;
-        private Keys shoutKey;
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
@@ -192,10 +194,8 @@ namespace ErppuTribute
             eeroShouts.Add(Content.Load<SoundEffect>("Eero5").CreateInstance());
             eeroShouts.Add(Content.Load<SoundEffect>("Eero6").CreateInstance());
 
-
             for (int i = 0; i < eeroShouts.Count; i++)
             {
-
                 eeroShouts[i].Pitch = -0.75f;
                 eeroShouts[i].Volume = 0.2f;
             }
@@ -219,8 +219,6 @@ namespace ErppuTribute
                     GraphicsDevice.Viewport.Y,
                     GraphicsDevice.Viewport.Width,
                     GraphicsDevice.Viewport.Height);
-
-
         Mouse.SetPosition(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
         originalMouseState = Mouse.GetState();
             // TODO: use this.Content to load your game content here
@@ -234,12 +232,14 @@ namespace ErppuTribute
         {
             // TODO: Unload any non ContentManager content here
         }
-
+        #endregion
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        /// 
+        #region MainLoop
         protected override void Update(GameTime gameTime)
         {
             // Allows the game to exit
@@ -264,7 +264,8 @@ namespace ErppuTribute
             }
             base.Update(gameTime);
         }
-
+        #endregion
+        #region Video/Audio related Methods
         public void playTransition(GameTime gameTime)
         {
             if (hasVideoPlayed == true)
@@ -293,11 +294,50 @@ namespace ErppuTribute
             }
         }
 
-        public void centerMouse()
+        private bool isShoutPlaying()
         {
-            Mouse.SetPosition(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
+            for (int i = 0; i < eeroShouts.Count; i++)
+            {
+                if (eeroShouts[i].State == SoundState.Playing)
+                {
+                    return true;
+                }
+
+            }
+            return false;
         }
 
+        private void changeShoutPitch()
+        {
+            for (int i = 0; i < eeroShouts.Count; i++)
+            {
+                if (eeroShouts[i].State == SoundState.Playing && isEnemyNear)
+                {
+                    eeroShouts[i].Pitch = 1f;
+                }
+
+                else
+                {
+                    eeroShouts[i].Pitch = -0.75f;
+                }
+            }
+        }
+
+        private void stopAllEeroShouts()
+        {
+            for (int i = 0; i < eeroShouts.Count; i++)
+                eeroShouts[i].Stop();
+        }
+
+        private void updateAudioCue()
+        {
+            camera.listener.Position = camera.Position;
+            cube.soundEffectInstance.Apply3D(camera.listener, cube.emitter);
+        }
+
+        #endregion
+
+        #region Update
         private void UpdateGamePlay(GameTime gameTime)
         {
 
@@ -377,9 +417,6 @@ namespace ErppuTribute
                     camera.MoveForwardVector(moveAmount);
             }
 
-
-
-            // TODO: Add your update logic here
             updateAudioCue();
 
             if (cube.Hitbox.Contains(camera.Position) == ContainmentType.Contains)
@@ -439,19 +476,16 @@ namespace ErppuTribute
 
             enemyTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            
-
             if (enemyTimer >= enemySpawnRate)
             {
                 randomizeEnemyPositions();
                 enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, enemyspawnmin, enemyCollisionRadius, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
                 enemyTimer = 0;
             }
-
             cube.Update(gameTime);
         }
-
-
+        #endregion
+        #region Miscallenous Gameplay Methods
         private void resetGameLevel()
         {
             updownRot = 0;
@@ -479,52 +513,17 @@ namespace ErppuTribute
             }
         }
 
-        private bool isShoutPlaying()
+        public void centerMouse()
         {
-
-            for (int i = 0; i < eeroShouts.Count; i++)
-            {
-                if (eeroShouts[i].State == SoundState.Playing)
-                {
-                    return true;
-                }
-
-            }
-            return false;
+            Mouse.SetPosition(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
         }
-
-        private void changeShoutPitch()
-        {
-                for (int i = 0; i < eeroShouts.Count; i++)
-                {
-                    if (eeroShouts[i].State == SoundState.Playing && isEnemyNear)
-                    {
-                        eeroShouts[i].Pitch = 1f;
-                    }
-
-                    else
-                    {
-                        eeroShouts[i].Pitch = -0.75f;
-                    }
-                }
-        }
-
-        private void stopAllEeroShouts()
-        {
-            for (int i = 0; i < eeroShouts.Count; i++)
-                eeroShouts[i].Stop();
-        }
-
-        private void updateAudioCue()
-        {
-            camera.listener.Position = camera.Position;
-            cube.soundEffectInstance.Apply3D(camera.listener, cube.emitter);
-        }
-
+        #endregion
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        ///
+        #region Draw
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
@@ -553,10 +552,8 @@ namespace ErppuTribute
                     spriteBatch.End();
                 }
             }
-
             else if (gameState == GameState.Playing)
             {
-
                 // TODO: Add your drawing code here
                 GraphicsDevice.BlendState = BlendState.Opaque;
                 GraphicsDevice.DepthStencilState = DepthStencilState.Default;
@@ -567,7 +564,6 @@ namespace ErppuTribute
             
             base.Draw(gameTime);
         }
-
-       
+        #endregion
     }
 }

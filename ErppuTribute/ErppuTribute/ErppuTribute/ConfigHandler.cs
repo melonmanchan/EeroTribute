@@ -16,6 +16,7 @@ namespace ErppuTribute
 {
     class ConfigHandler
     {
+        #region Variables
         private string configPath;
         public Dictionary<string, object> ConfigBundle { get; set; }
 
@@ -24,6 +25,8 @@ namespace ErppuTribute
         private System.IO.StreamReader streamReader;
 
         private bool pathSuccess = false;
+        #endregion
+        #region Constructor
         public ConfigHandler()
         {
             try
@@ -41,7 +44,8 @@ namespace ErppuTribute
 
             serializer = new System.Xml.Serialization.XmlSerializer(typeof(List<KeyValuePair<string, object>>));
         }
-
+        #endregion
+        #region Methods
         public bool WriteConfig()
         {
             if (pathSuccess)
@@ -104,7 +108,7 @@ namespace ErppuTribute
                 MessageBox.Show(g.ToString());
             }
         }
-
+       
         //Converttaa lista avain-arvopareja dictionaryksi (Dictionaryä mukavampi käyttää)
         private Dictionary<string, object> listToDictionary(List<KeyValuePair<string, object>> list)
         {
@@ -137,5 +141,6 @@ namespace ErppuTribute
 
             return list;
         }
+        #endregion
     }
 }
