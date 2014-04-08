@@ -16,7 +16,7 @@ namespace ErppuTribute
 {
     class ConfigHandler
     {
-        #region Variables
+        #region Fields
         private string configPath;
         public Dictionary<string, object> ConfigBundle { get; set; }
 

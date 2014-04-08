@@ -17,8 +17,7 @@ namespace ErppuTribute
     class Camera
     {
 #region Fields
-       public  AudioListener listener = new AudioListener();
-
+        public AudioListener listener = new AudioListener();
         //kameran sijainti 
         private Vector3 position = Vector3.Zero;
         //kameran rotaatio y-akselin ja x-akselin suhteen
@@ -33,7 +32,6 @@ namespace ErppuTribute
         private Matrix cachedViewMatrix;
 
 #endregion
-
 #region Properties
         //kameran projektion pystyy hakemaan kuka tahansa, mutta sitä pystyy muuttamaan vain kamera itse
         public Matrix Projection{get; private set; }
@@ -120,7 +118,6 @@ namespace ErppuTribute
             MoveTo(position, rotationY, rotationX);
         }
 #endregion
-
 #region Helper Methods
         private void UpdateLookAt()
         {

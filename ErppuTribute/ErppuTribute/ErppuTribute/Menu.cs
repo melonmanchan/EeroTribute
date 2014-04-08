@@ -22,7 +22,7 @@ namespace ErppuTribute
 
     class Menu
     {
-        #region Variables
+        #region Fields
         public Game1 game;
 
         private Texture2D mainMenu;

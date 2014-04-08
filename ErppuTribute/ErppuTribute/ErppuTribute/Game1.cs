@@ -26,7 +26,7 @@ namespace ErppuTribute
 
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        #region Variables
+        #region Fields
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         public int screenWidth = 1600;

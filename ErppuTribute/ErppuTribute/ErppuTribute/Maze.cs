@@ -35,7 +35,6 @@ namespace ErppuTribute
         Vector3[] wallPoints = new Vector3[8];
         private Random rand = new Random();
         #endregion
-
         #region Constructor
         public Maze(GraphicsDevice device, ContentManager content)
         {
@@ -65,7 +64,6 @@ namespace ErppuTribute
             GenerateMaze();
         }
         #endregion
-
         #region The Floor
         private void BuildFloorBuffer()
         {
@@ -120,7 +118,6 @@ namespace ErppuTribute
             return vList;
         }
 
-
         private void BuildCeilingBuffer()
         {
             //katon luominen on täsmälleen identtinen lattian luomiseen, paitsi että katon verteksien z-arvo on 1 yksikköä suurempi kuin lattian
@@ -161,7 +158,6 @@ namespace ErppuTribute
             return vList;
         }
         #endregion
-
         #region Walls
         private void BuildWallBuffer()
         {
@@ -200,8 +196,6 @@ namespace ErppuTribute
                 triangles.Add(CalcPoint(4, x, z, 1, 0));
                 triangles.Add(CalcPoint(6, x, z, 1, 1));
                 triangles.Add(CalcPoint(2, x, z, 0, 1));
-
-
             }
 
             if (MazeCells[x, z].Walls[1])
@@ -234,14 +228,12 @@ namespace ErppuTribute
                 triangles.Add(CalcPoint(3, x, z, 0,1));
             }
 
-            
             return triangles;
         }
 
         private VertexPositionNormalTexture CalcPoint(int wallPoint, int xOffset, int zOffset, int textureUOffset, int textureVOffset)
         {
             return new VertexPositionNormalTexture(wallPoints[wallPoint] + new Vector3(xOffset, 0, zOffset), new Vector3(0, 0, 0), new Vector2(textureUOffset, textureVOffset));
-            
         }
 
         //tarkistetaan törmääkö pelaaja seinään
@@ -261,6 +253,7 @@ namespace ErppuTribute
 
             return thisBox;
         }
+
         public List<BoundingBox> GetBoundsForCell(int x, int z)
         {
             List<BoundingBox> boxes = new List<BoundingBox>();
@@ -276,6 +269,7 @@ namespace ErppuTribute
 
             return boxes;
         }
+
         private void RemoveRandomWalls()
         {
 
@@ -291,7 +285,6 @@ namespace ErppuTribute
         }
 
         #endregion
-
         #region Maze Generation
         public void GenerateMaze()
         {
@@ -347,8 +340,6 @@ namespace ErppuTribute
                         break;
                     case 3: neighbor += new Vector2(-1, 0);
                         break;
-
-
                 }
 
                 if (
@@ -369,14 +360,11 @@ namespace ErppuTribute
                         MazeCells[(int)cell.X, (int)cell.Y].Walls[selectedNeighbor] = false;
                         MazeCells[(int)neighbor.X, (int)neighbor.Y].Walls[(selectedNeighbor + 2) % 4 ] = false;
                         EvaluateCell(neighbor);
-
                     }
-
                 }
             }
         }
         #endregion
-
         #region Draw
 
         public void Draw(Camera camera, BasicEffect effect)
@@ -411,8 +399,5 @@ namespace ErppuTribute
             }
         }
         #endregion
-
     }
-    
- 
 }
