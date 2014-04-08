@@ -211,7 +211,7 @@
 			<h3>6.1 Asentaminen</h3>
 				<p class = "content">
 				1. Asenna XNA redistributable Framework: http://www.microsoft.com/en-us/download/details.aspx?id=20914</br>
-				2. Pyöräytä peli käyntiin joko Erpputribute.exen kautta tai asenna se setup.exellä</br></br>
+				2. Pyöräytä peli käyntiin joko Release-kansion Erpputribute.exen kautta tai asenna se setup.exellä</br></br>
 				
 			</p>			
 			
@@ -341,7 +341,8 @@
 			<p class = "content">
 				<ul class = "content">
 					<li>Peli kaatui jonkin ajan päästä käynnistymisestä.
-					</br>Tämä johtui loputtomasta luupista vihollisia spawnatessa,</li>
+					</br>Tämä johtui loputtomasta luupista vihollisia spawnatessa, koska etäisyys, jonka päähän vihollinen 
+					</br>luodaan ei koskaan ollut tarpeeksi kaukana pelaajan positiosta.</li>
 				</ul>
 			</p>
 		<h2><a id="14">14. Loppuarvio</a></h2>
