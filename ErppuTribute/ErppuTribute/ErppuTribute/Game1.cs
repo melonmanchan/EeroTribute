@@ -53,6 +53,9 @@ namespace ErppuTribute
         private VideoPlayer videoplayer;
         private Texture2D videoTexture;
         private Rectangle videoScreen;
+        private bool hasVideoPlayed = false;
+
+
         private int counter = 0;
         private float countDuration = 1.5f;
         private float currentTime = 0f;
@@ -264,22 +267,29 @@ namespace ErppuTribute
 
         public void playTransition(GameTime gameTime)
         {
-            videoplayer.Play(staticVideo);
-
-            currentTime += (float)gameTime.ElapsedGameTime.TotalSeconds; //Time passed since last Update() 
-
-            if (currentTime >= countDuration)
+            if (hasVideoPlayed == true)
             {
-                counter++;
-                currentTime -= countDuration; 
-              
-            }
-            if (counter >= 4)
-            {
-                counter = 0;//Reset the counter;
-                videoplayer.Stop();
-                centerMouse();
                 gameState = GameState.Playing;
+                centerMouse();
+            }
+
+            else
+            {
+                videoplayer.Play(staticVideo);
+                currentTime += (float)gameTime.ElapsedGameTime.TotalSeconds; //Time passed since last Update() 
+
+                if (currentTime >= countDuration)
+                {
+                    counter++;
+                    currentTime -= countDuration;
+
+                }
+                if (counter >= 4)
+                {
+                    counter = 0;//Reset the counter;
+                    videoplayer.Stop();
+                    hasVideoPlayed = true;
+                }
             }
         }
 
@@ -497,8 +507,6 @@ namespace ErppuTribute
                         eeroShouts[i].Pitch = -0.75f;
                     }
                 }
-           
-
         }
 
         private void stopAllEeroShouts()
