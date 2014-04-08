@@ -25,7 +25,7 @@ namespace ErppuTribute
 
         protected float rotation = 0f;
         protected float zrotation = 0f;
-        public float CollisionRadius = 0.25f;
+        private float collisionRadius;
         protected Random rand = new Random();
 
         //kuution sijainti pelimaailmassa
@@ -45,18 +45,18 @@ namespace ErppuTribute
         {
             get
             {
-                return new BoundingSphere(location, CollisionRadius);
+                return new BoundingSphere(location, collisionRadius);
             }
 
         }
         #endregion
 
         #region Constructor
-        public Cube(GraphicsDevice graphicsDevice, Vector3 playerLocation, float minDistance, Texture2D texture, SoundEffect soundEffect)
+        public Cube(GraphicsDevice graphicsDevice, Vector3 playerLocation, float minDistance, float collisionRadius, Texture2D texture, SoundEffect soundEffect)
         {
             device = graphicsDevice;
             this.texture = texture;
-
+            this.collisionRadius = collisionRadius;
             PositionCube(playerLocation, minDistance);
 
             //luodaan kuution neljä "sivua" jotka ovat vertikaalisia

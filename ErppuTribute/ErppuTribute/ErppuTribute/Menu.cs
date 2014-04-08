@@ -36,8 +36,8 @@ namespace ErppuTribute
         private int selectedButtonIndex;
         public MouseState ms;
 
-        private int screenWidth;
-        private int screenHeight;
+        private float screenWidth;
+        private float screenHeight;
 
         private Vector2 scaleVector;
 
@@ -102,7 +102,6 @@ namespace ErppuTribute
         {
             ms = Mouse.GetState();
 
-
                 Rectangle mouseClickRect = new Rectangle(ms.X, ms.Y, 10, 10);
 
                 for (int i = 0; i < buttonPositions.Count; i++)
@@ -123,10 +122,7 @@ namespace ErppuTribute
                             selectedButtonIndex = i;
                         }
                     }
-
                 }
-
-            
         }
 
         private void handleSelection(int selected)
@@ -134,7 +130,7 @@ namespace ErppuTribute
             if (selected == 0)
             {
                 Boom.Play();
-                Mouse.SetPosition(screenWidth / 2, screenHeight / 2);
+                game.centerMouse();
                 game.IsMouseVisible = false;
                 game.gameState = GameState.PlayingVideo;
             }
@@ -176,10 +172,8 @@ namespace ErppuTribute
 
         public void Update()
         {
-
             handleMouseInput();
             handleKeyBoardInput();
-
         }
     }
 }

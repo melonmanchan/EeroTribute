@@ -22,42 +22,46 @@ namespace ErppuTribute
     /// This is the main type for your game
     /// </summary>
     /// 
-    public enum GameState { MainMenu, Playing, PlayingVideo, GameOver }
+    public enum GameState { MainMenu, Playing, PlayingVideo }
 
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
+        public int screenWidth = 1600;
+        public int screenHeight = 1000;
 
-        MouseState originalMouseState;
+        private MouseState originalMouseState;
         float leftrightRot = 0;
         float updownRot = 0;
-        Random rnd = new Random();
+        private Random rnd = new Random();
 
-        Camera camera;
-        Maze maze;
-        Menu menu;
+        private Camera camera;
+        private Maze maze;
+        private Menu menu;
         private Cube cube;
-        BasicEffect effect;
-        float moveScale = 1.7f;
-        float rotateScale = 0.3f;
+        private float cubeCollisionRadius;
+        private BasicEffect effect;
+        private float moveScale = 1.7f;
+        private float rotateScale = 0.3f;
 
-        SoundEffectInstance bgMusic;
+        private SoundEffectInstance bgMusic;
 
-        List<SoundEffectInstance> eeroShouts;
+        private List<SoundEffectInstance> eeroShouts;
 
-        Video staticVideo;
-        VideoPlayer videoplayer;
-        Texture2D videoTexture;
-        Rectangle videoScreen;
-        int counter = 0;
-        float countDuration = 1.5f;
-        float currentTime = 0f;
+        private Video staticVideo;
+        private VideoPlayer videoplayer;
+        private Texture2D videoTexture;
+        private Rectangle videoScreen;
+        private int counter = 0;
+        private float countDuration = 1.5f;
+        private float currentTime = 0f;
 
         private List<Enemy> enemyList;
         private float enemyTimer = 0f;
         private float enemySpawnRate = 15f;
         private float enemySpeed = 30f;
+        private float enemyCollisionRadius;
         private bool isEnemyNear = false;
 
         public GameState gameState = GameState.MainMenu;
@@ -66,9 +70,11 @@ namespace ErppuTribute
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferHeight = 1000;
-            graphics.PreferredBackBufferWidth = 1600;
-            
+            configHandler = new ConfigHandler();
+            loadConfig();
+            graphics.PreferredBackBufferHeight = screenHeight;
+            graphics.PreferredBackBufferWidth = screenWidth;
+
             Content.RootDirectory = "Content";
         }
 
@@ -80,9 +86,13 @@ namespace ErppuTribute
         /// </summary>
         protected override void Initialize()
         {
+
             
+
             // TODO: Add your initialization logic here
             enemyList = new List<Enemy>();
+
+            loadConfig();
 
             camera = new Camera(new Vector3(0.5f, 0.5f, 0.5f), 0, 0, GraphicsDevice.Viewport.AspectRatio, 0.05f, 100f);
 
@@ -96,9 +106,6 @@ namespace ErppuTribute
 
             var form = (System.Windows.Forms.Form)System.Windows.Forms.Control.FromHandle(this.Window.Handle);
             form.Location = new System.Drawing.Point(100, 10);
-
-            configHandler = new ConfigHandler();
-            loadConfig();
            
         }
 
@@ -136,12 +143,12 @@ namespace ErppuTribute
                 enemySpeed = (float)configHandler.ConfigBundle["enemyspeed"];
                 enemyspawnmin = (float)configHandler.ConfigBundle["enemyspawnmindistance"];
                 enemyneardistance = (float)configHandler.ConfigBundle["enemyneardistance"];
-                cube.CollisionRadius = (float)configHandler.ConfigBundle["cubecollisionradius"];
+                cubeCollisionRadius = (float)configHandler.ConfigBundle["cubecollisionradius"];
 
-                foreach (Enemy e in enemyList)
-                {
-                    e.CollisionRadius = (float)configHandler.ConfigBundle["enemycollisionradius"];
-                }
+                screenHeight = (int)configHandler.ConfigBundle["screenheight"];
+                screenWidth = (int)configHandler.ConfigBundle["screenwidth"];
+
+                enemyCollisionRadius = (float)configHandler.ConfigBundle["enemycollisionradius"];
 
                 backgroundMusicVolume = (float)configHandler.ConfigBundle["backgroundmusicvolume"];
                 forwardKey = (Keys)Enum.Parse(typeof(Keys), (string)configHandler.ConfigBundle["forwardkey"]);
@@ -192,8 +199,8 @@ namespace ErppuTribute
             bgMusic = Content.Load<SoundEffect>("spookybackgroundmusic").CreateInstance();
             bgMusic.Volume = backgroundMusicVolume;
 
-            cube = new Cube(this.GraphicsDevice, camera.Position, cubespawnmin, Content.Load<Texture2D>("eerominati"), Content.Load<SoundEffect>("ambienthum"));
-            enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, enemyspawnmin, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
+            cube = new Cube(this.GraphicsDevice, camera.Position, cubespawnmin, cubeCollisionRadius, Content.Load<Texture2D>("eerominati"), Content.Load<SoundEffect>("ambienthum"));
+            enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, enemyspawnmin, enemyCollisionRadius,Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
 
             menu = new Menu(Content, spriteBatch, this, GraphicsDevice);
 
@@ -250,9 +257,6 @@ namespace ErppuTribute
                     break;
                 case GameState.PlayingVideo:
                     playTransition(gameTime);
-                     break;
-                case GameState.GameOver:
-                    //Peli ohi jutskat
                     break;
             }
             base.Update(gameTime);
@@ -274,8 +278,14 @@ namespace ErppuTribute
             {
                 counter = 0;//Reset the counter;
                 videoplayer.Stop();
+                centerMouse();
                 gameState = GameState.Playing;
             }
+        }
+
+        public void centerMouse()
+        {
+            Mouse.SetPosition(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
         }
 
         private void UpdateGamePlay(GameTime gameTime)
@@ -295,7 +305,7 @@ namespace ErppuTribute
                 leftrightRot -= rotateScale * xDifference * elapsed;
                 updownRot -= -rotateScale * yDifference * elapsed;
 
-                Mouse.SetPosition(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
+                centerMouse();
 
                 camera.RotationY = MathHelper.WrapAngle(leftrightRot);
                 camera.RotationX = MathHelper.WrapAngle(updownRot);
@@ -424,7 +434,7 @@ namespace ErppuTribute
             if (enemyTimer >= enemySpawnRate)
             {
                 randomizeEnemyPositions();
-                enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 5.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
+                enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, enemyspawnmin, enemyCollisionRadius, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
                 enemyTimer = 0;
             }
 
@@ -446,7 +456,7 @@ namespace ErppuTribute
             maze.GenerateMaze();
             cube.PositionCube(camera.Position, 10f);
             enemyList.Clear();
-            enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
+            enemyList.Add(new Enemy(this.GraphicsDevice, camera.Position, 15.0f, enemyCollisionRadius, Content.Load<Texture2D>("nmi"), Content.Load<SoundEffect>("ambienthum")));
             this.IsMouseVisible = true;
             stopAllEeroShouts();
         }

@@ -40,6 +40,14 @@
     <Key>enemycollisionradius</Key>
     <Value xsi:type="xsd:float">0.5</Value>
   </KeyValuePairOfStringObject>
+    <KeyValuePairOfStringObject>
+    <Key>screenheight</Key>
+    <Value xsi:type="xsd:int">1000</Value>
+  </KeyValuePairOfStringObject>
+    <KeyValuePairOfStringObject>
+    <Key>screenwidth</Key>
+    <Value xsi:type="xsd:int">1600</Value>
+  </KeyValuePairOfStringObject>
   <KeyValuePairOfStringObject>
     <Key>backgroundmusicvolume</Key>
     <Value xsi:type="xsd:float">0.2</Value>

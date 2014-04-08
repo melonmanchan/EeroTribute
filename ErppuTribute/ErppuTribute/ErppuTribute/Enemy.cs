@@ -18,8 +18,8 @@ namespace ErppuTribute
     class Enemy : Cube
     {
         #region Constructor
-        public Enemy(GraphicsDevice graphicsDevice, Vector3 playerLocation, float minDistance, Texture2D texture, SoundEffect soundEffect)
-            : base(graphicsDevice, playerLocation, minDistance, texture, soundEffect)
+        public Enemy(GraphicsDevice graphicsDevice, Vector3 playerLocation, float minDistance, float enemyCollisionRadius,Texture2D texture, SoundEffect soundEffect)
+            : base(graphicsDevice, playerLocation, minDistance, enemyCollisionRadius, texture, soundEffect)
         {
             base.zrotation = MathHelper.WrapAngle((float)Math.PI);
         }
