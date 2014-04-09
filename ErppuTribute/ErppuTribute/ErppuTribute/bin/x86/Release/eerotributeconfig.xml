@@ -26,7 +26,7 @@
   </KeyValuePairOfStringObject>
   <KeyValuePairOfStringObject>
     <Key>enemyspawnmindistance</Key>
-    <Value xsi:type="xsd:float">15</Value>
+    <Value xsi:type="xsd:float">7</Value>
   </KeyValuePairOfStringObject>
   <KeyValuePairOfStringObject>
     <Key>enemyneardistance</Key>

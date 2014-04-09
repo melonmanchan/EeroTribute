@@ -64,22 +64,23 @@ namespace ErppuTribute
         private float enemyTimer = 0f;
         private float enemySpawnRate = 15f;
         private float enemySpeed = 30f;
-        private float enemyCollisionRadius;
+        private float enemyCollisionRadius = 0.5f;
+        private float enemyspawnmin = 15;
+        private float enemyneardistance = 2.5f;
         private bool isEnemyNear = false;
 
         public GameState gameState = GameState.MainMenu;
 
         private ConfigHandler configHandler;
 
-        private float cubespawnmin;
-        private float enemyspawnmin;
-        private float enemyneardistance;
-        private float backgroundMusicVolume;
-        private Keys forwardKey;
-        private Keys leftKey;
-        private Keys backwardKey;
-        private Keys rightKey;
-        private Keys shoutKey;
+        private float cubespawnmin = 10;
+        private float backgroundMusicVolume = 0.2f;
+
+        private Keys forwardKey = Keys.W;
+        private Keys leftKey = Keys.A;
+        private Keys backwardKey = Keys.S;
+        private Keys rightKey = Keys.D;
+        private Keys shoutKey = Keys.E;
 
         #endregion
         #region Constructor
@@ -119,33 +120,11 @@ namespace ErppuTribute
             this.IsMouseVisible = true;
 
             base.Initialize();
-
-            var form = (System.Windows.Forms.Form)System.Windows.Forms.Control.FromHandle(this.Window.Handle);
-            form.Location = new System.Drawing.Point(100, 10);
            
         }
 
         private void loadConfig()
         {
-            #region config alustus
-            /*configHandler.ConfigBundle.Add("movescale", 1.7f);
-            configHandler.ConfigBundle.Add("rotatescale", 0.3f);
-            configHandler.ConfigBundle.Add("countduration", 1.5f);
-            configHandler.ConfigBundle.Add("cubespawnmindistance", 10f);
-            configHandler.ConfigBundle.Add("enemyspawnrate", 15f);
-            configHandler.ConfigBundle.Add("enemyspeed", 30f);
-            configHandler.ConfigBundle.Add("enemyspawnmindistance", 15f);
-            configHandler.ConfigBundle.Add("enemyneardistance", 2.5f);
-            configHandler.ConfigBundle.Add("cubecollisionradius", 0.25f);
-            configHandler.ConfigBundle.Add("enemycollisionradius", 0.50f);
-            configHandler.ConfigBundle.Add("backgroundmusicvolume", 0.20f);
-            configHandler.ConfigBundle.Add("forwardkey", Keys.W.ToString());
-            configHandler.ConfigBundle.Add("leftkey", Keys.A.ToString());
-            configHandler.ConfigBundle.Add("backwardkey", Keys.S.ToString());
-            configHandler.ConfigBundle.Add("rightkey", Keys.D.ToString());
-            configHandler.ConfigBundle.Add("shoutkey", Keys.E.ToString());
-            configHandler.WriteConfig();*/
-            #endregion
             configHandler.ReadConfig();
             try
             {
@@ -268,6 +247,12 @@ namespace ErppuTribute
         #region Video/Audio related Methods
         public void playTransition(GameTime gameTime)
         {
+            if (Keyboard.GetState().GetPressedKeys().Length > 0)
+            {
+                videoplayer.Stop();
+                hasVideoPlayed = true;
+            }
+                
             if (hasVideoPlayed == true)
             {
                 gameState = GameState.Playing;
@@ -277,7 +262,7 @@ namespace ErppuTribute
             else
             {
                 videoplayer.Play(staticVideo);
-                currentTime += (float)gameTime.ElapsedGameTime.TotalSeconds; //Time passed since last Update() 
+                currentTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 if (currentTime >= countDuration)
                 {

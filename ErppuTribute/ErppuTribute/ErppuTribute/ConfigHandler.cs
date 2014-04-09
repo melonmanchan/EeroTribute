@@ -80,13 +80,21 @@ namespace ErppuTribute
 
         public void ReadConfig()
         {
-            if (pathSuccess)
+            try
             {
-                streamReader = new System.IO.StreamReader(configPath);
+                if (pathSuccess)
+                {
+                    streamReader = new System.IO.StreamReader(configPath);
+                }
+                else
+                {
+                    streamReader = new System.IO.StreamReader("eerotributedefaultconfig.xml");
+                }
             }
-            else
+            catch (Exception)
             {
-                streamReader = new System.IO.StreamReader("eerotributedefaultconfig.xml");
+
+                MessageBox.Show("Couldn't find the config file.");
             }
             
             try
