@@ -210,7 +210,7 @@
 			</p>
 			<h3>6.1 Asentaminen</h3>
 				<p class = "content">
-				1. Asenna XNA redistributable Framework: http://www.microsoft.com/en-us/download/details.aspx?id=20914</br>
+				1. <a href=" http://www.microsoft.com/en-us/download/details.aspx?id=20914">Asenna XNA Redistributable Framework</a></br>
 				2. Pyöräytä peli käyntiin joko Release-kansion Erpputribute.exen kautta tai asenna se setup.exellä</br></br>
 				
 			</p>			
@@ -239,7 +239,7 @@
 			<h3>8.2 Toteuttamatta jääneet toiminnalliset vaatimukset</h3>
 			<p class = "content">
 				<ul class = "content">
-				<li>-</li>
+				<li>Kaikki suunnitellut vaatimukset saatiin toteutettua</li>
 				</ul>
 			</p>
 			
@@ -283,7 +283,9 @@
 		
 		<h2><a id="11">11. Luokkakaavio (v0.1)</a></h2>
 			<p class = "content">
-				<img src = "http://puu.sh/7GQFn.png" class = "roundedimage"/>
+				<img src = "http://i.imgur.com/X3j8uy3.png?1" class = "roundedimage"/></br>
+				 <a href="http://i.imgur.com/GVsUSM2.png">Isompi kuva</a>
+				
 			</p>
 		<h2><a id="12">12. Luokat (v0.1)</a></h2>
 			<h3>12.1 Game</h3>

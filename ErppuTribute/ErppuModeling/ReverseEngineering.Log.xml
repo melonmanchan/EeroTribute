@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 11.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2014-04-09T12:16:15" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '00cd6115-eab2-452f-9f8a-8f53ae823a1e' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '07cd43c8-8035-4004-b90a-d3df94ba89e6' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ccd192dc-b861-4495-bec7-3fcdaa015c3a' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'd96aada2-009e-41ec-827b-c5b09c69d8c0' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'e86c5111-6d34-494b-9b70-60e2f3a8aa5f' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Medium" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera' -  (Class)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::baseCameraReference' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::cachedViewMatrix' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::Camera' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::Camera::aspectRatio' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::Camera::farClip' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::Camera::nearClip' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::Camera::position' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::Camera::rotationX' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::Camera::rotationY' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::listener' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::lookAt' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::MoveForwardVector' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::MoveForwardVector::moveVector' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::MoveTo' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::MoveTo::position' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::MoveTo::rotationX' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::MoveTo::rotationY' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::needViewResync' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::position' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::Position' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::PreviewMoveVector' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::PreviewMoveVector::moveVector' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::Projection' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::rotationX' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::RotationX' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::rotationY' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::RotationY' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::UpdateLookAt' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Camera::View' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Medium" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler' -  (Class)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::ConfigBundle' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::ConfigHandler' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::configPath' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::dictionaryToList' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::dictionaryToList::dictionary' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::listToDictionary' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::listToDictionary::list' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::pathSuccess' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::ReadConfig' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::serializer' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::streamReader' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::streamWriter' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::ConfigHandler::WriteConfig' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Medium" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube' -  (Class)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildFace' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildFace::p1' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildFace::p2' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildFaceHorizontal' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildFaceHorizontal::p1' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildFaceHorizontal::p2' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildVertex' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildVertex::u' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildVertex::v' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildVertex::x' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildVertex::y' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::BuildVertex::z' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::collisionRadius' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Cube' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Cube::collisionRadius' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Cube::graphicsDevice' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Cube::minDistance' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Cube::playerLocation' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Cube::soundEffect' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Cube::texture' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::cubeVertexBuffer' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::device' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Draw' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Draw::camera' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Draw::effect' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::emitter' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Hitbox' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::location' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::PositionCube' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::PositionCube::minDistance' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::PositionCube::PlayerLocation' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::rand' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::rotation' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::soundEffectInstance' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::texture' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Update' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::Update::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::vertices' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Cube::zrotation' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Medium" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy' -  (Class)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Draw' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Draw::camera' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Draw::effect' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Enemy' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Enemy::enemyCollisionRadius' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Enemy::graphicsDevice' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Enemy::minDistance' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Enemy::playerLocation' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Enemy::soundEffect' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Enemy::texture' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::PositionEnemy' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::PositionEnemy::maxDistance' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::PositionEnemy::minDistance' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::PositionEnemy::PlayerLocation' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Update' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Enemy::Update::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Medium" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1' -  (Class)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::backgroundMusicVolume' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::backwardKey' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::bgMusic' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::camera' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::centerMouse' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::changeShoutPitch' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::configHandler' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::countDuration' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::counter' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::cube' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::cubeCollisionRadius' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::cubespawnmin' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::currentTime' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::Draw' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::Draw::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::eeroShouts' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::effect' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::enemyCollisionRadius' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::enemyList' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::enemyneardistance' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::enemyspawnmin' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::enemySpawnRate' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::enemySpeed' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::enemyTimer' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::forwardKey' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::Game1' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::gameState' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::graphics' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::hasVideoPlayed' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::Initialize' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::isEnemyNear' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::isShoutPlaying' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::leftKey' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::leftrightRot' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::loadConfig' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::LoadContent' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::maze' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::menu' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::moveScale' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::originalMouseState' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::playTransition' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::playTransition::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::randomizeEnemyPositions' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::resetGameLevel' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::rightKey' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::rnd' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::rotateScale' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::screenHeight' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::screenWidth' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::shoutKey' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::spriteBatch' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::staticVideo' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::stopAllEeroShouts' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::UnloadContent' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::Update' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::Update::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::updateAudioCue' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::UpdateGamePlay' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::UpdateGamePlay::gameTime' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::updownRot' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::videoplayer' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::videoScreen' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Game1::videoTexture' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Medium" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::GameState' -  (Enumeration)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::GameState::MainMenu' -  (EnumerationLiteral)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::GameState::Playing' -  (EnumerationLiteral)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::GameState::PlayingVideo' -  (EnumerationLiteral)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::KeyValuePair' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::KeyValuePair&lt;String‎, Object‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Medium" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze' -  (Class)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::BuildBoundingBox' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::BuildBoundingBox::point1' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::BuildBoundingBox::point2' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::BuildBoundingBox::x' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::BuildBoundingBox::z' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::BuildCeilingBuffer' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::BuildFloorBuffer' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::BuildMazeWall' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::BuildMazeWall::x' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::BuildMazeWall::z' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::BuildWallBuffer' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::CalcPoint' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::CalcPoint::textureUOffset' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::CalcPoint::textureVOffset' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::CalcPoint::wallPoint' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::CalcPoint::xOffset' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::CalcPoint::zOffset' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::ceilingBuffer' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::CeilingTile' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::CeilingTile::xOffset' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::CeilingTile::zOffset' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::device' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::Draw' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::Draw::camera' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::Draw::effect' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::drawTexture' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::EvaluateCell' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::EvaluateCell::cell' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::floorBuffer' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::FloorTile' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::FloorTile::xOffset' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::FloorTile::zOffset' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::fogColor' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::GenerateMaze' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::GetBoundsForCell' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::GetBoundsForCell::x' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::GetBoundsForCell::z' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::Maze' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::Maze::content' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::Maze::device' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::MazeCells' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::mazeHeight' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::mazeWidth' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::normalEero' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::rand' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::RemoveRandomWalls' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::scaryEero' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::wallBuffer' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Maze::wallPoints' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::MazeCell' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::MazeCell::MazeCell' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::MazeCell::Walls' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::MazeCell::Visited' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Medium" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu' -  (Class)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::Boom' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::buttonPositions' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::buttons' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::cursor' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::Draw' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::game' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::handleKeyBoardInput' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::handleMouseInput' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::handleSelection' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::handleSelection::selected' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::initializeButtonPositions' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::mainMenu' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::Menu' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::Menu::content' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::Menu::game' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::Menu::graphicsDevice' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::Menu::spriteBatch' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::ms' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::scaleVector' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::screenHeight' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::screenWidth' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::selectedButtonIndex' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::selectedButtons' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::selectionChanged' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::spriteBatch' -  (Property)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Menu::Update' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Medium" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Program' -  (Class)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Program::Main' -  (Operation)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::ErppuTribute::Program::Main::args' -  (Parameter)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Audio' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Audio::AudioEmitter' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Audio::AudioListener' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Audio::SoundEffect' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Audio::SoundEffectInstance' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::BoundingBox' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::BoundingSphere' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Content' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Content::ContentManager' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Game' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::GameTime' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Graphics' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Graphics::BasicEffect' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Graphics::GraphicsDevice' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Graphics::SpriteBatch' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Graphics::Texture2D' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Graphics::VertexBuffer' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Graphics::VertexPositionNormalTexture' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::GraphicsDeviceManager' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Input' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Input::Keys' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Input::MouseState' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Matrix' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Media' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Media::Video' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Media::VideoPlayer' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Rectangle' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Vector2' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::Microsoft::Xna::Framework::Vector3' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections::Generic::Dictionary' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections::Generic::Dictionary&lt;String‎, Object‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections::Generic::List&lt;BoundingBox‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections::Generic::List&lt;Enemy‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections::Generic::List&lt;KeyValuePair‎&lt;String‎, Object‎&gt;‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections::Generic::List&lt;SoundEffectInstance‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections::Generic::List&lt;Texture2D‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections::Generic::List&lt;Vector2‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Collections::Generic::List&lt;VertexPositionNormalTexture‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::IO' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::IO::StreamReader' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::IO::StreamWriter' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Object' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Random' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Single' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Xml' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Xml::Serialization' -  (Package)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ErppuModeling::System::Xml::Serialization::XmlSerializer' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ErppuModeling::ErppuTribute::Enemy to ErppuModeling::ErppuTribute::Cube (Generalization)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ErppuModeling::ErppuTribute::Game1 to ErppuModeling::Microsoft::Xna::Framework::Game (Generalization)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ErppuModeling::ErppuTribute::Camera to ErppuModeling::Microsoft::Xna::Framework::Vector3 (Association)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ErppuModeling::ErppuTribute::Camera to ErppuModeling::Microsoft::Xna::Framework::Matrix (Association)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ErppuModeling::ErppuTribute::Camera to ErppuModeling::System::Single (Association)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ErppuModeling::ErppuTribute::Camera to ErppuModeling::System::Single (Association)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ErppuModeling::ErppuTribute::Camera to ErppuModeling::Microsoft::Xna::Framework::Matrix (Association)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ErppuModeling::ErppuTribute::ConfigHandler to ErppuModeling::System::Collections::Generic::Dictionary&lt;String‎, Object‎&gt; (Association)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ErppuModeling::ErppuTribute::Cube to ErppuModeling::Microsoft::Xna::Framework::BoundingSphere (Association)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ErppuModeling::ErppuTribute::Cube to ErppuModeling::Microsoft::Xna::Framework::Vector3 (Association)" />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="High" Text="(9) type(s) fully reverse engineered." />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="High" Text="(43) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2014-04-09T12:16:24" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>
