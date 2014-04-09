@@ -125,7 +125,6 @@ namespace ErppuTribute
             foreach(KeyValuePair<string, object> pair in list)
             {
                 dictionary.Add(pair.Key, pair.Value);
-                Console.WriteLine(pair.Key + " | " + pair.Value);
             }
 
             return dictionary;

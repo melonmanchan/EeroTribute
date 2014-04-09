@@ -18,10 +18,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace ErppuTribute
 {
-    /// <summary>
-    /// This is the main type for your game
-    /// </summary>
-    /// 
+    
     public enum GameState { MainMenu, Playing, PlayingVideo }
 
     public class Game1 : Microsoft.Xna.Framework.Game
@@ -93,8 +90,15 @@ namespace ErppuTribute
             graphics.PreferredBackBufferWidth = screenWidth;
 
             Content.RootDirectory = "Content";
+
+          var form = (System.Windows.Forms.Form)System.Windows.Forms.Control.FromHandle(this.Window.Handle);
+
+         form.Location = new System.Drawing.Point(100, 10);
+
+
         }
         #endregion
+        #region Load Game Content
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
         /// This is where it can query for any required services and load any non-graphic
@@ -102,10 +106,8 @@ namespace ErppuTribute
         /// and initialize them as well.
         /// </summary>
         /// 
-        #region Load Game Content
         protected override void Initialize()
         {
-
             // TODO: Add your initialization logic here
             enemyList = new List<Enemy>();
 
@@ -120,7 +122,6 @@ namespace ErppuTribute
             this.IsMouseVisible = true;
 
             base.Initialize();
-           
         }
 
         private void loadConfig()
@@ -198,8 +199,9 @@ namespace ErppuTribute
                     GraphicsDevice.Viewport.Y,
                     GraphicsDevice.Viewport.Width,
                     GraphicsDevice.Viewport.Height);
-        Mouse.SetPosition(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
-        originalMouseState = Mouse.GetState();
+
+            centerMouse();
+            originalMouseState = Mouse.GetState();
             // TODO: use this.Content to load your game content here
         }
 
@@ -212,13 +214,13 @@ namespace ErppuTribute
             // TODO: Unload any non ContentManager content here
         }
         #endregion
+        #region Main Loop
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         /// 
-        #region MainLoop
         protected override void Update(GameTime gameTime)
         {
             // Allows the game to exit
@@ -321,7 +323,6 @@ namespace ErppuTribute
         }
 
         #endregion
-
         #region Update
         private void UpdateGamePlay(GameTime gameTime)
         {
@@ -503,12 +504,12 @@ namespace ErppuTribute
             Mouse.SetPosition(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
         }
         #endregion
+        #region Draw
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         ///
-        #region Draw
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
